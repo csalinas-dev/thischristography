@@ -1,0 +1,17 @@
+.app {
+  align-items: center;
+  background-image: url("/assets/images/20190112-sandia-mountains.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-flow: row nowrap;
+  height: 100vh;
+  justify-content: flex-start;
+  padding: 32px;
+  width: 100%;
+}
+
+.app img {
+  height: 75vh;
+}
