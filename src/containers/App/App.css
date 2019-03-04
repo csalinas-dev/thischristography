@@ -7,11 +7,11 @@
   display: flex;
   flex-flow: row nowrap;
   height: 100vh;
-  justify-content: flex-start;
+  justify-content: center;
   padding: 32px;
   width: 100%;
 }
 
 .app img {
-  height: 75vh;
+  max-width: 100%;
 }

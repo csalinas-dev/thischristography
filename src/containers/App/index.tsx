@@ -5,7 +5,7 @@ class App extends React.Component {
   public render() {
     return (
       <div className="app">
-        <img src="/assets/logos/1x/vertical-white.png" />
+        <img src="/assets/logos/logo-white.png" />
       </div>
     );
   }
