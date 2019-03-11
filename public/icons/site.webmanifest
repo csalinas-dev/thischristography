@@ -3,13 +3,13 @@
     "short_name": "",
     "icons": [
         {
-            "src": "/icons/android-chrome-192x192.png?v=Kmn6AKYlAQ",
+            "src": "/icons/android-chrome-192x192.png?v=vMdwBJpj5y",
             "sizes": "192x192",
             "type": "image/png"
         },
         {
-            "src": "/icons/android-chrome-384x384.png?v=Kmn6AKYlAQ",
-            "sizes": "384x384",
+            "src": "/icons/android-chrome-512x512.png?v=vMdwBJpj5y",
+            "sizes": "512x512",
             "type": "image/png"
         }
     ],
