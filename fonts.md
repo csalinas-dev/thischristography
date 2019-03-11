@@ -7,14 +7,13 @@ Add the following `link` tag to the head of the page.
 
 Activated fonts:
 - Open Sans (`font-family: open-sans, sans-serif;`)
-- Open Sans Condensed (`font-family: open-sans-condensed, sans-serif;`)
+- Sign Painter (`font-family: house-slant, sans-serif`)
 - Montserrat (`font-family: montserrat, sans-serif;`)
-- Montserrat Alternates(`font-family: montserrat-alternates, sans-serif;`)
 
 
 ## Logo
 The font for the logo should be as follows:
-- For the "CHRIS" portion of the logo: Montserrat, Bold (700), Italic, and all-caps.
+- For the "This Chris" portion of the logo: Sign Painter, Regular (400).
 - For the "TOGRAPHY" portion of the logo: Montserrat, Extra Light (200), and all-caps.
 
 ## Text
