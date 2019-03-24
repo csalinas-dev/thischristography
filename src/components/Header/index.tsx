@@ -5,10 +5,12 @@ class App extends React.Component {
   public render() {
     return (
       <header>
-        <a className="logo" href="/" />
-        <nav>
-          <a href="/">Home</a>
-        </nav>
+        <div className="container">
+          <a className="logo" href="/" />
+          <nav>
+            <a href="/">Home</a>
+          </nav>
+        </div>
       </header>
     );
   }

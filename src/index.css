@@ -12,6 +12,11 @@ body {
     width: 100%;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    font-family: house-slant, sans-serif;
+    font-weight: 300;
+}
+
 a,
 a:visited,
 a:active {
@@ -20,13 +25,44 @@ a:active {
     text-decoration: none;
     border-bottom-width: 1px;
     border-bottom-style: dotted;
-    border-bottom-color: transparent;
+    border-bottom-color: rgba(0, 0, 0, 0.12);
 }
 
 a:hover {
-    border-bottom-color: rgba(0, 0, 0, 0.12);
+    border-bottom-style: solid;
 }
 
 main {
     background-color: #eff9ff;
+    color: #305f7b;
+}
+
+section {
+    padding-bottom: 128px;
+    padding-top: 128px;
+}
+
+section h1 {
+    font-size: 3em;
+}
+
+/* Container */
+.container {
+    height: 100%;
+    margin: 0 auto;
+    max-width: 100%;
+    padding-left: 32px;
+    padding-right: 32px;
+}
+
+@media (min-width: 768px) {
+    .container {
+        width: 700px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        width: 960px;
+    }
 }

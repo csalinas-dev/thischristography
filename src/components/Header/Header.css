@@ -1,19 +1,21 @@
 header {
-    align-items: center;
     background-color: #fff;
     box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.12);
-    display: flex;
-    flex-flow: row nowrap;
     font-family: montserrat, sans-serif;
     font-weight: 300;
     height: 64px;
-    justify-content: space-between;
     position: -webkit-sticky; /* Safari */
     position: sticky;
     text-transform: uppercase;
     top: 0;
     width: 100%;
-    padding: 0px 16px;
+}
+
+header .container {
+    align-items: center;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
 }
 
 header .logo {
@@ -21,15 +23,36 @@ header .logo {
     background-position: left center;
     background-repeat: no-repeat;
     background-size: contain;
-    border: none;
-    height: 80%;
+    height: 100%;
     width: 100px;
+}
+
+header a {
+    border: none;
+    transition: all ease-in-out 150ms;
+}
+
+header a:hover {
+    border: none;
+    background-color: #eff9ff;
+    color: #305f7b;
+}
+
+header nav {
+    height: 100%;
+}
+
+header nav a {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    padding: 0 8px;
 }
 
 @media (min-width: 968px) {
     header {
         height: 80px;
-        padding: 0px 32px;
     }
 
     header .logo {
