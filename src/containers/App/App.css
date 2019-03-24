@@ -1,6 +1,6 @@
 .app {
-  align-items: center;
-  background-image: url("/assets/images/20190112-sandia-mountains.jpg");
+  align-items: flex-start;
+  background-image: url("/assets/images/ThisChristography-20190323-001.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -14,5 +14,10 @@
 
 .app img {
   max-width: 100%;
-  margin-top: 25vh;
+}
+
+@media (min-width: 768px) {
+  .app {
+    background-image: url("/assets/images/ThisChristography-20190323-002.jpg");
+  }
 }

@@ -6,7 +6,27 @@
 }
 
 body {
+    font-family: open-sans, sans-serif;
     margin: 0;
     padding: 0;
     width: 100%;
+}
+
+a,
+a:visited,
+a:active {
+    color: inherit;
+    cursor: pointer;
+    text-decoration: none;
+    border-bottom-width: 1px;
+    border-bottom-style: dotted;
+    border-bottom-color: transparent;
+}
+
+a:hover {
+    border-bottom-color: rgba(0, 0, 0, 0.12);
+}
+
+main {
+    background-color: #eff9ff;
 }
