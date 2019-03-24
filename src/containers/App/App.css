@@ -1,4 +1,4 @@
-.app {
+.splash {
   align-items: flex-start;
   background-image: url("/assets/images/ThisChristography-20190323-001.jpg");
   background-position: center;
@@ -16,8 +16,21 @@
   max-width: 100%;
 }
 
+.app a.image {
+  border: none;
+  width: 100%;
+}
+
+.app a.image img {
+  border-radius: 5px;
+}
+
+.app a.image:hover img {
+  box-shadow: 1px 2px 6px rgba(48, 95, 123, 0.5);
+}
+
 @media (min-width: 768px) {
-  .app {
+  .splash {
     background-image: url("/assets/images/ThisChristography-20190323-002.jpg");
   }
 }
