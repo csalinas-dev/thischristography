@@ -1,7 +1,7 @@
 import * as React from 'react';
 import './Header.css';
 
-class App extends React.Component {
+class Header extends React.Component {
   public render() {
     return (
       <header>
@@ -16,4 +16,4 @@ class App extends React.Component {
   }
 }
 
-export default App;
+export default Header;

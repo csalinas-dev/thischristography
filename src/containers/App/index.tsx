@@ -1,4 +1,5 @@
 import * as React from 'react';
+import Footer from '../../components/Footer/index';
 import Header from '../../components/Header/index';
 import './App.css';
 
@@ -27,6 +28,7 @@ class App extends React.Component {
             </a>
           </section>
         </main>
+        <Footer />
       </div>
     );
   }
