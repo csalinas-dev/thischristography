@@ -15,7 +15,7 @@ class App extends React.Component {
             <h1>Albuquerque Photographer</h1>
             <h4><em>#portraits #weddings #landscapes #automotive #lightpainting</em></h4>
             <p>
-              Christopher Salinas Jr. is a native New Mexican, born and raised in Albuquerque. His photography interests include portraits, weddings, landscapes, automotive, and light painting. He is a software engineer for <a href="https://iteamnm.com/" target="_blank">iTEAM Consulting</a>, and is available for sessions on weekday evenings (after 5:30pm) and weekends. You may contact Chris via email at:
+              Christopher Salinas Jr. is a native New Mexican, born and raised in Albuquerque. His photography interests include portraits, weddings, landscapes, automotive, and light painting. He is a software engineer in Albuquerque, and is available for sessions on weekday evenings (after 5:30pm) and weekends. You may contact Chris via email at:
             </p>
             <h3><a href="mailto:thischristography@gmail.com">thischristography@gmail.com</a></h3>
           </section>
