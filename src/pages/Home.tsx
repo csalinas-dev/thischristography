@@ -1,12 +1,11 @@
 import * as React from 'react';
-import Footer from '../../components/Footer/index';
-import Header from '../../components/Header/index';
-import './App.css';
 
-class App extends React.Component {
+import Header from '../components/Header';
+
+class Home extends React.Component {
   public render() {
     return (
-      <div className="app">
+      <div className="home">
         <div className="splash">
           <img src="/assets/logos/logo-white.png" />
         </div>
@@ -28,10 +27,9 @@ class App extends React.Component {
             </a>
           </section>
         </main>
-        <Footer />
       </div>
     );
   }
 }
 
-export default App;
+export default Home;
