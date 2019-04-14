@@ -1,16 +1,19 @@
 import * as React from 'react';
-import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
-import Footer from '../components/Footer';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Footer from './Footer';
+
+// Pages
 import Home from '../pages/Home';
 import NotFound from '../pages/NotFound';
-import './App.css';
+import Rates from '../pages/Rates';
 
-class App extends React.Component {
+class Routes extends React.Component {
   public render() {
     return (
       <Router>
         <Switch>
           <Route path="/" exact={true} component={Home} />
+          <Route path="/rates" component={Rates} />
           <Route component={NotFound} />
         </Switch>
         <Footer />
@@ -19,4 +22,4 @@ class App extends React.Component {
   }
 }
 
-export default App;
+export default Routes;
