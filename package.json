@@ -15,7 +15,7 @@
     "build": "react-scripts-ts build",
     "test": "react-scripts-ts test --env=jsdom",
     "eject": "react-scripts-ts eject",
-    "deploy": "gh-pages -d build -b master"
+    "deploy": "yarn build && gh-pages -d build -b master"
   },
   "devDependencies": {
     "@types/jest": "^24.0.9",
