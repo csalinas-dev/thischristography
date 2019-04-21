@@ -5,7 +5,7 @@ import Footer from './Footer';
 // Pages
 import Home from '../pages/Home';
 import NotFound from '../pages/NotFound';
-import Rates from '../pages/Rates';
+import Services from '../pages/Services';
 
 class Routes extends React.Component {
   public render() {
@@ -13,7 +13,7 @@ class Routes extends React.Component {
       <Router>
         <Switch>
           <Route path="/" exact={true} component={Home} />
-          <Route path="/rates" component={Rates} />
+          <Route path="/services" component={Services} />
           <Route component={NotFound} />
         </Switch>
         <Footer />
