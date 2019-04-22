@@ -51,7 +51,7 @@ section h1 {
 }
 
 section + section {
-    border-top: 1px solid #305f7b;
+    border-top: 1px solid #aacce0;
 }
 
 /* Container */

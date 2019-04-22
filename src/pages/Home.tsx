@@ -1,6 +1,9 @@
+import { shuffle } from 'lodash';
 import * as React from 'react';
+import Gallery from 'react-photo-gallery';
 
 import Header from '../components/Header';
+import photos from './Gallery';
 import './Home.css';
 
 class Home extends React.Component {
@@ -14,11 +17,14 @@ class Home extends React.Component {
         <main>
           <section className="container">
             <h1>This Christography</h1>
-            <h4><em>#portraits #weddings #landscapes #automotive #lightpainting</em></h4>
+            <h4><em>#portraits #weddings #landscapes #automotive #lightpainting #realestate</em></h4>
             <p>
               Chris Salinas Jr. is an Albuquerque photographer, specializing in portraits, weddings, landscapes, automotive, and light painting. He is a native New Mexican, born and raised in Albuquerque. During the day, he is a softare engineer for a local IT company, but he is available for sessions on the weekends and on weekday evenings (after 5:30pm). You may contact Chris via email at:
             </p>
             <h3><a href="mailto:thischristography@gmail.com">thischristography@gmail.com</a></h3>
+          </section>
+          <section className="container">
+            <Gallery photos={shuffle(photos)} direction={"column"} />
           </section>
         </main>
       </div>
