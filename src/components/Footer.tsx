@@ -13,6 +13,7 @@ class Footer extends React.Component {
               <img src="/assets/logos/logo.png" alt="This Christography Logo" className="d-none d-md-inline-block align-top" height="54" />
             </Link>
             <Link className="nav-link" to="/rates">Rates</Link>
+            <Link className="nav-link" to="/delivery-options">Delivery</Link>
           </nav>
           <small><i className="far fa-copyright" /> 2019 This Christography. All Rights Reserved.</small>
         </div>

@@ -3,9 +3,14 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Footer from './Footer';
 
 // Pages
-import Home from '../pages/Home';
-import NotFound from '../pages/NotFound';
-import Services from '../pages/Services';
+import Automotive from 'src/pages/Automotive';
+import DeliveryOptions from 'src/pages/DeliveryOptions';
+import Home from 'src/pages/Home';
+import NotFound from 'src/pages/NotFound';
+import Portraits from 'src/pages/Portraits';
+import Rates from 'src/pages/Rates';
+import RealEstate from 'src/pages/RealEstate';
+import Weddings from 'src/pages/Weddings';
 
 class Routes extends React.Component {
   public render() {
@@ -13,7 +18,12 @@ class Routes extends React.Component {
       <Router>
         <Switch>
           <Route path="/" exact={true} component={Home} />
-          <Route path="/services" component={Services} />
+          <Route path="/automotive" component={Automotive} />
+          <Route path="/delivery-options" component={DeliveryOptions} />
+          <Route path="/portraits" component={Portraits} />
+          <Route path="/rates" component={Rates} />
+          <Route path="/real-estate" component={RealEstate} />
+          <Route path="/weddings" component={Weddings} />
           <Route component={NotFound} />
         </Switch>
         <Footer />

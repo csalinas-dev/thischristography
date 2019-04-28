@@ -31,10 +31,10 @@ a:visited,
 a:active {
   color: inherit;
   cursor: pointer;
-  text-decoration: none;
+  text-decoration: none !important;
   border-bottom-width: 1px;
   border-bottom-style: dotted;
-  border-bottom-color: rgba($primary, 0.12);
+  border-bottom-color: rgba($primary, 0.25);
 
   &:hover {
     border-bottom-style: solid;
@@ -67,4 +67,9 @@ section {
 p {
   font-size: 1.2em;
   line-height: 1.5em;
+}
+
+/* Images */
+img {
+  max-width: 100%;
 }

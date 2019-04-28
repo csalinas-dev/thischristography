@@ -25,7 +25,7 @@ class Home extends React.Component {
             <div className="row">
               <div className="col-sm-6 col-md-4 col-lg-3">
                 <div className="card my-3">
-                  <img src="/assets/gallery/ThisChristography-20190323-003.jpg" className="card-img-top" alt="Renee's Portrait" />
+                  <img src="/assets/gallery/portraits/ThisChristography-20190323-003.jpg" className="card-img-top" alt="Renee's Portrait" />
                   <div className="card-body text-center">
                     <h4>Portraits</h4>
                     <p className="mb-0">$100/hr</p>
@@ -37,7 +37,7 @@ class Home extends React.Component {
               </div>
               <div className="col-sm-6 col-md-4 col-lg-3">
                 <div className="card my-3">
-                  <img src="/assets/gallery/ThisChristography-20190316-021.jpg" className="card-img-top" alt="Alex and Serina's Engagement Picture" />
+                  <img src="/assets/gallery/weddings/ThisChristography-20190316-021.jpg" className="card-img-top" alt="Alex and Serina's Engagement Picture" />
                   <div className="card-body text-center">
                     <h4>Weddings</h4>
                     <p className="mb-0">$100/hr</p>
@@ -49,7 +49,7 @@ class Home extends React.Component {
               </div>
               <div className="col-sm-6 col-md-4 col-lg-3">
                 <div className="card my-3">
-                  <img src="/assets/gallery/ThisChristography-20190416-001.jpg" className="card-img-top" alt="Mustang" />
+                  <img src="/assets/gallery/automotive/ThisChristography-20190416-001.jpg" className="card-img-top" alt="Mustang" />
                   <div className="card-body text-center">
                     <h4>Automotive</h4>
                     <p className="mb-0">$100/hr</p>
@@ -61,7 +61,7 @@ class Home extends React.Component {
               </div>
               <div className="col-sm-6 col-md-4 col-lg-3">
                 <div className="card my-3">
-                  <img src="/assets/gallery/ThisChristography-20190421-003.jpg" className="card-img-top" alt="Mustang" />
+                  <img src="/assets/gallery/real-estate/ThisChristography-20190421-003.jpg" className="card-img-top" alt="Mustang" />
                   <div className="card-body text-center">
                     <h4>Real Estate</h4>
                     <p className="mb-0">$200/property</p>
