@@ -1,6 +1,5 @@
 import * as React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Footer from './Footer';
 
 // Pages
 import Automotive from 'src/pages/Automotive';
@@ -12,20 +11,26 @@ import Rates from 'src/pages/Rates';
 import RealEstate from 'src/pages/RealEstate';
 import Weddings from 'src/pages/Weddings';
 
+// Components
+import Footer from './Footer';
+import ScrollToTop from './ScrollToTop';
+
 class Routes extends React.Component {
   public render() {
     return (
       <Router>
-        <Switch>
-          <Route path="/" exact={true} component={Home} />
-          <Route path="/automotive" component={Automotive} />
-          <Route path="/delivery-options" component={DeliveryOptions} />
-          <Route path="/portraits" component={Portraits} />
-          <Route path="/rates" component={Rates} />
-          <Route path="/real-estate" component={RealEstate} />
-          <Route path="/weddings" component={Weddings} />
-          <Route component={NotFound} />
-        </Switch>
+        <ScrollToTop>
+          <Switch>
+            <Route path="/" exact={true} component={Home} />
+            <Route path="/automotive" component={Automotive} />
+            <Route path="/delivery-options" component={DeliveryOptions} />
+            <Route path="/portraits" component={Portraits} />
+            <Route path="/rates" component={Rates} />
+            <Route path="/real-estate" component={RealEstate} />
+            <Route path="/weddings" component={Weddings} />
+            <Route component={NotFound} />
+          </Switch>
+        </ScrollToTop>
         <Footer />
       </Router>
     );
