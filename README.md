@@ -8,6 +8,7 @@ To develop in this project:
 2. Ensure you are on the `source` branch
 3. Install dependencies using `yarn`
 4. Run the development instance by `yarn start`
+5. Open a second terminal and run `yarn watch-css`
 
 ## Production
 To create a production build, run `yarn build`. To deploy the newly created production build, run `yarn deploy`.
