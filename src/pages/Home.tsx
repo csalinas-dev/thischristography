@@ -1,9 +1,7 @@
-import { shuffle } from 'lodash';
 import * as React from 'react';
-import Gallery from 'react-photo-gallery';
+import { Link } from 'react-router-dom';
 
 import Header from '../components/Header';
-import photos from './Gallery';
 import './Home.css';
 
 class Home extends React.Component {
@@ -17,14 +15,63 @@ class Home extends React.Component {
         <main>
           <section className="container">
             <h1>This Christography</h1>
-            <h4><em>#portraits #weddings #landscapes #automotive #lightpainting #realestate</em></h4>
             <p>
               Chris Salinas Jr. is an Albuquerque photographer, specializing in portraits, weddings, landscapes, automotive, and light painting. He is a native New Mexican, born and raised in Albuquerque. During the day, he is a softare engineer for a local IT company, but he is available for sessions on the weekends and on weekday evenings (after 5:30pm). You may contact Chris via email at:
             </p>
             <h3><a href="mailto:thischristography@gmail.com">thischristography@gmail.com</a></h3>
           </section>
           <section className="container">
-            <Gallery photos={shuffle(photos)} direction={"column"} />
+            <h1>Services</h1>
+            <div className="row">
+              <div className="col-sm-6 col-md-4 col-lg-3">
+                <div className="card my-3">
+                  <img src="/assets/gallery/ThisChristography-20190323-003.jpg" className="card-img-top" alt="Renee's Portrait" />
+                  <div className="card-body text-center">
+                    <h4>Portraits</h4>
+                    <p className="mb-0">$100/hr</p>
+                  </div>
+                  <div className="card-footer text-center">
+                    <Link className="btn btn-outline-primary" to="/portraits">Learn more</Link>
+                  </div>
+                </div>
+              </div>
+              <div className="col-sm-6 col-md-4 col-lg-3">
+                <div className="card my-3">
+                  <img src="/assets/gallery/ThisChristography-20190316-021.jpg" className="card-img-top" alt="Alex and Serina's Engagement Picture" />
+                  <div className="card-body text-center">
+                    <h4>Weddings</h4>
+                    <p className="mb-0">$100/hr</p>
+                  </div>
+                  <div className="card-footer text-center">
+                    <Link className="btn btn-outline-primary" to="/weddings">Learn more</Link>
+                  </div>
+                </div>
+              </div>
+              <div className="col-sm-6 col-md-4 col-lg-3">
+                <div className="card my-3">
+                  <img src="/assets/gallery/ThisChristography-20190416-001.jpg" className="card-img-top" alt="Mustang" />
+                  <div className="card-body text-center">
+                    <h4>Automotive</h4>
+                    <p className="mb-0">$100/hr</p>
+                  </div>
+                  <div className="card-footer text-center">
+                    <Link className="btn btn-outline-primary" to="/automotive">Learn more</Link>
+                  </div>
+                </div>
+              </div>
+              <div className="col-sm-6 col-md-4 col-lg-3">
+                <div className="card my-3">
+                  <img src="/assets/gallery/ThisChristography-20190421-003.jpg" className="card-img-top" alt="Mustang" />
+                  <div className="card-body text-center">
+                    <h4>Real Estate</h4>
+                    <p className="mb-0">$200/property</p>
+                  </div>
+                  <div className="card-footer text-center">
+                    <Link className="btn btn-outline-primary" to="/real-estate">Learn more</Link>
+                  </div>
+                </div>
+              </div>
+            </div>
           </section>
         </main>
       </div>
