@@ -4,60 +4,67 @@
 *,
 *:before,
 *:after {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: open-sans, sans-serif;
-    margin: 0;
-    padding: 0;
-    width: 100%;
+  font-family: open-sans, sans-serif;
+  margin: 0;
+  padding: 0;
+  width: 100%;
 }
 
 /* Headings */
-h1, h2, h3, h4, h5, h6 {
-    font-family: house-slant, sans-serif;
-    font-weight: 300;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: house-slant, sans-serif;
+  font-weight: 300;
 }
 
 /* Links */
 a,
 a:visited,
 a:active {
-    color: inherit;
-    cursor: pointer;
-    text-decoration: none;
-    border-bottom-width: 1px;
-    border-bottom-style: dotted;
-    border-bottom-color: rgba(0, 0, 0, 0.12);
+  color: inherit;
+  cursor: pointer;
+  text-decoration: none;
+  border-bottom-width: 1px;
+  border-bottom-style: dotted;
+  border-bottom-color: rgba(0, 0, 0, 0.12);
+
+  &:hover {
+    border-bottom-style: solid;
+  }
 }
 
-a:hover {
-    border-bottom-style: solid;
+nav {
+  a {
+    border: none !important;
+  }
 }
 
 /* Main */
 main {
-    background-color: $body-bg;
-    color: $primary;
+  background-color: $body-bg;
+  color: $primary;
 }
 
 /* Sections */
 section {
-    padding-bottom: 128px;
-    padding-top: 128px;
-}
+  padding-bottom: 128px;
+  padding-top: 128px;
 
-section h1 {
-    font-size: 3em;
-}
-
-section + section {
-    border-top: 1px solid #aacce0;
+  & + & {
+    border-top: 1px solid $hr-color;
+  }
 }
 
 /* Paragraphs */
 p {
-    font-size: 1.2em;
-    line-height: 1.5em;
+  font-size: 1.2em;
+  line-height: 1.5em;
 }
