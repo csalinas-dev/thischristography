@@ -1,6 +1,5 @@
 import * as React from 'react';
 import Gallery from 'react-photo-gallery';
-import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import { portraits } from './Galleries';
 
