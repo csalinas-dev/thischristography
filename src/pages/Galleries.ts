@@ -150,7 +150,7 @@ export const landscapes = shuffle([
 export const realEstate = shuffle([
   {
     "height": 5,
-    "src": "/assets/gallery/real-estate/ThisChristography-20190421-003.jpg.jpg",
+    "src": "/assets/gallery/real-estate/ThisChristography-20190421-003.jpg",
     "width": 4
   },
 ]);
