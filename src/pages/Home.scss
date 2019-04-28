@@ -17,21 +17,4 @@
     }
     
   }
-
-  img {
-    max-width: 100%;
-  }
-
-  a.image {
-    border: none;
-    width: 100%;
-
-    &:hover img {
-      box-shadow: 1px 2px 6px rgba(48, 95, 123, 0.5);
-    }
-
-    img {
-      border-radius: 5px;
-    }
-  }
 }

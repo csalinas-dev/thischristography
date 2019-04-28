@@ -18,7 +18,7 @@ class Home extends React.Component {
             <p>
               Chris Salinas Jr. is an Albuquerque photographer, specializing in portraits, weddings, landscapes, automotive, and light painting. He is a native New Mexican, born and raised in Albuquerque. During the day, he is a softare engineer for a local IT company, but he is available for sessions on the weekends and on weekday evenings (after 5:30pm). You may contact Chris via email at:
             </p>
-            <h3><a href="mailto:thischristography@gmail.com">thischristography@gmail.com</a></h3>
+            <a className="btn btn-outline-primary" href="mailto:thischristography@gmail.com"><h4>thischristography@gmail.com</h4></a>
           </section>
           <section className="container">
             <h1>Services</h1>

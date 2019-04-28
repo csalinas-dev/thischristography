@@ -34,7 +34,7 @@ a:active {
   text-decoration: none;
   border-bottom-width: 1px;
   border-bottom-style: dotted;
-  border-bottom-color: rgba(0, 0, 0, 0.12);
+  border-bottom-color: rgba($primary, 0.12);
 
   &:hover {
     border-bottom-style: solid;
@@ -49,7 +49,7 @@ nav {
 
 /* Main */
 main {
-  background-color: $body-bg;
+  background-color: $main-bg;
   color: $primary;
 }
 
