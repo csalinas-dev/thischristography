@@ -1,6 +1,6 @@
 import * as React from 'react';
-import Gallery from 'react-photo-gallery';
-import Header from '../components/Header';
+import Gallery from 'src/components/Gallery';
+import Header from 'src/components/Header';
 import { weddings } from './Galleries';
 
 class Weddings extends React.Component {
@@ -28,7 +28,7 @@ class Weddings extends React.Component {
           </section>
           <section className="container">
             <h1>Gallery</h1>
-            <Gallery photos={weddings} direction={"column"} />
+            <Gallery photos={weddings} />
           </section>
         </main>
       </div>

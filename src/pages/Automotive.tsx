@@ -1,6 +1,6 @@
 import * as React from 'react';
-import Gallery from 'react-photo-gallery';
-import Header from '../components/Header';
+import Gallery from 'src/components/Gallery';
+import Header from 'src/components/Header';
 import { automotive } from './Galleries';
 
 class Automotive extends React.Component {
@@ -23,7 +23,7 @@ class Automotive extends React.Component {
           </section>
           <section className="container">
             <h1>Gallery</h1>
-            <Gallery photos={automotive} direction={"column"} />
+            <Gallery photos={automotive} />
           </section>
         </main>
       </div>

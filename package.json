@@ -5,11 +5,13 @@
   "homepage": "https://thischristography.com",
   "dependencies": {
     "@types/lodash": "^4.14.123",
+    "@types/react-images": "^0.5.1",
     "@types/react-router-dom": "^4.3.2",
     "bootstrap": "^4.3.1",
     "lodash": "^4.17.11",
     "react": "^16.8.3",
     "react-dom": "^16.8.3",
+    "react-images": "^0.5.19",
     "react-photo-gallery": "^7.0.2",
     "react-router-dom": "^5.0.0",
     "react-scripts-ts": "3.1.0"

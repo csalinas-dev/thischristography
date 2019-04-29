@@ -1,4 +1,4 @@
-import {shuffle} from 'lodash';
+import { shuffle } from 'lodash';
 
 export const portraits = shuffle([
   {
@@ -74,6 +74,31 @@ export const portraits = shuffle([
   {
     "height": 5,
     "src": "/assets/gallery/portraits/ThisChristography-20190323-003.jpg",
+    "width": 4
+  },
+  {
+    "height": 5,
+    "src": "/assets/gallery/portraits/ThisChristography-20190427-003.jpg",
+    "width": 4
+  },
+  {
+    "height": 5,
+    "src": "/assets/gallery/portraits/ThisChristography-20190427-022.jpg",
+    "width": 4
+  },
+  {
+    "height": 5,
+    "src": "/assets/gallery/portraits/ThisChristography-20190427-027.jpg",
+    "width": 4
+  },
+  {
+    "height": 5,
+    "src": "/assets/gallery/portraits/ThisChristography-20190427-037.jpg",
+    "width": 4
+  },
+  {
+    "height": 5,
+    "src": "/assets/gallery/portraits/ThisChristography-20190427-051.jpg",
     "width": 4
   },
 ]);
