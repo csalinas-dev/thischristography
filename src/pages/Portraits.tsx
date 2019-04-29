@@ -31,7 +31,7 @@ class Portraits extends React.Component {
                 <h1>Smoke Bombs</h1>
                 <h3>$20 each</h3>
                 <p>Enhance your photos with an artistic smoke bomb. These colored smoke bombs give you approximately 90 seconds of smoke.</p>
-                <p>In order to have smoke bomb portraits taken, the photographer <strong>MUST</strong> be notified <em>at least one week in advance</em>. The offered colors include: Black, Blue, Green, Orange, Pink, Purple, Red, White, and Yellow.</p>
+                <p>In order to have smoke bomb portraits taken, the photographer <strong>MUST</strong> be requested <em>at least one week in advance</em>. The offered colors include: Black, Blue, Green, Orange, Pink, Purple, Red, White, and Yellow.</p>
                 <p><small>* A refund will be given for this item if weather or location does not permit the use of smoke bombs.</small></p>
               </div>
             </div>
