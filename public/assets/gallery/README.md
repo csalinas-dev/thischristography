@@ -2,6 +2,6 @@
 ```
 Ratio (h:w)     Image Size
 ---             ---
-5:4             500px:400px
-4:6             400px:600px
+5:4             1000px:800px
+4:6             800px:1200px
 ```
