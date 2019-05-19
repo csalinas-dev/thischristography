@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Gallery from 'src/components/Gallery';
 import Header from 'src/components/Header';
-import { portraits } from './Galleries';
+import { portraits } from '../data/Galleries';
 
 class Portraits extends React.Component {
   public render() {

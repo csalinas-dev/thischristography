@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Gallery from 'src/components/Gallery';
 import Header from 'src/components/Header';
-import { automotive } from './Galleries';
+import { automotive } from '../data/Galleries';
 
 class Automotive extends React.Component {
   public render() {
