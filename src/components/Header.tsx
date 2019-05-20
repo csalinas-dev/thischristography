@@ -29,6 +29,7 @@ class Header extends React.Component {
                 <Link className="nav-item nav-link" to="/weddings">Weddings</Link>
                 <Link className="nav-item nav-link" to="/automotive">Auto</Link>
                 <Link className="nav-item nav-link" to="/real-estate">Real Estate</Link>
+                <Link className="nav-item nav-link" to="/galleries">Galleries</Link>
                 <span className="flex-grow-1" />
                 <span className="social">
                   <a className="nav-item nav-link" href="https://instagram.com/ThisChristography" target="_blank"><i className="fab fa-instagram" /></a>

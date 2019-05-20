@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Gallery from 'src/components/Gallery';
 import Header from 'src/components/Header';
-import { weddings } from '../data/Galleries';
+import { weddings } from '../data/Photos';
 
 class Weddings extends React.Component {
   public render() {

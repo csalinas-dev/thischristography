@@ -4,6 +4,8 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 // Pages
 import Automotive from 'src/pages/Automotive';
 import DeliveryOptions from 'src/pages/DeliveryOptions';
+import Album from 'src/pages/Galleries/Album';
+import Galleries from 'src/pages/Galleries/index';
 import Home from 'src/pages/Home';
 import NotFound from 'src/pages/NotFound';
 import Portraits from 'src/pages/Portraits';
@@ -28,6 +30,8 @@ class Routes extends React.Component {
             <Route path="/rates" component={Rates} />
             <Route path="/real-estate" component={RealEstate} />
             <Route path="/weddings" component={Weddings} />
+            <Route path="/galleries" exact={true} component={Galleries} />
+            <Route path="/galleries/:album" component={Album} />
             <Route component={NotFound} />
           </Switch>
         </ScrollToTop>

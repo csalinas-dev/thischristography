@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Gallery from 'src/components/Gallery';
 import Header from 'src/components/Header';
-import { realEstate } from '../data/Galleries';
+import { realEstate } from '../data/Photos';
 
 class RealEstate extends React.Component {
   public render() {

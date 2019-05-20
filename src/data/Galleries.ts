@@ -1,196 +1,55 @@
 import { shuffle } from 'lodash';
 
-export const portraits = shuffle([
-  {
-    "height": 5,
-    "src": "/assets/gallery/portraits/ThisChristography-20181130-001.jpg",
-    "width": 4
-  },
-  {
-    "height": 5,
-    "src": "/assets/gallery/portraits/ThisChristography-20190215-009.jpg",
-    "width": 4
-  },
-  {
-    "height": 5,
-    "src": "/assets/gallery/portraits/ThisChristography-20190309-002.jpg",
-    "width": 4
-  },
-  {
-    "height": 5,
-    "src": "/assets/gallery/portraits/ThisChristography-20190309-004.jpg",
-    "width": 4
-  },
-  {
-    "height": 5,
-    "src": "/assets/gallery/portraits/ThisChristography-20190309-009.jpg",
-    "width": 4
-  },
-  {
-    "height": 5,
-    "src": "/assets/gallery/portraits/ThisChristography-20190309-013.jpg",
-    "width": 4
-  },
-  {
-    "height": 5,
-    "src": "/assets/gallery/portraits/ThisChristography-20190319-001.jpg",
-    "width": 4
-  },
-  {
-    "height": 5,
-    "src": "/assets/gallery/portraits/ThisChristography-20190319-002.jpg",
-    "width": 4
-  },
-  {
-    "height": 5,
-    "src": "/assets/gallery/portraits/ThisChristography-20190319-003.jpg",
-    "width": 4
-  },
-  {
-    "height": 2,
-    "src": "/assets/gallery/portraits/ThisChristography-20190319-004.jpg",
-    "width": 3
-  },
-  {
-    "height": 5,
-    "src": "/assets/gallery/portraits/ThisChristography-20190319-014.jpg",
-    "width": 4
-  },
-  {
-    "height": 5,
-    "src": "/assets/gallery/portraits/ThisChristography-20190319-029.jpg",
-    "width": 4
-  },
-  {
-    "height": 5,
-    "src": "/assets/gallery/portraits/ThisChristography-20190319-031.jpg",
-    "width": 4
-  },
-  {
-    "height": 5,
-    "src": "/assets/gallery/portraits/ThisChristography-20190323-002.jpg",
-    "width": 4
-  },
-  {
-    "height": 5,
-    "src": "/assets/gallery/portraits/ThisChristography-20190323-003.jpg",
-    "width": 4
-  },
-  {
-    "height": 5,
-    "src": "/assets/gallery/portraits/ThisChristography-20190427-003.jpg",
-    "width": 4
-  },
-  {
-    "height": 5,
-    "src": "/assets/gallery/portraits/ThisChristography-20190427-022.jpg",
-    "width": 4
-  },
-  {
-    "height": 5,
-    "src": "/assets/gallery/portraits/ThisChristography-20190427-027.jpg",
-    "width": 4
-  },
-  {
-    "height": 5,
-    "src": "/assets/gallery/portraits/ThisChristography-20190427-037.jpg",
-    "width": 4
-  },
-  {
-    "height": 5,
-    "src": "/assets/gallery/portraits/ThisChristography-20190427-051.jpg",
-    "width": 4
-  },
+const thunderbirds = shuffle([
+  { "height": 2, "width": 3, "src": "/assets/galleries/20190518/ThisChristography-20190518-001.jpg" },
+  { "height": 5, "width": 4, "src": "/assets/galleries/20190518/ThisChristography-20190518-002.jpg" },
+  { "height": 5, "width": 4, "src": "/assets/galleries/20190518/ThisChristography-20190518-003.jpg" },
+  { "height": 5, "width": 4, "src": "/assets/galleries/20190518/ThisChristography-20190518-004.jpg" },
+  { "height": 5, "width": 4, "src": "/assets/galleries/20190518/ThisChristography-20190518-005.jpg" },
+  { "height": 2, "width": 3, "src": "/assets/galleries/20190518/ThisChristography-20190518-006.jpg" },
+  { "height": 2, "width": 3, "src": "/assets/galleries/20190518/ThisChristography-20190518-007.jpg" },
+  { "height": 5, "width": 4, "src": "/assets/galleries/20190518/ThisChristography-20190518-008.jpg" },
+  { "height": 2, "width": 3, "src": "/assets/galleries/20190518/ThisChristography-20190518-009.jpg" },
+  { "height": 2, "width": 3, "src": "/assets/galleries/20190518/ThisChristography-20190518-010.jpg" },
+  { "height": 5, "width": 4, "src": "/assets/galleries/20190518/ThisChristography-20190518-011.jpg" },
+  { "height": 2, "width": 3, "src": "/assets/galleries/20190518/ThisChristography-20190518-012.jpg" },
+  { "height": 5, "width": 4, "src": "/assets/galleries/20190518/ThisChristography-20190518-013.jpg" },
+  { "height": 5, "width": 4, "src": "/assets/galleries/20190518/ThisChristography-20190518-014.jpg" },
+  { "height": 5, "width": 4, "src": "/assets/galleries/20190518/ThisChristography-20190518-015.jpg" },
+  { "height": 5, "width": 4, "src": "/assets/galleries/20190518/ThisChristography-20190518-016.jpg" },
+  { "height": 5, "width": 4, "src": "/assets/galleries/20190518/ThisChristography-20190518-017.jpg" },
+  { "height": 2, "width": 3, "src": "/assets/galleries/20190518/ThisChristography-20190518-018.jpg" },
+  { "height": 5, "width": 4, "src": "/assets/galleries/20190518/ThisChristography-20190518-019.jpg" },
+  { "height": 5, "width": 4, "src": "/assets/galleries/20190518/ThisChristography-20190518-020.jpg" },
+  { "height": 5, "width": 4, "src": "/assets/galleries/20190518/ThisChristography-20190518-021.jpg" },
+  { "height": 5, "width": 4, "src": "/assets/galleries/20190518/ThisChristography-20190518-022.jpg" },
+  { "height": 5, "width": 4, "src": "/assets/galleries/20190518/ThisChristography-20190518-023.jpg" },
+  { "height": 5, "width": 4, "src": "/assets/galleries/20190518/ThisChristography-20190518-024.jpg" },
+  { "height": 5, "width": 4, "src": "/assets/galleries/20190518/ThisChristography-20190518-025.jpg" },
+  { "height": 5, "width": 4, "src": "/assets/galleries/20190518/ThisChristography-20190518-026.jpg" },
+  { "height": 5, "width": 4, "src": "/assets/galleries/20190518/ThisChristography-20190518-027.jpg" },
+  { "height": 2, "width": 3, "src": "/assets/galleries/20190518/ThisChristography-20190518-028.jpg" },
+  { "height": 2, "width": 3, "src": "/assets/galleries/20190518/ThisChristography-20190518-029.jpg" },
+  { "height": 5, "width": 4, "src": "/assets/galleries/20190518/ThisChristography-20190518-030.jpg" },
+  { "height": 5, "width": 4, "src": "/assets/galleries/20190518/ThisChristography-20190518-031.jpg" },
+  { "height": 5, "width": 4, "src": "/assets/galleries/20190518/ThisChristography-20190518-032.jpg" },
+  { "height": 5, "width": 4, "src": "/assets/galleries/20190518/ThisChristography-20190518-033.jpg" },
+  { "height": 5, "width": 4, "src": "/assets/galleries/20190518/ThisChristography-20190518-034.jpg" },
+  { "height": 5, "width": 4, "src": "/assets/galleries/20190518/ThisChristography-20190518-035.jpg" },
+  { "height": 5, "width": 4, "src": "/assets/galleries/20190518/ThisChristography-20190518-036.jpg" },
+  { "height": 5, "width": 4, "src": "/assets/galleries/20190518/ThisChristography-20190518-037.jpg" },
+  { "height": 2, "width": 3, "src": "/assets/galleries/20190518/ThisChristography-20190518-038.jpg" },
+  { "height": 5, "width": 4, "src": "/assets/galleries/20190518/ThisChristography-20190518-039.jpg" },
+  { "height": 5, "width": 4, "src": "/assets/galleries/20190518/ThisChristography-20190518-040.jpg" },
+  { "height": 2, "width": 3, "src": "/assets/galleries/20190518/ThisChristography-20190518-041.jpg" },
+  { "height": 5, "width": 4, "src": "/assets/galleries/20190518/ThisChristography-20190518-042.jpg" },
+  { "height": 5, "width": 4, "src": "/assets/galleries/20190518/ThisChristography-20190518-043.jpg" },
+  { "height": 2, "width": 3, "src": "/assets/galleries/20190518/ThisChristography-20190518-044.jpg" },
+  { "height": 5, "width": 4, "src": "/assets/galleries/20190518/ThisChristography-20190518-045.jpg" },
 ]);
 
-export const weddings = shuffle([
-  {
-    "height": 2,
-    "src": "/assets/gallery/weddings/ThisChristography-20190316-011.jpg",
-    "width": 3
-  },
-  {
-    "height": 5,
-    "src": "/assets/gallery/weddings/ThisChristography-20190316-021.jpg",
-    "width": 4
-  },
-  {
-    "height": 2,
-    "src": "/assets/gallery/weddings/ThisChristography-20190316-026.jpg",
-    "width": 3
-  },
-]);
 
-export const automotive = shuffle([
-  {
-    "height": 5,
-    "src": "/assets/gallery/automotive/ThisChristography-20180527-002.jpg",
-    "width": 4
-  },
-  {
-    "height": 2,
-    "src": "/assets/gallery/automotive/ThisChristography-20180714-001.jpg",
-    "width": 3
-  },
-  {
-    "height": 5,
-    "src": "/assets/gallery/automotive/ThisChristography-20190416-001.jpg",
-    "width": 4
-  },
-  {
-    "height": 5,
-    "src": "/assets/gallery/automotive/ThisChristography-20190416-003.jpg",
-    "width": 4
-  },
-  {
-    "height": 5,
-    "src": "/assets/gallery/automotive/ThisChristography-20190416-004.jpg",
-    "width": 4
-  }
-]);
+export default {
+  '20190518': thunderbirds,
+};
 
-export const landscapes = shuffle([
-  {
-    "height": 2,
-    "src": "/assets/gallery/landscapes/ThisChristography-20180622-001.jpg",
-    "width": 3
-  },
-  {
-    "height": 5,
-    "src": "/assets/gallery/landscapes/ThisChristography-20180622-002.jpg",
-    "width": 4
-  },
-  {
-    "height": 2,
-    "src": "/assets/gallery/landscapes/ThisChristography-20190323-014.jpg",
-    "width": 3
-  },
-  {
-    "height": 5,
-    "src": "/assets/gallery/landscapes/ThisChristography-20190414-002.jpg",
-    "width": 4
-  },
-]);
-
-export const realEstate = shuffle([
-  {
-    "height": 2,
-    "src": "/assets/gallery/real-estate/ThisChristography-20190421-001.jpg",
-    "width": 3
-  },
-  {
-    "height": 5,
-    "src": "/assets/gallery/real-estate/ThisChristography-20190421-002.jpg",
-    "width": 4
-  },
-  {
-    "height": 5,
-    "src": "/assets/gallery/real-estate/ThisChristography-20190421-003.jpg",
-    "width": 4
-  },
-  {
-    "height": 2,
-    "src": "/assets/gallery/real-estate/ThisChristography-20190421-004.jpg",
-    "width": 3
-  },
-]);
