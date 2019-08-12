@@ -34,6 +34,7 @@ class Header extends React.Component {
                 <span className="social">
                   <a className="nav-item nav-link" href="https://instagram.com/ThisChristography" target="_blank"><i className="fab fa-instagram" /></a>
                   <a className="nav-item nav-link" href="https://twitter.com/TChristography" target="_blank"><i className="fab fa-twitter" /></a>
+                  <a className="nav-item nav-link" href="https://www.facebook.com/ThisChristography" target="_blank"><i className="fab fa-facebook-f" /></a>
                 </span>
               </div>
             </div>
