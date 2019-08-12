@@ -42,7 +42,7 @@ class Home extends React.Component {
               </div>
               <div className="col-sm-6 col-md-4 col-lg-3">
                 <div className="card my-3">
-                  <img src="/assets/gallery/weddings/ThisChristography-20190316-021.jpg" className="card-img-top" alt="Alex and Serina's Engagement Picture" />
+                  <img src="/assets/gallery/weddings/ThisChristography-20190724-151.jpg" className="card-img-top" alt="Alex and Serina's Engagement Picture" />
                   <div className="card-body text-center">
                     <h4>Weddings</h4>
                     <p className="mb-0">$100/hr</p>
