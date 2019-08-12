@@ -1,0 +1,12 @@
+@import "../variables";
+
+.react-photo-gallery--gallery {
+  img {
+    transition: all ease-in-out 300ms;
+    filter: opacity(0.75);
+
+    &:hover {
+      filter: none;
+    }
+  }
+}

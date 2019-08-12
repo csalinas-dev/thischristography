@@ -1,7 +1,9 @@
 import * as React from 'react';
 import { Link } from 'react-router-dom';
 
-import Header from '../components/Header';
+import Gallery from 'src/components/Gallery';
+import Header from 'src/components/Header';
+import { featured } from 'src/data/Photos';
 import './Home.css';
 
 class Home extends React.Component {
@@ -13,6 +15,9 @@ class Home extends React.Component {
         </div>
         <Header />
         <main>
+          <div>
+            <Gallery photos={featured} />
+          </div>
           <section className="container">
             <h1>This Christography</h1>
             <p>

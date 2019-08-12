@@ -1,6 +1,7 @@
 import * as React from 'react';
 import Lightbox from 'react-images';
 import PhotoGallery from 'react-photo-gallery';
+import './Gallery.css';
 
 interface IGalleryProps {
   photos: any[];
