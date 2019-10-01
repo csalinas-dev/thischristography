@@ -14,7 +14,6 @@ import RealEstate from 'src/pages/RealEstate';
 import Weddings from 'src/pages/Weddings';
 
 // Components
-import Footer from './Footer';
 import ScrollToTop from './ScrollToTop';
 
 class Routes extends React.Component {
@@ -35,7 +34,6 @@ class Routes extends React.Component {
             <Route component={NotFound} />
           </Switch>
         </ScrollToTop>
-        <Footer />
       </Router>
     );
   }

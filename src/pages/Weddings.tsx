@@ -1,4 +1,5 @@
 import * as React from 'react';
+import Footer from 'src/components/Footer';
 import Gallery from 'src/components/Gallery';
 import Header from 'src/components/Header';
 import { weddings } from '../data/Photos';
@@ -31,6 +32,7 @@ class Weddings extends React.Component {
             <Gallery photos={weddings} />
           </section>
         </main>
+        <Footer />
       </div>
     )
   }

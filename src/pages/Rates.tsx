@@ -1,5 +1,6 @@
 import * as React from 'react';
-import Header from '../components/Header';
+import Footer from 'src/components/Footer';
+import Header from 'src/components/Header';
 
 class Rates extends React.Component {
   public render() {
@@ -50,6 +51,7 @@ class Rates extends React.Component {
             </div>
           </section>
         </main>
+        <Footer />
       </div>
     )
   }

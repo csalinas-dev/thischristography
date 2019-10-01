@@ -1,5 +1,6 @@
 import * as React from 'react';
-import Header from '../components/Header';
+import Footer from 'src/components/Footer';
+import Header from 'src/components/Header';
 
 class DeliveryOptions extends React.Component {
   public render() {
@@ -19,6 +20,7 @@ class DeliveryOptions extends React.Component {
             <p>All of the final, branded images will be put onto a USB thumb drive, and delivered to you (either in person or in the mail).</p>
           </section>
         </main>
+        <Footer />
       </div>
     )
   }

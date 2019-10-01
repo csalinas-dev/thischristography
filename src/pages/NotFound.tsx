@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { Link } from 'react-router-dom';
-import Header from '../components/Header';
+import Footer from 'src/components/Footer';
+import Header from 'src/components/Header';
 
 class NotFound extends React.Component {
   public render() {
@@ -14,6 +15,7 @@ class NotFound extends React.Component {
             <Link to="/">Back to Home</Link>
           </section>
         </main>
+        <Footer />
       </div>
     )
   }
