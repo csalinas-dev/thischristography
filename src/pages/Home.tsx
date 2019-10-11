@@ -7,9 +7,9 @@ import './Home.css';
 class Home extends React.Component {
   public render() {
     const images = [
-      '/assets/images/ThisChristography-20190323-002.jpg',
-      '/assets/images/ThisChristography-20190616-002.jpg',
-      '/assets/images/ThisChristography-20190803.jpg',
+      '/assets/images/ThisChristography-20190323.jpg',
+      '/assets/images/ThisChristography-20190616.jpg',
+      '/assets/images/ThisChristography-20190905.jpg',
     ];
     return (
       <div className="home">
