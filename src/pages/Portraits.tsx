@@ -24,20 +24,6 @@ class Portraits extends React.Component {
             </div>
           </section>
           <section className="container">
-            <div className="row">
-              <div className="col-md-4">
-                <img src="/assets/gallery/portraits/ThisChristography-20190319-031.jpg" alt="Smoke Bomb Portrait"/>
-              </div>
-              <div className="col-md-8">
-                <h1>Smoke Bombs</h1>
-                <h3>$20 each</h3>
-                <p>Enhance your photos with an artistic smoke bomb. These colored smoke bombs give you approximately 90 seconds of smoke.</p>
-                <p>In order to have smoke bomb portraits taken, the photographer <strong>MUST</strong> be requested <em>at least one week in advance</em>. The offered colors include: Black, Blue, Green, Orange, Pink, Purple, Red, White, and Yellow.</p>
-                <p><small>* A refund will be given for this item if weather or location does not permit the use of smoke bombs.</small></p>
-              </div>
-            </div>
-          </section>
-          <section className="container">
             <h1>Gallery</h1>
             <Gallery photos={portraits} />
           </section>
