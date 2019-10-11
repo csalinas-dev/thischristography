@@ -19,19 +19,15 @@ class Rates extends React.Component {
                   </tr>
                   <tr>
                     <td>Weddings</td>
-                    <td>$100/hour</td>
+                    <td>$300/hour</td>
                   </tr>
                   <tr>
                     <td>Automotive</td>
-                    <td>$100/hour</td>
+                    <td>$75/hour</td>
                   </tr>
                   <tr>
                     <td>Real Estate</td>
                     <td>$200/property</td>
-                  </tr>
-                  <tr>
-                    <td>Smoke Bomb (add-on)</td>
-                    <td>$20 each</td>
                   </tr>
                   <tr>
                     <td>Travelling Fees</td>

@@ -14,7 +14,7 @@ class Automotive extends React.Component {
             <div className="row">
               <div className="col-md-8">
                 <h1>Automotive</h1>
-                <h3>$100 Per Hour</h3>
+                <h3>$75 Per Hour</h3>
                 <p>You've put a lot of effort into getting your vehicle where it is today. Show the world how far you've come!</p>
               </div>
               <div className="col-md-4">
