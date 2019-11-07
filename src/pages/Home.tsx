@@ -10,6 +10,7 @@ class Home extends React.Component {
       '/assets/images/ThisChristography-20190323.jpg',
       '/assets/images/ThisChristography-20190616.jpg',
       '/assets/images/ThisChristography-20191024.jpg',
+      '/assets/images/ThisChristography-20191106.jpg',
     ];
     return (
       <div className="home">
