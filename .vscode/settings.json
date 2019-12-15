@@ -1,40 +1,41 @@
 {
-    "css.validate": false,
-    "files.associations": {
-      "*.css": "postcss"
-    },
-    "files.eol": "\n",
-    "files.exclude": {
-      "**/.DS_Store": true,
-      "**/.git": true,
-      "jspm_packages": true,
-      "node_modules": true,
-      "tmp": true,
-      ".meteor/local": true
-    },
-    "stylelint.enable": true,
-    "emmet.includeLanguages": {
-      "javascript": "javascriptreact"
-    },
-    "emmet.syntaxProfiles": {
-      "javascript": "jsx"
-    },
-    "editor.detectIndentation": false,
-    "editor.insertSpaces": true,
-    "editor.minimap.enabled": true,
-    "editor.minimap.renderCharacters": false,
-    "editor.renderControlCharacters": true,
-    "editor.renderWhitespace": "all",
-    "editor.rulers": [ 80 ],
-    "editor.tabSize": 2,
-    "editor.wordWrapColumn": 80,
-    "editor.fontFamily": "Fira Code",
-    "editor.fontSize": 14,
-    "editor.fontLigatures": true,
-    "window.zoomLevel": -1,
-    "git.confirmSync": false,
-    "git.autofetch": false,
-    "workbench.colorTheme": "Default Dark+",
-    "workbench.iconTheme": "vs-seti"
-    "terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\cmd.exe"
-  }
+  "css.validate": false,
+  "files.associations": {
+    "*.css": "postcss"
+  },
+  "files.eol": "\n",
+  "files.exclude": {
+    "**/.DS_Store": true,
+    "**/.git": true,
+    "jspm_packages": true,
+    "node_modules": true,
+    "tmp": true,
+    ".meteor/local": true
+  },
+  "stylelint.enable": true,
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  },
+  "emmet.syntaxProfiles": {
+    "javascript": "jsx"
+  },
+  "editor.detectIndentation": false,
+  "editor.insertSpaces": true,
+  "editor.minimap.enabled": true,
+  "editor.minimap.renderCharacters": false,
+  "editor.renderControlCharacters": true,
+  "editor.renderWhitespace": "all",
+  "editor.rulers": [
+    80
+  ],
+  "editor.tabSize": 2,
+  "editor.wordWrapColumn": 80,
+  "editor.fontFamily": "Fira Code",
+  "editor.fontSize": 14,
+  "editor.fontLigatures": true,
+  "window.zoomLevel": -1,
+  "git.confirmSync": false,
+  "git.autofetch": false,
+  "workbench.colorTheme": "Default Dark+",
+  "workbench.iconTheme": "vs-seti"
+}
