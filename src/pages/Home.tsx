@@ -7,10 +7,11 @@ import './Home.css';
 class Home extends React.Component {
   public render() {
     const images = [
-      '/assets/images/ThisChristography-20190323.jpg',
-      '/assets/images/ThisChristography-20190616.jpg',
-      '/assets/images/ThisChristography-20191024.jpg',
-      '/assets/images/ThisChristography-20191106.jpg',
+      '/assets/home/ThisChristography-20190323.jpg',
+      '/assets/home/ThisChristography-20190616.jpg',
+      '/assets/home/ThisChristography-20191024.jpg',
+      '/assets/home/ThisChristography-20191106.jpg',
+      '/assets/home/ThisChristography-20191214.jpg',
     ];
     return (
       <div className="home">
