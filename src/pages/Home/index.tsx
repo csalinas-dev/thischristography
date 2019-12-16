@@ -1,13 +1,13 @@
+import CarouselItem from './CarouselItem';
+import homeImages from 'shared/data/homeImages.json';
 import React from 'react';
+import SocialLink from 'components/SocialLink';
+import socials from 'shared/data/socials.json';
 import { Carousel } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { map } from 'lodash';
-import CarouselItem from './CarouselItem'
-import SocialLink from '../../components/SocialLink';
-import homeImages from '../../shared/data/homeImages.json';
-import socials from '../../shared/data/socials.json';
-
 import './index.scss';
+
 
 const Home: React.FC = () => (
   <div className="home">
@@ -21,10 +21,10 @@ const Home: React.FC = () => (
         alt="This Christography"
       />
       <nav>
-        <Link to="/portraits">Portraits</Link>
-        <Link to="/weddings">Weddings</Link>
-        <Link to="/automotive">Automotive</Link>
-        <Link to="/real-estate">Real Estate</Link>
+        <Link className="nav-link" to="/portraits">Portraits</Link>
+        <Link className="nav-link" to="/weddings">Weddings</Link>
+        <Link className="nav-link" to="/automotive">Automotive</Link>
+        <Link className="nav-link" to="/real-estate">Real Estate</Link>
       </nav>
       <nav className="socials">
         {map(socials, SocialLink)}

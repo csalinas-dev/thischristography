@@ -1,6 +1,6 @@
 import React from 'react';
-import { StaticContext } from 'react-router';
 import { RouteComponentProps, withRouter } from 'react-router-dom';
+import { StaticContext } from 'react-router';
 
 class ScrollToTop extends React.Component<RouteComponentProps<any, StaticContext, any>> {
   public componentDidUpdate(prevProps: RouteComponentProps<any, StaticContext, any>) {

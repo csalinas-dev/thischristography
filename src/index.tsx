@@ -1,13 +1,8 @@
-// Packages
+import * as serviceWorker from './serviceWorker';
 import React from 'react';
 import ReactDOM from 'react-dom';
-
-// App
 import Routes from './components/Routes';
 import './index.scss';
-
-// Utilities
-import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(<Routes />, document.getElementById('root'));
 

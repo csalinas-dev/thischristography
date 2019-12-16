@@ -1,11 +1,15 @@
 import React from 'react';
-import { Social } from '../../shared/models/Social';
+import uuid from 'shared/util/uuid';
+import { Social } from 'shared/models/Social';
 
 const SocialLink: React.FC<Social> = (props: React.PropsWithChildren<Social>) => (
   <a
+    className="nav-link"
+    href={props.url}
+    key={uuid()}
     rel="noopener noreferrer"
     target="_blank"
-    href={props.url}>
+  >
     <i className={`fab ${props.icon}`} />
   </a>
 );
