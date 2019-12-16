@@ -1,21 +1,26 @@
 [
   {
+    "id": "1",
     "name": "Albuquerque in Dry Winter",
     "url": "/assets/home/ThisChristography-20190323.jpg"
   },
   {
+    "id": "2",
     "name": "Albuquerque in Spring",
     "url": "/assets/home/ThisChristography-20190616.jpg"
   },
   {
+    "id": "3",
     "name": "Albuquerque in Autumn",
     "url": "/assets/home/ThisChristography-20191024.jpg"
   },
   {
+    "id": "4",
     "name": "Albuquerque at Night",
     "url": "/assets/home/ThisChristography-20191106.jpg"
   },
   {
+    "id": "5",
     "name": "Albuquerque Sunrise",
     "url": "/assets/home/ThisChristography-20191214.jpg"
   }
