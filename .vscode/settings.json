@@ -7,19 +7,13 @@
   "files.exclude": {
     "**/.DS_Store": true,
     "**/.git": true,
-    "jspm_packages": true,
     "node_modules": true,
     "tmp": true,
-    ".meteor/local": true
-  },
-  "stylelint.enable": true,
-  "emmet.includeLanguages": {
-    "javascript": "javascriptreact"
-  },
-  "emmet.syntaxProfiles": {
-    "javascript": "jsx"
   },
   "editor.detectIndentation": false,
+  "editor.fontFamily": "Fira Code",
+  "editor.fontLigatures": true,
+  "editor.fontSize": 14,
   "editor.insertSpaces": true,
   "editor.minimap.enabled": true,
   "editor.minimap.renderCharacters": false,
@@ -30,12 +24,13 @@
   ],
   "editor.tabSize": 2,
   "editor.wordWrapColumn": 80,
-  "editor.fontFamily": "Fira Code",
-  "editor.fontSize": 14,
-  "editor.fontLigatures": true,
-  "window.zoomLevel": -1,
-  "git.confirmSync": false,
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact",
+    "typescript": "typescriptreact"
+  },
   "git.autofetch": false,
+  "git.confirmSync": false,
+  "window.zoomLevel": -1,
   "workbench.colorTheme": "Default Dark+",
   "workbench.iconTheme": "vs-seti"
 }
