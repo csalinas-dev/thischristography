@@ -17,5 +17,6 @@ jobs:
       - name: Deploy
         uses: Cecilapp/GitHub-Pages-deploy@master
         env: 
+          EMAIL: chrissalinasjr@gmail.com
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BUILD_DIR: build/
