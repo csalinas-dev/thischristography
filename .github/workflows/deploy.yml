@@ -10,12 +10,8 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - name: Install
-        uses: CultureHQ/actions-yarn@master
-        with:
-          args: install
+        run: yarn
       - name: Build & Deploy
-        uses: CultureGQ/actions-yarn@master
-        with:
-          args: deploy
+        run: yarn deploy
         env: 
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
