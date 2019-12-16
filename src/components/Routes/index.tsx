@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 // Pages
 // import Automotive from 'src/pages/Automotive';
 // import DeliveryOptions from 'src/pages/DeliveryOptions';
-import Home from '../pages/Home';
+import Home from '../../pages/Home';
 // import NotFound from 'src/pages/NotFound';
 // import Portraits from 'src/pages/Portraits';
 // import Rates from 'src/pages/Rates';

@@ -12,7 +12,7 @@
     background-image: url("/assets/home/texture.png");
     background-repeat: repeat;
     bottom: 0;
-    content: '';
+    content: "";
     left: 0;
     opacity: 0.5;
     position: absolute;
@@ -60,11 +60,11 @@
       justify-content: center;
       align-items: center;
       width: 100%;
-      
+
       &.socials {
         flex-flow: row nowrap;
 
-        .link {
+        a {
           min-width: 32px;
           min-height: 32px;
         }
@@ -77,24 +77,24 @@
       }
     }
 
-    .link {
+    a {
       align-items: center;
       border-radius: 5px;
       color: white;
       display: flex;
-      font-family: 'Montserrat', open-sans, sans-serif;
+      font-family: "Montserrat", open-sans, sans-serif;
       font-weight: 100;
       justify-content: center;
       letter-spacing: 1px;
-      margin: .25em;
-      padding: .25em .5em;
+      margin: 0.25em;
+      padding: 0.25em 0.5em;
       text-shadow: 1px 1px 2px rgba(#000, 0.5);
       text-transform: uppercase;
       transition: all ease-in-out 0.3s;
 
       @media (min-width: 1024px) {
-        margin: .5em 1em;
-        padding: .5em 1em;
+        margin: 0.5em 1em;
+        padding: 0.5em 1em;
       }
 
       &:hover {

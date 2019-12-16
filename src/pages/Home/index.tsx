@@ -1,7 +1,7 @@
 import React from 'react';
 import { Carousel } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import { map, shuffle } from 'lodash';
+import { map } from 'lodash';
 import CarouselItem from './CarouselItem'
 import SocialLink from '../../components/SocialLink';
 import homeImages from '../../shared/data/homeImages.json';
@@ -12,7 +12,7 @@ import './index.scss';
 const Home: React.FC = () => (
   <div className="home">
     <Carousel controls={false} indicators={false} fade={true}>
-      {map(shuffle(homeImages), CarouselItem)}
+      {map(homeImages, CarouselItem)}
     </Carousel>
     <div className="content">
       <img
@@ -21,10 +21,10 @@ const Home: React.FC = () => (
         alt="This Christography"
       />
       <nav>
-        <Link className="link" to="/portraits">Portraits</Link>
-        <Link className="link" to="/weddings">Weddings</Link>
-        <Link className="link" to="/automotive">Automotive</Link>
-        <Link className="link" to="/real-estate">Real Estate</Link>
+        <Link to="/portraits">Portraits</Link>
+        <Link to="/weddings">Weddings</Link>
+        <Link to="/automotive">Automotive</Link>
+        <Link to="/real-estate">Real Estate</Link>
       </nav>
       <nav className="socials">
         {map(socials, SocialLink)}
