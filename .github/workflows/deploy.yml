@@ -1,0 +1,21 @@
+name: Github Pages
+on:
+  push:
+    branches:
+      - source
+
+jobs:
+  build-deploy:
+    runs-on: [ubuntu-18.04]
+    steps:
+      - uses: actions/checkout@master
+      - name: Install
+        uses: CultureHQ/actions-yarn@master
+        with:
+          args: install
+      - name: Build & Deploy
+        uses: CultureGQ/actions-yarn@master
+        with:
+          args: deploy
+        env: 
+          GITHUB_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
