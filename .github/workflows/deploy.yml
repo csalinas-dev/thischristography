@@ -14,9 +14,9 @@ jobs:
         run: yarn --non-interactive --frozen-lockfile install
       - name: Build
         run: yarn build
-      - name: Deploy
-        uses: Cecilapp/GitHub-Pages-deploy@master
-        env: 
-          EMAIL: chrissalinasjr@gmail.com
-          GH_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-          BUILD_DIR: build/
+      - name: Publish to GitHub Pages
+        uses: tsunematsu21/actions-publish-gh-pages@v1.0.0
+        with:
+          dir: build
+          branch: master
+          token: ${{ secrets.ACCESS_TOKEN }}
