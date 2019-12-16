@@ -8,10 +8,14 @@ jobs:
   build-deploy:
     runs-on: [ubuntu-18.04]
     steps:
-      - uses: actions/checkout@master
+      - name: Checkout
+        uses: actions/checkout@master
       - name: Install
         run: yarn --non-interactive --frozen-lockfile install
-      - name: Build & Deploy
-        run: yarn deploy
+      - name: Build
+        run: yarn build
+      - name: Deploy
+        uses: Cecilapp/GitHub-Pages-deploy@master
         env: 
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BUILD_DIR: build/
