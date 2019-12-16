@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Instagram",
+    "url": "https://instagram.com/ThisChristography",
+    "icon": "fa-instagram"
+  },
+  {
+    "name": "Twitter",
+    "url": "https://twitter.com/TChristography",
+    "icon": "fa-twitter"
+  },
+  {
+    "name": "Facebook",
+    "url": "https://www.facebook.com/ThisChristography",
+    "icon": "fa-facebook-f"
+  },
+  {
+    "name": "500px",
+    "url": "https://500px.com/thischristography",
+    "icon": "fa-500px"
+  }
+]
