@@ -1,6 +1,7 @@
 import Footer from './Footer';
 import Header from './Header';
 import React, { PropsWithChildren } from 'react';
+import './index.scss';
 
 export interface LayoutProps {
   className?: string,

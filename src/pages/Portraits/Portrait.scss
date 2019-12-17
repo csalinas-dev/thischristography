@@ -1,0 +1,19 @@
+@import "../../shared/styles/whiteframes";
+
+.portrait {
+  display: inline-block;
+  margin: 15px 0;
+  width: 100%;
+  
+  img {
+    background-position: center;
+    background-size: cover;
+    border-radius: 5px;
+    box-shadow: $whiteframe-shadow-6dp;
+    display: inline-block;
+    height: 0;
+    overflow: hidden;
+    padding-top: 100%;
+    width: 100%;
+  }
+}

@@ -2,6 +2,7 @@ import Brand from './Brand';
 import React, { FC } from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import './Footer.scss';
 
 const Footer: FC = () => (
   <footer className="py-5">

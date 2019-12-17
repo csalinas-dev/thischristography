@@ -6,7 +6,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 // import DeliveryOptions from 'pages/DeliveryOptions';
 import Home from 'pages/Home';
 import NotFound from 'pages/NotFound';
-// import Portraits from 'pages/Portraits';
+import Portraits from 'pages/Portraits';
 // import Rates from 'pages/Rates';
 // import RealEstate from 'pages/RealEstate';
 // import Weddings from 'pages/Weddings';
@@ -20,9 +20,9 @@ const Routes = () => (
       <Switch>
         <Route path="/" exact={true} component={Home} />
         {/* <Route path="/automotive" component={Automotive} />
-        <Route path="/delivery-options" component={DeliveryOptions} />
+        <Route path="/delivery-options" component={DeliveryOptions} />*/}
         <Route path="/portraits" component={Portraits} />
-        <Route path="/rates" component={Rates} />
+        {/*<Route path="/rates" component={Rates} />
         <Route path="/real-estate" component={RealEstate} />
         <Route path="/weddings" component={Weddings} />*/}
         <Route component={NotFound} />

@@ -1,6 +1,7 @@
-@import './shared/styles/variables';
-@import './shared/styles/navbars';
-@import '~bootstrap/scss/bootstrap';
+@import "./shared/styles/variables";
+@import "./shared/styles/navbars";
+@import "~bootstrap/scss/bootstrap";
+@import "./shared/styles/overrides";
 
 *,
 *:before,
@@ -13,6 +14,17 @@ body {
   margin: 0;
   padding: 0;
   width: 100%;
+}
+
+/* Fonts */
+.font-house {
+  font-family: house-slant, sans-serif !important;
+}
+.font-montserrat {
+  font-family: montserrat, sans-serif !important;
+}
+.font-open-sans {
+  font-family: open-sans, sans-serif !important;
 }
 
 /* Headings */
@@ -44,12 +56,6 @@ a:active {
   nav & {
     border: none !important;
   }
-}
-
-/* Main */
-main {
-  background-color: $main-bg;
-  color: $primary;
 }
 
 /* Sections */
