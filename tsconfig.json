@@ -12,8 +12,9 @@
       "dom.iterable",
       "esnext"
     ],
-    "module": "commonjs",
+    "module": "esnext",
     "moduleResolution": "node",
+    "noImplicitAny": true,
     "noEmit": true,
     "resolveJsonModule": true,
     "skipLibCheck": true,
