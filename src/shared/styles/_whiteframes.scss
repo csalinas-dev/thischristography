@@ -1,7 +1,7 @@
 // Whiteframes
-$shadow-key-umbra:      rgba(#222, .2);
-$shadow-key-penumbra:   rgba(#222, .14);
-$shadow-ambient-shadow: rgba(#222, .12);
+$shadow-key-umbra:      rgba(#000, .2);
+$shadow-key-penumbra:   rgba(#000, .14);
+$shadow-ambient-shadow: rgba(#000, .12);
 
 $whiteframe-shadow-1dp:  0  1px  3px  0   $shadow-key-umbra, 0  1px  1px 0   $shadow-key-penumbra, 0 2px  1px -1px $shadow-ambient-shadow;
 $whiteframe-shadow-2dp:  0  1px  5px  0   $shadow-key-umbra, 0  2px  2px 0   $shadow-key-penumbra, 0 3px  1px -2px $shadow-ambient-shadow;
