@@ -1,13 +1,11 @@
+import Image from 'components/Image';
 import React, { FC, PropsWithChildren } from 'react';
-import { Image } from 'shared/models/Image';
-import './Portrait.scss';
 import { Col } from 'react-bootstrap';
+import { Image as ImageInfo } from 'shared/models/Image';
 
-const Portrait: FC<Image> = (props: PropsWithChildren<Image>) => (
-  <Col xs={6} lg={3} key={props.name}>
-    <div className="portrait">
-      <img alt={props.name} style={{ backgroundImage: `url(${props.url})` }} />
-    </div>
+const Portrait: FC<ImageInfo> = (props: PropsWithChildren<ImageInfo>) => (
+  <Col xs={6} lg={3} key={props.name} className="p-2">
+    <Image src={props.url} alt={props.name} />
   </Col>
 );
 
