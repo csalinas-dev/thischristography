@@ -1,8 +1,11 @@
+// Packages
+@import "~bootstrap/scss/bootstrap";
+
+// Site
+@import "./shared/styles/overrides";
 @import "./shared/styles/variables";
 @import "./shared/styles/navbars";
 @import "./shared/styles/copy";
-@import "~bootstrap/scss/bootstrap";
-@import "./shared/styles/overrides";
 
 *,
 *:before,
