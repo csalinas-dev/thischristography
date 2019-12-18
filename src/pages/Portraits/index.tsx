@@ -11,7 +11,7 @@ const Portraits: FC = () => (
     <Container>
       <Row>
         <Col xs={12} lg={6} className="d-flex align-items-center justify-content-center">
-          <h1 className="font-montserrat quote">
+          <h1 className="font-montserrat font-weight-light quote">
             A portrait is not made in the camera but on either side of it.
           </h1>
         </Col>

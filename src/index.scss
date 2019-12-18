@@ -1,5 +1,6 @@
 @import "./shared/styles/variables";
 @import "./shared/styles/navbars";
+@import "./shared/styles/copy";
 @import "~bootstrap/scss/bootstrap";
 @import "./shared/styles/overrides";
 
@@ -10,33 +11,13 @@
 }
 
 body {
+  color: $primary;
   font-family: open-sans, sans-serif;
   margin: 0;
   padding: 0;
   width: 100%;
 }
 
-/* Fonts */
-.font-house {
-  font-family: house-slant, sans-serif !important;
-}
-.font-montserrat {
-  font-family: montserrat, sans-serif !important;
-}
-.font-open-sans {
-  font-family: open-sans, sans-serif !important;
-}
-
-/* Headings */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: house-slant, sans-serif;
-  font-weight: 300;
-}
 
 /* Links */
 a,

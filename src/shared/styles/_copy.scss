@@ -1,0 +1,38 @@
+@import 'variables';
+
+/* Fonts */
+.font-house {
+  font-family: house-slant, sans-serif !important;
+}
+.font-montserrat {
+  font-family: montserrat, sans-serif !important;
+}
+.font-open-sans {
+  font-family: open-sans, sans-serif !important;
+}
+
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: house-slant, sans-serif;
+  font-weight: 300;
+  margin-bottom: 1em;
+  padding-bottom: 1em;
+  position: relative;
+
+  &:before {
+    background-color: rgba($primary, 0.25);
+    border-radius: 1px;
+    bottom: 0;
+    content: '';
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+    width: 35%;
+  }
+}

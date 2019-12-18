@@ -2,17 +2,17 @@
 @import "../../shared/styles/whiteframes";
 
 .image {
+  border-radius: $border-radius;
+  box-shadow: $whiteframe-shadow-6dp;
   display: inline-block;
+  overflow: hidden;
   width: 100%;
 
   img {
     background-position: center;
     background-size: cover;
-    border-radius: $border-radius;
-    box-shadow: $whiteframe-shadow-6dp;
     display: inline-block;
     height: 0;
-    overflow: hidden;
     width: 100%;
   }
 }
