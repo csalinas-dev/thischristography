@@ -1,10 +1,13 @@
 import Layout from 'components/Layout';
 import Portrait from './Portrait';
 import React, { FC } from 'react';
+import { chain, map, shuffle } from 'lodash';
 import { Col, Container, Row } from 'react-bootstrap';
-import { map, shuffle } from 'lodash';
 
-const portraits = shuffle(require('shared/data/portraitImages.json'));
+const portraits = chain(require('shared/data/portraitImages.json'))
+  .shuffle()
+  .take(16)
+  .value();
 
 const Portraits: FC = () => (
   <Layout className="portraits">
