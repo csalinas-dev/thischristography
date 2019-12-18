@@ -5,9 +5,11 @@
   font-size: 0;
 
   .portrait-link {
+    background: transparent;
     border: none;
     display: inline-block;
     opacity: 1;
+    padding: 0;
     transition: all ease-in-out 300ms;
     width: 100%;
 

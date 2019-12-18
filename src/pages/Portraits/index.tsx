@@ -1,7 +1,7 @@
 import Layout from 'components/Layout';
 import Portrait from './Portrait';
 import React, { FC } from 'react';
-import { chain, map, shuffle } from 'lodash';
+import { chain, map } from 'lodash';
 import { Col, Container, Row } from 'react-bootstrap';
 
 const portraits = chain(require('shared/data/portraitImages.json'))
