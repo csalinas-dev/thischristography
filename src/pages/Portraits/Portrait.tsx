@@ -1,7 +1,7 @@
 import Image from 'components/Image';
 import React, { FC, PropsWithChildren } from 'react';
 import { Col } from 'react-bootstrap';
-import { Image as ImageInfo } from 'shared/models/Image';
+import { ImageInfo } from 'shared/models/ImageInfo';
 import './Portrait.scss';
 
 const Portrait: FC<ImageInfo> = (props: PropsWithChildren<ImageInfo>) => (

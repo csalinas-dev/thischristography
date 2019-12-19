@@ -1,7 +1,7 @@
 import React from 'react';
-import { Social } from 'shared/models/Social';
+import { SocialInfo } from 'shared/models/SocialInfo';
 
-const SocialLink: React.FC<Social> = (props: React.PropsWithChildren<Social>) => (
+const SocialLink: React.FC<SocialInfo> = (props: React.PropsWithChildren<SocialInfo>) => (
   <a
     className="nav-link"
     href={props.url}

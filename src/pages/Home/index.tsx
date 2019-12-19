@@ -1,5 +1,5 @@
 import CarouselItem from './CarouselItem';
-import homeImages from 'shared/data/homeImages.json';
+import images from 'shared/data/images/home.json';
 import React from 'react';
 import SocialLink from 'components/SocialLink';
 import socials from 'shared/data/socials.json';
@@ -12,7 +12,7 @@ import './index.scss';
 const Home: React.FC = () => (
   <div className="home">
     <Carousel controls={false} indicators={false} fade={true}>
-      {map(homeImages, CarouselItem)}
+      {map(images, CarouselItem)}
     </Carousel>
     <div className="content">
       <img

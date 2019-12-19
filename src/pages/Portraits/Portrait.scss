@@ -9,6 +9,7 @@
     border: none;
     display: inline-block;
     opacity: 1;
+    outline: none;
     padding: 0;
     transition: all ease-in-out 300ms;
     width: 100%;
@@ -16,6 +17,10 @@
     img {
       transform: scale(1.05);
       transition: all ease-in-out 300ms;
+    }
+
+    &:focus {
+      outline: none;
     }
 
     &:hover {
