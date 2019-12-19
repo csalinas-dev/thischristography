@@ -50,6 +50,14 @@ section {
       margin-top: 256px;
     }
   }
+
+  &:last-of-type {
+    margin-bottom: 64px;
+
+    @include media-breakpoint-up(xl) {
+      margin-bottom: 128px;
+    }
+  }
 }
 
 /* Paragraphs */

@@ -5,9 +5,9 @@ import { Link } from 'react-router-dom';
 import './Footer.scss';
 
 const Footer: FC = () => (
-  <footer className="py-5">
+  <footer>
     <Container className="d-flex flex-column align-items-center">
-      <Navbar>
+      <Navbar variant="dark">
         <Navbar.Brand as={Link} to="/">
           <Brand />
         </Navbar.Brand>
