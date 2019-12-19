@@ -2,19 +2,20 @@
 
 // Images
 .viewer-image-container {
-  $pos: ($pad * 2) + $btn-size;
-
-  bottom: $pos;
-  left: $pos;
+  bottom: $pad;
+  left: $pad;
   position: absolute;
-  right: $pos;
-  top: $pos;
+  right: $pad;
+  top: $pad;
+  user-select: none;
+  z-index: 7001;
 
   .viewer-image {
     display: none;
     object-fit: contain;
     height: 100%;
     width: 100%;
+    z-index: 7002;
 
     &.active {
       display: inline-block;

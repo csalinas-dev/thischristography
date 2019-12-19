@@ -10,8 +10,9 @@ $btn-size: 36px;
   left: 0;
   position: fixed;
   top: 0;
+  user-select: none;
   width: 100vw;
-  z-index: 3000;
+  z-index: 7000;
 
   // Buttons
   .btn-close,
@@ -27,6 +28,7 @@ $btn-size: 36px;
     outline: none !important;
     position: absolute;
     width: $btn-size;
+    z-index: 7010;
   }
 
   .btn-close {
