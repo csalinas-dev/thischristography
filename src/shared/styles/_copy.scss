@@ -1,5 +1,10 @@
 @import "variables";
 
+body {
+  font-family: open-sans, sans-serif;
+  font-weight: 300;
+}
+
 /* Fonts */
 .font-house {
   font-family: house-slant, sans-serif !important;
@@ -24,26 +29,33 @@ h5,
 .h5,
 h6,
 .h6 {
+  display: block;
   font-family: montserrat, sans-serif;
   font-weight: 300;
-  margin-bottom: 1em;
-  padding-bottom: 1em;
-  position: relative;
+  // padding-bottom: 1em;
+  // position: relative;
 
-  &:before {
-    background-color: rgba($primary, 0.25);
-    border-radius: 1px;
-    bottom: 0;
-    content: "";
-    height: 2px;
-    left: 0;
-    position: absolute;
-    width: 35%;
+  // &:before {
+  //   background-color: rgba($primary, 0.25);
+  //   border-radius: 1px;
+  //   bottom: 0;
+  //   content: "";
+  //   height: 2px;
+  //   left: 0;
+  //   position: absolute;
+  //   width: 35%;
+  //   transform: translateY(-50%);
+  // }
 
-  }
+  // &.text-center:before,
+  // .text-center &:before {
+  //   left: 50%;
+  //   transform: translateX(-50%);
+  // }
 
-  &.text-center:before {
-    left: 50%;
-    transform: translateX(-50%);
-  }
+  // &.text-right:before,
+  // .text-right &:before {
+  //   left: unset;
+  //   right: 0;
+  // }
 }
