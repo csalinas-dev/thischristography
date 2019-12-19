@@ -2,6 +2,7 @@ import React, { FC, PropsWithChildren } from 'react';
 import './index.scss';
 
 export interface ImageProps {
+  id: string,
   src: string,
   alt?: string,
   height?: number,
@@ -10,20 +11,20 @@ export interface ImageProps {
 
 /**
  * Responsive image that keeps aspect ratio. Provide a height and width to override aspect ratio. Default ratio is 1:1.
- * @param props 
+ * @param image 
  */
-const Image: FC<ImageProps> = (props: PropsWithChildren<ImageProps>) => {
+const Image: FC<ImageProps> = (image: PropsWithChildren<ImageProps>) => {
   let ratio = 1;
-  if (props.height && props.width){
-    ratio = props.height / props.width;
+  if (image.height && image.width){
+    ratio = image.height / image.width;
   }
 
   return (
-    <div className="image">
+    <div className="image" key={`image-${image.id}`}>
       <img
-        alt={props.alt}
+        alt={image.alt}
         style={{
-          backgroundImage: `url(${props.src})`,
+          backgroundImage: `url(${image.src})`,
           paddingTop: `${ratio * 100}%`,
         }}
       />

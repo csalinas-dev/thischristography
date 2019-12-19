@@ -1,0 +1,23 @@
+@import './index';
+
+// Images
+.viewer-image-container {
+  $pos: ($pad * 2) + $btn-size;
+
+  bottom: $pos;
+  left: $pos;
+  position: absolute;
+  right: $pos;
+  top: $pos;
+
+  .viewer-image {
+    display: none;
+    object-fit: contain;
+    height: 100%;
+    width: 100%;
+
+    &.active {
+      display: inline-block;
+    }
+  }
+}

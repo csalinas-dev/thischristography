@@ -1,0 +1,50 @@
+@import "../../shared/styles/variables";
+@import "../../shared/styles/whiteframes";
+
+$pad: 16px;
+$btn-size: 36px;
+
+#image-viewer {
+  background-color: rgba($white, 0.95);
+  height: 100vh;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 3000;
+
+  // Buttons
+  .btn-close,
+  .btn-prev,
+  .btn-next {
+    background-color: $main-bg-bottom;
+    border-radius: 50%;
+    border: none;
+    box-shadow: $whiteframe-shadow-4dp;
+    color: $black;
+    font-size: 24px;
+    height: $btn-size;
+    outline: none !important;
+    position: absolute;
+    width: $btn-size;
+  }
+
+  .btn-close {
+    top: $pad;
+    right: $pad;
+  }
+
+  .btn-prev,
+  .btn-next {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .btn-prev {
+    left: $pad;
+  }
+
+  .btn-next {
+    right: $pad;
+  }
+}

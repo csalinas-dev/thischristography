@@ -1,34 +1,29 @@
-import * as React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-
-// Pages
-// import Automotive from 'pages/Automotive';
-// import DeliveryOptions from 'pages/DeliveryOptions';
 import Home from 'pages/Home';
 import NotFound from 'pages/NotFound';
 import Portraits from 'pages/Portraits';
-// import Rates from 'pages/Rates';
-// import RealEstate from 'pages/RealEstate';
-// import Weddings from 'pages/Weddings';
-
-// Components
+import React, { useReducer } from 'react';
 import ScrollToTop from './ScrollToTop';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { ImageViewerContext } from 'containers/ImageViewer/context';
+import { ImageViewerReducer } from 'containers/ImageViewer/reducer';
+import { initialImageViewerState } from 'containers/ImageViewer/state';
 
-const Routes = () => (
-  <Router>
-    <ScrollToTop>
-      <Switch>
-        <Route path="/" exact={true} component={Home} />
-        {/* <Route path="/automotive" component={Automotive} />
-        <Route path="/delivery-options" component={DeliveryOptions} />*/}
-        <Route path="/portraits" component={Portraits} />
-        {/*<Route path="/rates" component={Rates} />
-        <Route path="/real-estate" component={RealEstate} />
-        <Route path="/weddings" component={Weddings} />*/}
-        <Route component={NotFound} />
-      </Switch>
-    </ScrollToTop>
-  </Router>
-);
+const Routes = () => {
+  const [state, dispatch] = useReducer(ImageViewerReducer, initialImageViewerState);
+
+  return (
+    <Router>
+      <ImageViewerContext.Provider value={{ state, dispatch }}>
+        <ScrollToTop>
+          <Switch>
+            <Route path="/" exact={true} component={Home} />
+            <Route path="/portraits" component={Portraits} />
+            <Route component={NotFound} />
+          </Switch>
+        </ScrollToTop>
+      </ImageViewerContext.Provider>
+    </Router>
+  );
+};
 
 export default Routes;
