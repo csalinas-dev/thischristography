@@ -15,7 +15,6 @@
 
 body {
   color: $primary;
-  font-family: open-sans, sans-serif;
   margin: 0;
   padding: 0;
   width: 100%;
@@ -44,11 +43,12 @@ a:active {
 
 /* Sections */
 section {
-  padding-bottom: 128px;
-  padding-top: 128px;
-
   & + & {
-    border-top: 1px solid $hr-color;
+    margin-top: 128px;
+
+    @include media-breakpoint-up(xl) {
+      margin-top: 256px;
+    }
   }
 }
 
