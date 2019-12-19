@@ -20,10 +20,10 @@
   "editor.renderControlCharacters": true,
   "editor.renderWhitespace": "all",
   "editor.rulers": [
-    80
+    120
   ],
   "editor.tabSize": 2,
-  "editor.wordWrapColumn": 80,
+  "editor.wordWrapColumn": 120,
   "emmet.includeLanguages": {
     "javascript": "javascriptreact",
     "typescript": "typescriptreact"
