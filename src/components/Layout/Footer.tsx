@@ -12,8 +12,10 @@ const Footer: FC = () => (
           <Brand />
         </Navbar.Brand>
         <Nav>
-          <Nav.Link as={Link} to="/rates">Rates</Nav.Link>
+          <Nav.Link as={Link} to="/pricing">Pricing</Nav.Link>
           <Nav.Link as={Link} to="/delivery-options">Delivery</Nav.Link>
+          <Nav.Link as={Link} to="/about">About</Nav.Link>
+          <Nav.Link as={Link} to="/contact">Contact</Nav.Link>
         </Nav>
       </Navbar>
         <small>
