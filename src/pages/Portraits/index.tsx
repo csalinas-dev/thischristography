@@ -15,7 +15,7 @@ const portraits = chain(images)
 
 const Portraits: FC = () => {
   // Update images in image viewer on mount
-  const {dispatch} = useContext(ImageViewerContext);
+  const { dispatch } = useContext(ImageViewerContext);
   useEffect(() => {
     const action = updateImageViewer(portraits);
     dispatch(action);
@@ -25,6 +25,7 @@ const Portraits: FC = () => {
       const action = resetImageViewer();
       dispatch(action);
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   // Select images to use in the sections
@@ -53,7 +54,7 @@ const Portraits: FC = () => {
         <Container as="section">
           <Row>
             <Col lg={6} className="offset-lg-1 mb-4 mb-lg-0">
-              <Image src={portrait.url} height={portrait.height} width={portrait.width} id={portrait.id}/>
+              <Image src={portrait.url} height={portrait.height} width={portrait.width} id={portrait.id} />
             </Col>
             <Col lg={4} className="d-flex flex-column justify-content-center text-center text-lg-left">
               <h1>Portraits</h1>
@@ -79,7 +80,7 @@ const Portraits: FC = () => {
         <Container as="section">
           <Row>
             <Col sm={8} md={6} lg={4} className="offset-sm-2 offset-md-0 offset-lg-2 mb-4 mb-lg-0">
-              <Image src={family.url} height={family.height} width={family.width} id={family.id}/>
+              <Image src={family.url} height={family.height} width={family.width} id={family.id} />
             </Col>
             <Col md={6} lg={4} className="d-flex flex-column justify-content-center offset-lg-1 text-center text-md-left">
               <h1>Family</h1>
