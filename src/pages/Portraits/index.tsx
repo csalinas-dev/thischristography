@@ -3,11 +3,11 @@ import images from 'shared/data/images/portraits.json';
 import Layout from 'components/Layout';
 import Portrait from './Portrait';
 import React, { FC, useContext, useEffect } from 'react';
+import ScrollAnimation from 'react-animate-on-scroll';
 import { chain, find, map } from 'lodash';
 import { Col, Container, Row } from 'react-bootstrap';
 import { ImageViewerContext } from 'containers/ImageViewer/context';
 import { resetImageViewer, updateImageViewer } from 'containers/ImageViewer/actions';
-import ScrollAnimation from 'react-animate-on-scroll';
 
 const portraits = chain(images)
   .shuffle()

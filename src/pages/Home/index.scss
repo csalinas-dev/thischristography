@@ -1,4 +1,5 @@
-@import "../../shared/styles/variables";
+@import '../../shared/styles/variables';
+@import '~bootstrap/scss/bootstrap';
 
 .home {
   align-items: center;
@@ -59,12 +60,23 @@
   }
 
   .other {
-    bottom: 32px;
+    background: linear-gradient(transparent, $black);
+    bottom: 0;
+    left: 0;
+    padding: 32px 32px 16px;
     position: absolute;
-    right: 32px;
+    right: 0;
 
-    .nav-link {
-      font-size: .75rem;
+    
+    nav {
+      @include media-breakpoint-up(md){
+        justify-content: flex-end;
+      }
+
+      .nav-link {
+        font-size: .75rem;
+        margin: 0 .5em;
+      }
     }
   }
 
