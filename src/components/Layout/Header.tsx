@@ -20,7 +20,6 @@ const Header: React.FC = (props: PropsWithChildren<any>) => (
             <Nav.Link as={Link} className="text-center" to="/landscapes">Landscapes</Nav.Link>
             <Nav.Link as={Link} className="text-center" to="/weddings">Weddings</Nav.Link>
             <Nav.Link as={Link} className="text-center" to="/automotive">Automotive</Nav.Link>
-            <Nav.Link as={Link} className="text-center" to="/real-estate">Real Estate</Nav.Link>
           </Nav>
           <div className="socials d-flex align-items-center justify-content-center">
             {socials.map(SocialLink)}
