@@ -22,12 +22,20 @@ const Home: React.FC = () => (
       />
       <nav>
         <Link className="nav-link" to="/portraits">Portraits</Link>
+        <Link className="nav-link" to="/landscapes">Landscapes</Link>
         <Link className="nav-link" to="/weddings">Weddings</Link>
         <Link className="nav-link" to="/automotive">Automotive</Link>
         <Link className="nav-link" to="/real-estate">Real Estate</Link>
       </nav>
       <nav className="socials">
         {map(socials, SocialLink)}
+      </nav>
+    </div>
+    <div className="other">
+      <nav>
+        <Link className="nav-link" to="/pricing">Pricing</Link>
+        <Link className="nav-link" to="/pricing">About</Link>
+        <Link className="nav-link" to="/pricing">Contact</Link>
       </nav>
     </div>
   </div>
