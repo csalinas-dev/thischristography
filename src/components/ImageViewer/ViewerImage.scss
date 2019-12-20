@@ -4,16 +4,17 @@
 // Images
 .viewer-image-container {
   bottom: $pad + ($btn-size / 2);
-  display: none;
+  opacity: 0;
   left: $pad + ($btn-size / 2);
   position: absolute;
   right: $pad + ($btn-size / 2);
   top: $pad + ($btn-size / 2);
   user-select: none;
   z-index: 7001;
+  transition: opacity ease-in-out 300ms;
 
   &.active {
-    display: inline-block;
+    opacity: 1;
   }
 
   .viewer-image {

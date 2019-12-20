@@ -1,68 +1,81 @@
 import ViewerImage from './ViewerImage';
-import React, { FC, useContext, useEffect, SyntheticEvent } from 'react';
+import React, { FC, useContext, useEffect } from 'react';
 import { ImageViewerContext } from 'containers/ImageViewer/context';
 import { indexOf, map } from 'lodash';
 import { selectImage } from 'containers/ImageViewer/actions';
 import './index.scss';
+import { OverlayTrigger, Tooltip } from 'react-bootstrap';
 
 const ImageViewer: FC = () => {
-  const { state, dispatch } = useContext(ImageViewerContext);
-  const { selected } = state;
+  const { state: { selected, images }, dispatch } = useContext(ImageViewerContext);
 
   useEffect(() => {
-    const body = document.body;
+    // Add key down listener and remove ability to scroll
+    document.body.classList.add('overflow-hidden');
+    window.addEventListener("keydown", handleKey, true);
 
-    if (selected) {
-      body.classList.add('overflow-hidden');
-    } else {
-      body.classList.remove('overflow-hidden');
+    return () => {
+      // Remove key down listener and add ability to scroll
+      document.body.classList.remove('overflow-hidden');
+      window.removeEventListener("keydown", handleKey, true);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [selected]);
 
-  if (!selected) {
-    return null;
-  }
-
-  const currentIndex = indexOf(state.images, state.selected);
+  // Calculate Indices
+  const lastIndex = images.length - 1;
+  const currentIndex = indexOf(images, selected);
+  const prevIndex = currentIndex === 0 ? lastIndex : (currentIndex - 1);
+  const nextIndex = currentIndex === lastIndex ? 0 : (currentIndex + 1)
 
   return (
     <div id="image-viewer">
-      <button className="btn-close" onClick={handlerExit}>
-        <i className="fas fa-times" />
-      </button>
-      {currentIndex > 0 &&
-        <button className="btn-prev" onClick={handlerPrevious}>
-          <i className="fas fa-chevron-left" />
-        </button>
-      }
-      {currentIndex < (state.images.length - 1) &&
-        <button className="btn-next fas fa-chevron-right" onClick={handlerNext} />
-      }
-      {map(state.images, ViewerImage)}
+      <OverlayTrigger
+        placement="left"
+        overlay={<Tooltip id="tooltip-close" className="d-none d-lg-inline-block">Escape</Tooltip>}
+      >
+        <button className="btn-close fas fa-times" onClick={exit} />
+      </OverlayTrigger>
+      <OverlayTrigger
+        placement="right"
+        overlay={<Tooltip id="tooltip-prev" className="d-none d-lg-inline-block">Left Arrow</Tooltip>}
+      >
+        <button className="btn-prev fas fa-chevron-left" onClick={() => move(prevIndex)} />
+      </OverlayTrigger>
+      <OverlayTrigger
+        placement="left"
+        overlay={<Tooltip id="tooltip-next" className="d-none d-lg-inline-block">Right Arrow</Tooltip>}
+      >
+        <button className="btn-next fas fa-chevron-right" onClick={() => move(nextIndex)} />
+      </OverlayTrigger>
+      {map(images, ViewerImage)}
     </div>
   );
 
-  function handlerExit() {
+  function exit() {
     const action = selectImage(null);
     dispatch(action);
   }
 
-  function handlerPrevious() {
-    const prevIndex = currentIndex - 1;
-    const prev = state.images[prevIndex];
-    const action = selectImage(prev);
+  function move(index: number) {
+    const action = selectImage(images[index]);
     dispatch(action);
   }
 
-  function handlerNext() {
-    const nextIndex = currentIndex + 1;
-    const next = state.images[nextIndex];
-    const action = selectImage(next);
-    dispatch(action);
-  }
-
-  function keydownHandler(event: SyntheticEvent) {
-    // Handle Keydown for next, prev, and exit
+  function handleKey(event: KeyboardEvent) {
+    switch (event.key) {
+      case 'ArrowLeft':
+        move(prevIndex);
+        break;
+      case 'ArrowRight':
+        move(nextIndex);
+        break;
+      case 'Escape':
+        exit();
+        break;
+      default:
+        break;
+    }
   }
 };
 
