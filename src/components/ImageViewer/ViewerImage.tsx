@@ -7,19 +7,14 @@ import './ViewerImage.scss';
 const ViewerImage: FC<ImageInfo> = (image: PropsWithChildren<ImageInfo>) => {
   const { state } = useContext(ImageViewerContext);
 
-  const imageClasses = classnames(
-    'viewer-image',
+  const containerClasses = classnames(
+    'viewer-image-container',
     { active: state.selected && state.selected.id === image.id }
   );
 
   return (
-    <div className="viewer-image-container">
-      <img
-        alt={image.name}
-        className={imageClasses}
-        key={`viewer-image-${image.id}`}
-        src={image.url}
-      />
+    <div className={containerClasses} key={`viewer-image-${image.id}`}>
+      <img src={image.url} alt={image.name} className="viewer-image" />
     </div>
   );
 };
