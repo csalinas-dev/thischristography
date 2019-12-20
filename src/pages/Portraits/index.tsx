@@ -40,11 +40,9 @@ const Portraits: FC = () => {
       <Container as="section">
         <Row>
           <Col xs={12} lg={6} className="d-flex align-items-center justify-content-center">
-            <ScrollAnimation animateIn="pulse">
-              <h1 className="text-center">
-                A portrait is not made in the camera but on either side of it.
-              </h1>
-            </ScrollAnimation>
+            <h1 className="text-center">
+              A portrait is not made in the camera but on either side of it.
+            </h1>
           </Col>
           <Col xs={12} lg={5} className="offset-lg-1 portraits-container">
             <Row>

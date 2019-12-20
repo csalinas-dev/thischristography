@@ -17,6 +17,7 @@ const Header: React.FC = (props: PropsWithChildren<any>) => (
         <Navbar.Collapse id="main-navigation">
           <Nav className="mr-auto">
             <Nav.Link as={Link} className="text-center" to="/portraits">Portraits</Nav.Link>
+            <Nav.Link as={Link} className="text-center" to="/landscapes">Landscapes</Nav.Link>
             <Nav.Link as={Link} className="text-center" to="/weddings">Weddings</Nav.Link>
             <Nav.Link as={Link} className="text-center" to="/automotive">Automotive</Nav.Link>
             <Nav.Link as={Link} className="text-center" to="/real-estate">Real Estate</Nav.Link>
