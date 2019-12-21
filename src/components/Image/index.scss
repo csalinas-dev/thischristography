@@ -6,13 +6,15 @@
   box-shadow: $whiteframe-shadow-6dp;
   display: inline-block;
   overflow: hidden;
+  position: relative;
   width: 100%;
 
   img {
-    background-position: center;
-    background-size: cover;
-    display: inline-block;
-    height: 0;
+    height: 100%
+    left: 0;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
     width: 100%;
   }
 }

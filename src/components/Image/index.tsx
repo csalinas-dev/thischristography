@@ -15,19 +15,13 @@ export interface ImageProps {
  */
 const Image: FC<ImageProps> = (image: PropsWithChildren<ImageProps>) => {
   let ratio = 1;
-  if (image.height && image.width){
+  if (image.height && image.width) {
     ratio = image.height / image.width;
   }
 
   return (
-    <div className="image" key={`image-${image.id}`}>
-      <img
-        alt={image.alt}
-        style={{
-          backgroundImage: `url(${image.src})`,
-          paddingTop: `${ratio * 100}%`,
-        }}
-      />
+    <div className="image" key={`image-${image.id}`} style={{ paddingTop: `${ratio * 100}%` }}>
+      <img src={image.src} alt={image.alt} />
     </div>
   );
 };
