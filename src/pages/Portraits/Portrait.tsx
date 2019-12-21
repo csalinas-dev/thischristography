@@ -7,7 +7,6 @@ import { ImageViewerContext } from 'containers/ImageViewer/context';
 import { selectImage } from 'containers/ImageViewer/actions';
 import './Portrait.scss';
 
-
 const Portrait = (image: ImageInfo, index: number) => {
   const { dispatch } = useContext(ImageViewerContext);
 
