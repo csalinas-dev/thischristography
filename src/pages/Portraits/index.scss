@@ -1,7 +1,7 @@
 @import '../../shared/styles/variables';
 
-$portrait-bg-color: #fff6ec;
+$bg-color: #fff6ec;
 
 .portraits {
-  background: linear-gradient($main-bg-top, $portrait-bg-color);
+  background: linear-gradient($main-bg-top, $bg-color);
 }

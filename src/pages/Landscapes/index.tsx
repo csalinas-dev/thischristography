@@ -1,15 +1,15 @@
 import abqImages from 'shared/data/images/landscapes/albuquerque.json';
-import Image from 'components/Image';
+import LandscapeImage from './LandscapeImage';
 import Layout from 'components/Layout';
+import nfImages from 'shared/data/images/landscapes/niagara-falls.json';
 import React, { useContext, useEffect } from 'react';
-import ScrollAnimation from 'react-animate-on-scroll';
-import { Container } from 'react-bootstrap';
 import { find } from 'lodash';
 import { ImageViewerContext } from 'containers/ImageViewer/context';
-import { resetImageViewer, selectImage, updateImageViewer } from 'containers/ImageViewer/actions';
+import { resetImageViewer } from 'containers/ImageViewer/actions';
 import './index.scss';
 
 const albuquerque = find(abqImages, ['id', 'TUPMPRfm628t']);
+const niagaraFalls = find(nfImages, ['id', '82mWs4QzBSfA']);
 
 const Landscapes = () => {
   const { dispatch } = useContext(ImageViewerContext);
@@ -26,31 +26,17 @@ const Landscapes = () => {
   return (
     <Layout className="landscapes">
       {albuquerque &&
-        <Container as="section" onClick={handleAlbuquerque} className="landscape-image">
-          <Image
-            alt={albuquerque.name}
-            height={albuquerque.height}
-            id={albuquerque.id}
-            src={albuquerque.url}
-            width={albuquerque.width}
-          />
-          <ScrollAnimation animateIn="fadeInRight" className="landscape-content">
-            <h1>Albuquerque</h1>
-            <label>Click to view gallery</label>
-          </ScrollAnimation>
-        </Container>
+        <LandscapeImage images={abqImages} selected={albuquerque} className="mt-5">
+          <h1>Albuquerque, NM</h1>
+        </LandscapeImage>
+      }
+      {niagaraFalls &&
+        <LandscapeImage images={nfImages} selected={niagaraFalls}>
+          <h1>Niagara Falls, NY/Ontario</h1>
+        </LandscapeImage>
       }
     </Layout>
   );
-
-  function handleAlbuquerque() {
-    if (albuquerque) {
-      const albuquerqueAction = updateImageViewer(abqImages);
-      dispatch(albuquerqueAction);
-      const selectAction = selectImage(albuquerque);
-      dispatch(selectAction);
-    }
-  }
 };
 
 export default Landscapes;
