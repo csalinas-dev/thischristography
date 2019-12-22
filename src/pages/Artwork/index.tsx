@@ -1,7 +1,7 @@
-import abqImages from 'shared/data/images/landscapes/albuquerque.json';
-import LandscapeImage from './LandscapeImage';
+import abqImages from 'shared/data/images/artwork/albuquerque.json';
+import ArtworkImage from './ArtworkImage';
 import Layout from 'components/Layout';
-import nfImages from 'shared/data/images/landscapes/niagara-falls.json';
+import nfImages from 'shared/data/images/artwork/niagara-falls.json';
 import React, { useContext, useEffect } from 'react';
 import { find } from 'lodash';
 import { ImageViewerContext } from 'containers/ImageViewer/context';
@@ -26,14 +26,14 @@ const Landscapes = () => {
   return (
     <Layout className="landscapes">
       {albuquerque &&
-        <LandscapeImage images={abqImages} selected={albuquerque} className="mt-5">
+        <ArtworkImage images={abqImages} selected={albuquerque} className="mt-5">
           <h1>Albuquerque, NM</h1>
-        </LandscapeImage>
+        </ArtworkImage>
       }
       {niagaraFalls &&
-        <LandscapeImage images={nfImages} selected={niagaraFalls}>
+        <ArtworkImage images={nfImages} selected={niagaraFalls}>
           <h1>Niagara Falls, NY/Ontario</h1>
-        </LandscapeImage>
+        </ArtworkImage>
       }
     </Layout>
   );

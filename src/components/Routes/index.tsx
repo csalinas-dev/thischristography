@@ -2,7 +2,7 @@ import About from 'pages/About';
 import Automotive from 'pages/Automotive';
 import Contact from 'pages/Contact';
 import Home from 'pages/Home';
-import Landscapes from 'pages/Landscapes';
+import Artwork from 'pages/Artwork';
 import NotFound from 'pages/NotFound';
 import Portraits from 'pages/Portraits';
 import Pricing from 'pages/Pricing';
@@ -29,7 +29,7 @@ const Routes = () => {
             <Route component={Automotive}      path="/automotive" />
             <Route component={Contact}         path="/contact" />
             <Route component={DeliveryOptions} path="/delivery-options" />
-            <Route component={Landscapes}      path="/landscapes" />
+            <Route component={Artwork}         path="/artwork" />
             <Route component={Portraits}       path="/portraits" />
             <Route component={Pricing}         path="/pricing" />
             <Route component={RealEstate}      path="/real-estate" />

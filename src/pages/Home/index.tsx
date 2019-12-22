@@ -22,7 +22,7 @@ const Home = () => (
       />
       <nav>
         <Link className="nav-link" to="/portraits">Portraits</Link>
-        <Link className="nav-link" to="/landscapes">Landscapes</Link>
+        <Link className="nav-link" to="/artwork">Artwork</Link>
         <Link className="nav-link" to="/weddings">Weddings</Link>
         <Link className="nav-link" to="/automotive">Automotive</Link>
       </nav>

@@ -5,15 +5,15 @@ import { Container } from 'react-bootstrap';
 import { ImageInfo } from 'shared/models/ImageInfo';
 import { ImageViewerContext } from 'containers/ImageViewer/context';
 import { selectImage, updateImageViewer } from 'containers/ImageViewer/actions';
-import './LandscapeImage.scss';
+import './ArtworkImage.scss';
 
-interface WorkProps {
+interface ArtWorkImageProps {
   images: Array<ImageInfo>;
   selected: ImageInfo;
   className?: string;
 }
 
-const Work = (props: PropsWithChildren<WorkProps>) => {
+const ArtWorkImage = (props: PropsWithChildren<ArtWorkImageProps>) => {
   const { dispatch } = useContext(ImageViewerContext);
   const { images, selected, children, className } = props;
 
@@ -44,4 +44,4 @@ const Work = (props: PropsWithChildren<WorkProps>) => {
   };
 };
 
-export default Work;
+export default ArtWorkImage;
