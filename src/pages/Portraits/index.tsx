@@ -14,6 +14,11 @@ const portraits = chain(images)
   .take(16)
   .value();
 
+// Select images to use in the sections
+const portrait = find(portraits, ['id', 'dJt72h6mTgB7']);
+const senior = find(portraits, ['id', 'sYHKhFnVx68D']);
+const family = find(portraits, ['id', 'e2SMMM6TSjpy']);
+
 const Portraits: FC = () => {
   // Update images in image viewer on mount
   const { dispatch } = useContext(ImageViewerContext);
@@ -28,11 +33,6 @@ const Portraits: FC = () => {
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-
-  // Select images to use in the sections
-  const portrait = find(portraits, ['id', 'dJt72h6mTgB7']);
-  const senior = find(portraits, ['id', 'sYHKhFnVx68D']);
-  const family = find(portraits, ['id', 'e2SMMM6TSjpy']);
 
   // Render the component
   return (
