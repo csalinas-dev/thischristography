@@ -21,10 +21,10 @@ const ArtWorkImage = (props: PropsWithChildren<ArtWorkImageProps>) => {
     <Container as="section" onClick={handler} className={`landscape-image ${className}`}>
       <Image
         alt={selected.name}
-        height={selected.height}
+        height={1}
         id={selected.id}
         src={selected.url}
-        width={selected.width}
+        width={3}
       />
       <ScrollAnimation animateIn="fadeInRight" className="landscape-content">
         {children}

@@ -1,4 +1,5 @@
 import abqImages from 'shared/data/images/artwork/albuquerque.json';
+import lvImages from 'shared/data/images/artwork/las-vegas.json';
 import ArtworkImage from './ArtworkImage';
 import Layout from 'components/Layout';
 import nfImages from 'shared/data/images/artwork/niagara-falls.json';
@@ -10,6 +11,7 @@ import './index.scss';
 
 const albuquerque = find(abqImages, ['id', 'TUPMPRfm628t']);
 const niagaraFalls = find(nfImages, ['id', '82mWs4QzBSfA']);
+const lasVegas = find(lvImages, ['id', '3Y2bkrc6wh36']);
 
 const Landscapes = () => {
   const { dispatch } = useContext(ImageViewerContext);
@@ -27,12 +29,17 @@ const Landscapes = () => {
     <Layout className="landscapes">
       {albuquerque &&
         <ArtworkImage images={abqImages} selected={albuquerque} className="mt-5">
-          <h1>Albuquerque, NM</h1>
+          <h1 className="font-house">Albuquerque, NM</h1>
         </ArtworkImage>
       }
       {niagaraFalls &&
         <ArtworkImage images={nfImages} selected={niagaraFalls}>
-          <h1>Niagara Falls, NY/Ontario</h1>
+          <h1 className="font-house">Niagara Falls, NY/Ontario</h1>
+        </ArtworkImage>
+      }
+      {lasVegas &&
+        <ArtworkImage images={lvImages} selected={lasVegas}>
+          <h1 className="font-house">Las Vegas, NV</h1>
         </ArtworkImage>
       }
     </Layout>
