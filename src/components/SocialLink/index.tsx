@@ -1,15 +1,15 @@
 import React from 'react';
-import { SocialInfo } from 'shared/models/SocialInfo';
+import { LinkInfo } from 'shared/models/LinkInfo';
 
-const SocialLink: React.FC<SocialInfo> = (props: React.PropsWithChildren<SocialInfo>) => (
+const SocialLink = (link: LinkInfo) => (
   <a
     className="nav-link"
-    href={props.url}
-    key={props.name}
+    href={link.url}
+    key={link.id}
     rel="noopener noreferrer"
     target="_blank"
   >
-    <i className={`fab ${props.icon}`} />
+    <i className={`fab ${link.icon}`} />
   </a>
 );
 

@@ -1,7 +1,10 @@
 import Brand from './Brand';
+import PageLink from 'components/PageLink';
 import React, { FC } from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import { map } from 'lodash';
+import { secondaryLinks } from 'components/Routes/links';
 import './Footer.scss';
 
 const Footer: FC = () => (
@@ -12,16 +15,13 @@ const Footer: FC = () => (
           <Brand />
         </Navbar.Brand>
         <Nav>
-          <Nav.Link as={Link} to="/pricing">Pricing</Nav.Link>
-          <Nav.Link as={Link} to="/delivery-options">Delivery</Nav.Link>
-          <Nav.Link as={Link} to="/about">About</Nav.Link>
-          <Nav.Link as={Link} to="/contact">Contact</Nav.Link>
+          {map(secondaryLinks, PageLink)}
         </Nav>
       </Navbar>
-        <small>
-          <i className="far fa-copyright mr-1 d-inline-block" />
-          {new Date().getFullYear()} This Christography. All Rights Reserved.
-        </small>
+      <small>
+        <i className="far fa-copyright mr-1 d-inline-block" />
+        {new Date().getFullYear()} This Christography. All Rights Reserved.
+      </small>
     </Container>
   </footer>
 );

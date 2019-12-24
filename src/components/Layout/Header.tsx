@@ -1,12 +1,15 @@
 import Brand from './Brand';
-import React, { PropsWithChildren } from 'react';
+import PageLink from 'components/PageLink';
+import React from 'react';
 import SocialLink from 'components/SocialLink';
 import socials from 'shared/data/socials.json';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import { map } from 'lodash';
+import { primaryLinks } from 'components/Routes/links';
 import './Header.scss';
 
-const Header: React.FC = (props: PropsWithChildren<any>) => (
+const Header = () => (
   <header>
     <Container>
       <Navbar expand="lg">
@@ -15,11 +18,8 @@ const Header: React.FC = (props: PropsWithChildren<any>) => (
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="main-navigation" />
         <Navbar.Collapse id="main-navigation">
-          <Nav className="mr-auto">
-            <Nav.Link as={Link} className="text-center" to="/portraits">Portraits</Nav.Link>
-            <Nav.Link as={Link} className="text-center" to="/artwork">Artwork</Nav.Link>
-            <Nav.Link as={Link} className="text-center" to="/weddings">Weddings</Nav.Link>
-            <Nav.Link as={Link} className="text-center" to="/automotive">Automotive</Nav.Link>
+          <Nav className="mr-auto text-center">
+            {map(primaryLinks, PageLink)}
           </Nav>
           <div className="socials d-flex align-items-center justify-content-center">
             {socials.map(SocialLink)}

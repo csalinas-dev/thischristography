@@ -1,7 +1,7 @@
 @import "../../shared/styles/variables";
 @import "../../shared/styles/whiteframes";
 
-.landscape-image {
+.cover-image {
   cursor: pointer;
   position: relative;
 
@@ -20,7 +20,7 @@
     }
   }
 
-  .landscape-content {
+  .cover-image-content {
     margin-top: 16px;
 
     @media (min-width: 768px) {
@@ -45,5 +45,4 @@
       text-transform: uppercase;
     }
   }
-
 }

@@ -5,20 +5,20 @@ import { Container } from 'react-bootstrap';
 import { ImageInfo } from 'shared/models/ImageInfo';
 import { ImageViewerContext } from 'containers/ImageViewer/context';
 import { selectImage, updateImageViewer } from 'containers/ImageViewer/actions';
-import './ArtworkImage.scss';
+import './CoverImage.scss';
 
-interface ArtWorkImageProps {
+interface CoverImageProps {
   images: Array<ImageInfo>;
   selected: ImageInfo;
   className?: string;
 }
 
-const ArtWorkImage = (props: PropsWithChildren<ArtWorkImageProps>) => {
+const CoverImage = (props: PropsWithChildren<CoverImageProps>) => {
   const { dispatch } = useContext(ImageViewerContext);
   const { images, selected, children, className } = props;
 
   return (
-    <Container as="section" onClick={handler} className={`landscape-image ${className}`}>
+    <Container as="section" onClick={handler} className={`cover-image ${className}`}>
       <Image
         alt={selected.name}
         height={1}
@@ -26,7 +26,7 @@ const ArtWorkImage = (props: PropsWithChildren<ArtWorkImageProps>) => {
         src={selected.url}
         width={3}
       />
-      <ScrollAnimation animateIn="fadeInRight" className="landscape-content">
+      <ScrollAnimation animateIn="fadeInRight" className="cover-image-content">
         {children}
         <label>Click to view gallery</label>
       </ScrollAnimation>
@@ -44,4 +44,4 @@ const ArtWorkImage = (props: PropsWithChildren<ArtWorkImageProps>) => {
   };
 };
 
-export default ArtWorkImage;
+export default CoverImage;

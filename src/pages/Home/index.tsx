@@ -1,13 +1,13 @@
 import CarouselItem from './CarouselItem';
 import images from 'shared/data/images/home.json';
+import PageLink from 'components/PageLink';
 import React from 'react';
 import SocialLink from 'components/SocialLink';
 import socials from 'shared/data/socials.json';
 import { Carousel } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
 import { map } from 'lodash';
+import { primaryLinks, secondaryLinks } from 'components/Routes/links';
 import './index.scss';
-
 
 const Home = () => (
   <div className="home">
@@ -21,10 +21,7 @@ const Home = () => (
         alt="This Christography"
       />
       <nav>
-        <Link className="nav-link" to="/portraits">Portraits</Link>
-        <Link className="nav-link" to="/artwork">Artwork</Link>
-        <Link className="nav-link" to="/weddings">Weddings</Link>
-        <Link className="nav-link" to="/automotive">Automotive</Link>
+        {map(primaryLinks, PageLink)}
       </nav>
       <nav className="socials">
         {map(socials, SocialLink)}
@@ -32,9 +29,7 @@ const Home = () => (
     </div>
     <div className="other">
       <nav>
-        <Link className="nav-link" to="/pricing">Pricing</Link>
-        <Link className="nav-link" to="/about">About</Link>
-        <Link className="nav-link" to="/contact">Contact</Link>
+        {map(secondaryLinks, PageLink)}
       </nav>
     </div>
   </div>
