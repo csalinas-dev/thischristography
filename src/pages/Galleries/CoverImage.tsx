@@ -1,47 +1,55 @@
 import Image from 'components/Image';
-import React, { PropsWithChildren, useContext } from 'react';
+import React, { useContext } from 'react';
 import ScrollAnimation from 'react-animate-on-scroll';
 import { Container } from 'react-bootstrap';
+import { find } from 'lodash';
 import { ImageInfo } from 'shared/models/ImageInfo';
 import { ImageViewerContext } from 'containers/ImageViewer/context';
 import { selectImage, updateImageViewer } from 'containers/ImageViewer/actions';
 import './CoverImage.scss';
 
-interface CoverImageProps {
+export interface CoverImageProps {
   images: Array<ImageInfo>;
-  selected: ImageInfo;
+  selected: string;
+  title: string;
   className?: string;
 }
 
-const CoverImage = (props: PropsWithChildren<CoverImageProps>) => {
+const CoverImage = (props: CoverImageProps) => {
   const { dispatch } = useContext(ImageViewerContext);
-  const { images, selected, children, className } = props;
+  const { images, selected, title, className } = props;
 
-  return (
-    <Container as="section" onClick={handler} className={`cover-image ${className}`}>
-      <Image
-        alt={selected.name}
-        height={1}
-        id={selected.id}
-        src={selected.url}
-        width={3}
-      />
-      <ScrollAnimation animateIn="fadeInRight" className="cover-image-content">
-        {children}
-        <label>Click to view gallery</label>
-      </ScrollAnimation>
-    </Container>
-  );
+  const image = find(images, ['id', selected]);
 
-  function handler() {
+  if (!image) {
+    return;
+  }
+
+  const handler = () => {
     // Add images for gallery
     const imagesAction = updateImageViewer(images);
     dispatch(imagesAction);
 
     // Select the cover image
-    const selectAction = selectImage(selected);
+    const selectAction = selectImage(image);
     dispatch(selectAction);
   };
+
+  return (
+    <Container as="section" onClick={handler} className={`cover-image ${className}`} key={`cover-image-${image.id}`}>
+      <Image
+        alt={image.name}
+        height={1}
+        id={image.id}
+        src={image.url}
+        width={3}
+      />
+      <ScrollAnimation animateIn="fadeInRight" className="cover-image-content">
+        <h1 className="font-house">{title}</h1>
+        <label>Click to view gallery</label>
+      </ScrollAnimation>
+    </Container>
+  );
 };
 
 export default CoverImage;
