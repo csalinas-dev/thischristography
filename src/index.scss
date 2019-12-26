@@ -43,14 +43,14 @@ a:active {
 /* Sections */
 section {
   & + & {
-    margin-top: 128px;
+    padding-top: 128px;
   }
 
   &:last-of-type {
-    margin-bottom: 64px;
+    padding-bottom: 64px;
 
     @include media-breakpoint-up(xl) {
-      margin-bottom: 128px;
+      padding-bottom: 128px;
     }
   }
 }

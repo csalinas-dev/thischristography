@@ -36,18 +36,20 @@ const CoverImage = (props: CoverImageProps) => {
   };
 
   return (
-    <Container as="section" onClick={handler} className={`cover-image ${className}`} key={`cover-image-${image.id}`}>
-      <Image
-        alt={image.name}
-        height={1}
-        id={image.id}
-        src={image.url}
-        width={3}
-      />
-      <ScrollAnimation animateIn="fadeInRight" className="cover-image-content">
-        <h1 className="font-house">{title}</h1>
-        <label>Click to view gallery</label>
-      </ScrollAnimation>
+    <Container as="section" key={`cover-image-${image.id}`}>
+      <div onClick={handler} className={`cover-image ${className}`}>
+        <Image
+          alt={image.name}
+          height={1}
+          id={image.id}
+          src={image.url}
+          width={3}
+        />
+        <ScrollAnimation animateIn="fadeInRight" className="cover-image-content">
+          <h1 className="font-house">{title}</h1>
+          <label>Click to view gallery</label>
+        </ScrollAnimation>
+      </div>
     </Container>
   );
 };
