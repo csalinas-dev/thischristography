@@ -4,6 +4,7 @@
 .cover-image {
   cursor: pointer;
   position: relative;
+  user-select: none;
 
   .image {
     box-shadow: $whiteframe-shadow-16dp;
@@ -22,6 +23,7 @@
 
   .cover-image-content {
     margin-top: 16px;
+    user-select: none;
 
     @media (min-width: 768px) {
       color: $white;
