@@ -30,6 +30,11 @@ export const secondaryLinks: Array<LinkInfo> = [
     name: 'Pricing'
   },
   {
+    id: 'PQw3ft323nHA',
+    url: '/prints',
+    name: 'Prints'
+  },
+  {
     id: 'sfSYK2gT4hZh',
     url: '/about',
     name: 'About'

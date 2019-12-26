@@ -1,11 +1,13 @@
 import About from 'pages/About';
 import Automotive from 'pages/Automotive';
 import Contact from 'pages/Contact';
-import Home from 'pages/Home';
+import DeliveryOptions from 'pages/DeliveryOptions';
 import Galleries from 'pages/Galleries';
+import Home from 'pages/Home';
 import NotFound from 'pages/NotFound';
 import Portraits from 'pages/Portraits';
 import Pricing from 'pages/Pricing';
+import Prints from 'pages/Prints';
 import React, { useReducer } from 'react';
 import RealEstate from 'pages/RealEstate';
 import ScrollToTop from './ScrollToTop';
@@ -14,7 +16,6 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { ImageViewerContext } from 'containers/ImageViewer/context';
 import { ImageViewerReducer } from 'containers/ImageViewer/reducer';
 import { initialImageViewerState } from 'containers/ImageViewer/state';
-import DeliveryOptions from 'pages/DeliveryOptions';
 
 const Routes = () => {
   const [state, dispatch] = useReducer(ImageViewerReducer, initialImageViewerState);
@@ -32,6 +33,7 @@ const Routes = () => {
             <Route component={Galleries}       path="/galleries" />
             <Route component={Portraits}       path="/portraits" />
             <Route component={Pricing}         path="/pricing" />
+            <Route component={Prints}          path="/prints" />
             <Route component={RealEstate}      path="/real-estate" />
             <Route component={Weddings}        path="/weddings" />
             <Route component={NotFound} />

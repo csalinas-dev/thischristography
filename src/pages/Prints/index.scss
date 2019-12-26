@@ -1,0 +1,7 @@
+@import '../../shared/styles/variables';
+
+$bg-color: #fff4f0;
+
+.prints {
+  background: linear-gradient($main-bg-top, $bg-color);
+}
