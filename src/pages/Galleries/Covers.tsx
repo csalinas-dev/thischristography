@@ -30,12 +30,12 @@ export const GalleryCovers: Array<CoverImageProps> = [
   },
   {
     images: imagesBalloonFiesta,
-    selected: '9b3X8jSh5kek',
+    selected: 'tH9Kw5pt7ZPt',
     title: 'Albuquerque International Balloon Fiesta',
   },
   {
     images: imagesFireworks,
-    selected: '6R3mXuBafC2k',
+    selected: 'rHQfTFt8W9ue',
     title: 'Fireworks',
   }
 ];
