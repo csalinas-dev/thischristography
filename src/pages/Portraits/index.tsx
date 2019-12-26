@@ -8,6 +8,7 @@ import { chain, find, map } from 'lodash';
 import { Col, Container, Row } from 'react-bootstrap';
 import { ImageViewerContext } from 'containers/ImageViewer/context';
 import { resetImageViewer, updateImageViewer } from 'containers/ImageViewer/actions';
+import './index.scss';
 
 const portraits = chain(images)
   .shuffle()

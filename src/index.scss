@@ -44,10 +44,6 @@ a:active {
 section {
   & + & {
     margin-top: 128px;
-
-    @include media-breakpoint-up(xl) {
-      margin-top: 256px;
-    }
   }
 
   &:last-of-type {
