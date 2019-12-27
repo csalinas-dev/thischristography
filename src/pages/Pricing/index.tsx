@@ -5,7 +5,6 @@ import './index.scss';
 
 const Pricing = () => (
   <Layout className="pricing">
-    <Container as="section"><label>All pricing effective January 1<sup>st</sup>, 2020</label></Container>
     <Container as="section">
       <h1>Photoshoot Pricing</h1>
       <Table responsive striped>
@@ -58,6 +57,7 @@ const Pricing = () => (
         The travelling fee will be <strong>$50.00</strong>.
       </Alert>
     </Container>
+    <Container as="section"><label>All pricing effective January 1<sup>st</sup>, 2020</label></Container>
   </Layout>
 );
 
