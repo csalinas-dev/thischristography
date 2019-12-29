@@ -1,0 +1,8 @@
+@import '../../shared/styles/variables';
+
+$bg-color: #211919;
+
+.about {
+  background: linear-gradient($dark-bg-top, $bg-color);
+  color: $white;
+}

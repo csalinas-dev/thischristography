@@ -9,10 +9,14 @@ import { map } from 'lodash';
 import { primaryLinks } from 'components/Routes/links';
 import './Header.scss';
 
-const Header = () => (
+interface HeaderProps {
+  dark: boolean;
+}
+
+const Header = (props: HeaderProps) => (
   <header>
     <Container>
-      <Navbar expand="lg">
+      <Navbar expand="lg" variant={props.dark ? "dark" : "light"}>
         <Navbar.Brand as={Link} to="/">
           <Brand />
         </Navbar.Brand>
