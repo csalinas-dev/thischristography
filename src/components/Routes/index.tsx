@@ -1,7 +1,6 @@
 import About from 'pages/About';
 import Automotive from 'pages/Automotive';
 import Contact from 'pages/Contact';
-import DeliveryOptions from 'pages/DeliveryOptions';
 import Galleries from 'pages/Galleries';
 import Home from 'pages/Home';
 import NotFound from 'pages/NotFound';
@@ -9,7 +8,6 @@ import Portraits from 'pages/Portraits';
 import Pricing from 'pages/Pricing';
 import Prints from 'pages/Prints';
 import React, { useReducer } from 'react';
-import RealEstate from 'pages/RealEstate';
 import ScrollToTop from './ScrollToTop';
 import Weddings from 'pages/Weddings';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
@@ -29,12 +27,10 @@ const Routes = () => {
             <Route component={About}           path="/about" />
             <Route component={Automotive}      path="/automotive" />
             <Route component={Contact}         path="/contact" />
-            <Route component={DeliveryOptions} path="/delivery-options" />
             <Route component={Galleries}       path="/galleries" />
             <Route component={Portraits}       path="/portraits" />
             <Route component={Pricing}         path="/pricing" />
             <Route component={Prints}          path="/prints" />
-            <Route component={RealEstate}      path="/real-estate" />
             <Route component={Weddings}        path="/weddings" />
             <Route component={NotFound} />
           </Switch>
