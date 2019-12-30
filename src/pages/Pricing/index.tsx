@@ -31,8 +31,9 @@ const Pricing = () => (
           </tr>
         </tbody>
       </Table>
-
-      <h2>Travelling Fees</h2>
+    </Container>
+    <Container as="section">
+      <h1>Travelling Fees</h1>
       <p>
         Using the one-way distance from Albuquerque to the location of the shoot,
         the round trip fee is $75 for every 50 miles. For example
@@ -45,7 +46,29 @@ const Pricing = () => (
         <li>and so on...</li>
       </ul>
     </Container>
-    <Container as="section"><label>All pricing effective January 1<sup>st</sup>, 2020</label></Container>
+    <Container as="section">
+      <h1>Session Information</h1>
+      <p>All photoshoot require a $50 booking fee and it will go towards your total balance.</p>
+      <p>At the end of your session, you may pay the remaining balance:</p>
+      <ul className="fa-ul">
+        <li>
+          <span className="fa-li"><i className="fas fa-money-bill-wave"/></span>
+          <span className="ml-2">In person using cash.</span>
+        </li>
+        <li>
+          <span className="fa-li"><i className="fas fa-credit-card"/></span>
+          <span className="ml-2">In person using debit or credit card.</span>
+        </li>
+        <li>
+          <span className="fa-li"><i className="fas fa-file-invoice-dollar"/></span>
+          <span className="ml-2">Online through a Square invoice.</span>
+        </li>
+      </ul>
+      <p>Final images will not be delivered until payment has been received.</p>
+    </Container>
+    <Container>
+      <label className="mb-5">All pricing effective January 1<sup>st</sup>, 2020</label>
+    </Container>
   </Layout>
 );
 

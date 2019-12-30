@@ -34,7 +34,12 @@ h6,
   font-weight: 300;
 }
 
-body p {
-  font-size: 1.25rem;
-  line-height: 2.25rem;
+/* Paragraphs and Lists */
+body {
+  p,
+  ul,
+  ol {
+    font-size: 1.25rem;
+    line-height: 2.25rem;
+  }
 }
