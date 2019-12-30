@@ -1,5 +1,4 @@
 @import '../../shared/styles/variables';
-@import '~bootstrap/scss/bootstrap';
 
 .home {
   align-items: center;
@@ -69,7 +68,7 @@
 
     
     nav {
-      @include media-breakpoint-up(md){
+      @media (min-width: $breakpoint-md){
         justify-content: flex-end;
       }
 
