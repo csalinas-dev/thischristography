@@ -1,9 +1,12 @@
 import React from 'react';
 import Layout from 'components/Layout';
+import { Container } from 'react-bootstrap';
 
 const Automotive = () => (
-  <Layout>
-    <h1>Automotive</h1>
+  <Layout className="automotive">
+    <Container as="section">
+      <h1>Automotive</h1>
+    </Container>
   </Layout>
 );
 
