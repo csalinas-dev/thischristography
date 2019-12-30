@@ -27,19 +27,19 @@ const About = () => {
             </Row>
           </Col>
           <Col>
-            <section>
+            <section className="mt-4 mt-lg-0">
               <h3>About Me</h3>
               <p>I'm a freelance photographer based in Albuquerque, NM that specializes in <Link to="/portraits">portraits</Link>, <Link to="/weddings">weddings</Link>, <Link to="/automotive">automotive</Link>, and landscapes. I have been practicing photography for about {yearsPracticing} years now, but only started This Christography at the end of March 2019.</p>
-              <p>I am currently a software engineer for a local IT/Software company in Albuquerque, NM. I am currently going to the University of New Mexico in pursuit of a Bachelor's of Science in Computer Science (BSCS).</p>
+              <p>I am currently a software engineer for a local IT/Software company in Albuquerque, NM. I am also pursuing my Bachelor's of Science in Computer Science (BSCS) at the University of New Mexico.</p>
             </section>
             <section>
               <Row>
-                <Col xl={5}>
+                <Col xl={7}>
                   <h3>My Photography</h3>
                   <p>Photography has given me many opportunities to work with some really talented individuals and go to very special places. I hope to continue travelling around the world to freeze beautiful moments in time so they last forever.</p>
                   <p>In the future, I plan on acquiring other photography gear that will allow me to gain different perspectives on life and its events. I want to continue my journey of creating creative works of art by exploring the capabilities of Adobe Photoshop and Adobe Lightroom. For instance, look at this creative portrait that I took and edited of Amber:</p>
                 </Col>
-                <Col md={6} xl={5} className="offset-md-3 offset-xl-1">
+                <Col md={6} xl={5} className="offset-md-3 offset-xl-0">
                   <Image id="pYywEwfx6F3U" src={amber} width={4} height={5} alt="@ambajambaa fire bending" />
                 </Col>
               </Row>
