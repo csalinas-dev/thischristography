@@ -63,7 +63,8 @@ const Portraits: FC = () => {
             <Col lg={4} className="d-flex flex-column justify-content-center text-center text-lg-left">
               <ScrollAnimation animateIn="fadeInRight">
                 <h1>Portraits</h1>
-                <p>Portraits</p>
+                <p>Composition is always my main concern! I strive to ensure that my photos are balanced and have a meaningful background, no matter the location.</p>
+                <p>Going on a portrait shoot with me is intended to be a fun and comfortable experience. The camera is not the star of the show, you are!</p>
               </ScrollAnimation>
             </Col>
           </Row>
@@ -80,7 +81,8 @@ const Portraits: FC = () => {
             <Col md={6} lg={4} className="d-flex flex-column justify-content-center offset-lg-2 order-md-1 text-center text-md-left">
               <ScrollAnimation animateIn="fadeInDown" animateOnce={true}>
                 <h1>Graduation</h1>
-                <p>Senior Portraits</p>
+                <p>If you are a graduating school, let's capture some timeless memories of the things that sum up your time in school! Now that you'll be done with school, let's also show the path of your future.</p>
+                <p>Bring as many props or outfits as you'd like (I have a portable changing pod for your privacy).</p>
               </ScrollAnimation>
             </Col>
           </Row>
@@ -97,7 +99,8 @@ const Portraits: FC = () => {
             <Col md={6} lg={4} className="d-flex flex-column justify-content-center offset-lg-1 text-center text-md-left">
               <ScrollAnimation animateIn="fadeInRight">
                 <h1>Family</h1>
-                <p>Family Portraits</p>
+                <p>Gather up your loved ones and color coordinate your outfits for some excellent photos to share with your friends and the rest of the family!</p>
+                <p>Annual photos are great for holiday cards and showing the growth of your family.</p>
               </ScrollAnimation>
             </Col>
           </Row>
