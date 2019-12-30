@@ -10,7 +10,7 @@ const SocialLink = (link: LinkInfo) => (
     rel="noopener noreferrer"
     target="_blank"
   >
-    <i className={`fab ${link.icon}`} />
+    <i className={link.icon} />
   </a>
 );
 
