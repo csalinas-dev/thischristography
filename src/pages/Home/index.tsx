@@ -11,6 +11,10 @@ import './index.scss';
 
 const Home = () => (
   <div className="home">
+    <div className="d-none">
+      <h1>Photography in Albuquerque, NM</h1>
+      <p>This Christography is a photographer based in Albuquerque, NM. Specializing in many forms of portraits (individual, couples, graduates, and family), automotive, engagement, weddings, events, and landscapes.</p>
+    </div>
     <Carousel controls={false} indicators={false} fade={true}>
       {map(images, CarouselItem)}
     </Carousel>
