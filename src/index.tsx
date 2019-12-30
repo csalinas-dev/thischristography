@@ -3,6 +3,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Routes from './components/Routes';
 import './index.scss';
+import '@fortawesome/fontawesome-free/js/all';
 
 ReactDOM.render(<Routes />, document.getElementById('root'));
 
