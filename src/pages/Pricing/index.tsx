@@ -44,18 +44,6 @@ const Pricing = () => (
         <li>150 - 200 miles: $225</li>
         <li>and so on...</li>
       </ul>
-      <p>To calculate the travelling fee, please search for your photoshoot's location below:</p>
-      <InputGroup className="mb-3">
-        <FormControl placeholder="Find Location" disabled />
-        <InputGroup.Append>
-          <Button variant="success">Find</Button>
-        </InputGroup.Append>
-      </InputGroup>
-      <Alert variant="success" className="mt-4">
-        <strong>Santa Fe, NM</strong> is <strong>62</strong> miles away from Albuquerque.
-        <hr />
-        The travelling fee will be <strong>$50.00</strong>.
-      </Alert>
     </Container>
     <Container as="section"><label>All pricing effective January 1<sup>st</sup>, 2020</label></Container>
   </Layout>
