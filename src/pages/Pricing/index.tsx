@@ -1,6 +1,6 @@
 import Layout from 'components/Layout';
 import React from 'react';
-import { Container, Table, InputGroup, FormControl, Button, Alert } from 'react-bootstrap';
+import { Container, Table } from 'react-bootstrap';
 import './index.scss';
 
 const Pricing = () => (
