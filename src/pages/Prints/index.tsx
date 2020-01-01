@@ -7,20 +7,12 @@ const Prints = () => (
   <Layout className="prints">
     <Container as="section">
       <h1>Ordering Prints</h1>
-      <p>
-        Order a print of a This Christography original by contacting
-        <a href="mailto:thischristography@gmail.com?subject=Order%20Prints">thischristography@gmail.com</a> today!
-        You will receive an invoice via Square that must be paid in full before the order is officially placed.
-      </p>
+      <p>Order a print of a This Christography original by contacting <a href="mailto:thischristography@gmail.com?subject=Order%20Prints">thischristography@gmail.com</a> today! You will receive an invoice via Square that must be paid in full before the order is officially placed.</p>
       <p>Free shipping on orders $35+.</p>
     </Container>
     <Container as="section">
       <h1>Paper Prints</h1>
-      <p>
-        Prints are printed on metallic paper (glossy pearlescent finish) with a lustre coating. Metallic Paper uses a
-        patented combination of film and laminate layers resulting in a striking metallic shine. The Lustre Coating adds
-        a rich sheen to the print and protects against fingerprints and UV exposure.
-      </p>
+      <p>Prints are printed on metallic paper (glossy pearlescent finish) with a lustre coating. Metallic Paper uses a patented combination of film and laminate layers resulting in a striking metallic shine. The Lustre Coating adds a rich sheen to the print and protects against fingerprints and UV exposure.</p>
       <Table responsive striped>
         <thead>
           <tr>
