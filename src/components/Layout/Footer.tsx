@@ -27,7 +27,7 @@ const Footer: FC = () => {
 
 
   const begin = 2019;
-  const end = (modified ?? new Date()).getFullYear();
+  const end = new Date().getFullYear();
   return (
     <footer>
       <Container className="d-flex flex-column align-items-center">
@@ -39,7 +39,7 @@ const Footer: FC = () => {
             {map(secondaryLinks, PageLink)}
           </Nav>
         </Navbar>
-        {modified && <small>Last Modified: {dateformat(modified, "dddd, mmmm dS, yyyy, h:MM:ss TT")}</small>}
+        {modified && <small>Last Modified: {dateformat(modified, "mmmm dS, yyyy")}</small>}
         <small className="mt-4">
           <i className="far fa-copyright mr-1 d-inline-block" />
           {end > begin ? `${begin} - ${end}` : begin} This Christography. All Rights Reserved.
