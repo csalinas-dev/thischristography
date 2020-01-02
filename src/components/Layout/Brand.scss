@@ -1,0 +1,13 @@
+.brand {
+  header & {
+    height: 54px;
+  }
+
+  footer & {
+    height: 40px;
+  }
+
+  .navbar-dark & {
+    filter: invert(60%);
+  }
+}

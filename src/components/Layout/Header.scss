@@ -1,0 +1,18 @@
+@import "../../shared/styles/variables";
+
+header {
+  background-color: $light-bg-top;
+  color: $black;
+  font-family: montserrat, sans-serif;
+  font-weight: 300;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  text-transform: uppercase;
+  top: 0;
+  z-index: 2000;
+
+  .dark & {
+    background-color: $dark-bg-top;
+    color: $white;
+  }
+}

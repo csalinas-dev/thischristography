@@ -1,0 +1,32 @@
+[
+  {
+    "id": "xrQj92DbU6kR",
+    "name": "thischristography@gmail.com",
+    "url": "mailto:thischristography@gmail.com",
+    "icon": "fas fa-envelope"
+  },
+  {
+    "id": "CyE8K4crZMMj",
+    "name": "Instagram",
+    "url": "https://instagram.com/ThisChristography",
+    "icon": "fab fa-instagram"
+  },
+  {
+    "id": "MkKWx9Fvk2SG",
+    "name": "Twitter",
+    "url": "https://twitter.com/TChristography",
+    "icon": "fab fa-twitter"
+  },
+  {
+    "id": "pNjdZ7CKmJ6y",
+    "name": "Facebook",
+    "url": "https://www.facebook.com/ThisChristography",
+    "icon": "fab fa-facebook-f"
+  },
+  {
+    "id": "FPd48TD45CdZ",
+    "name": "500px",
+    "url": "https://500px.com/thischristography",
+    "icon": "fab fa-500px"
+  }
+]

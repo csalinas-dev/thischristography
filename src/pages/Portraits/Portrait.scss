@@ -1,0 +1,37 @@
+@import "../../shared/styles/variables";
+@import "../../shared/styles/whiteframes";
+
+.portrait {
+  font-size: 0;
+
+  .portrait-link {
+    background: transparent;
+    border: none;
+    display: inline-block;
+    outline: none;
+    padding: 0;
+    transition: all ease-in-out 300ms;
+    width: 100%;
+
+    img {
+      transform: scale(1.05);
+      transition: all ease-in-out 300ms;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &:hover {
+      img {
+        transform: scale(1);
+      }
+    }
+  }
+
+  &:last-child {
+    @media (max-width: 992px) {
+      display: none;
+    }
+  }
+}

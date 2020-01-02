@@ -1,0 +1,63 @@
+@import "../../shared/styles/variables";
+@import "../../shared/styles/whiteframes";
+
+$pad: 16px;
+$btn-size: 36px;
+
+#image-viewer {
+  background-color: rgba($white, 0.95);
+  height: 100vh;
+  left: 0;
+  position: fixed;
+  top: 0;
+  user-select: none;
+  width: 100vw;
+  z-index: 7000;
+
+  // Buttons
+  .btn-close,
+  .btn-prev,
+  .btn-next {
+    align-items: center;
+    background-color: $primary;
+    border-radius: 50%;
+    border: none;
+    box-shadow: $whiteframe-shadow-6dp;
+    color: $black;
+    display: flex;
+    font-size: 24px;
+    height: $btn-size;
+    justify-content: center;
+    outline: none !important;
+    position: absolute;
+    width: $btn-size;
+    z-index: 7010;
+  }
+
+  .btn-close {
+    right: $pad;
+    top: $pad;
+  }
+
+  .btn-prev,
+  .btn-next {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .btn-prev {
+    left: $pad;
+    
+    svg {
+      margin-right: 4px;
+    }
+  }
+
+  .btn-next {
+    right: $pad;
+    
+    svg {
+      margin-left: 2px;
+    }
+  }
+}

@@ -1,5 +1,11 @@
-@import "variables";
-@import "../node_modules/bootstrap/scss/bootstrap";
+// Packages
+@import "~bootstrap/scss/bootstrap";
+
+// Site
+@import "./shared/styles/overrides";
+@import "./shared/styles/variables";
+@import "./shared/styles/navbars";
+@import "./shared/styles/copy";
 
 *,
 *:before,
@@ -8,21 +14,10 @@
 }
 
 body {
-  font-family: open-sans, sans-serif;
+  color: $black;
   margin: 0;
   padding: 0;
   width: 100%;
-}
-
-/* Headings */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: house-slant, sans-serif;
-  font-weight: 300;
 }
 
 /* Links */
@@ -39,37 +34,33 @@ a:active {
   &:hover {
     border-bottom-style: solid;
   }
-}
 
-nav {
-  a {
+  nav & {
     border: none !important;
   }
 }
 
-/* Main */
-main {
-  background-color: $main-bg;
-  color: $primary;
-}
-
 /* Sections */
 section {
-  padding-bottom: 128px;
-  padding-top: 128px;
-
   & + & {
-    border-top: 1px solid $hr-color;
+    padding-top: 128px;
   }
-}
 
-/* Paragraphs */
-p {
-  font-size: 1.2em;
-  line-height: 1.5em;
+  &:last-of-type {
+    padding-bottom: 64px;
+
+    @include media-breakpoint-up(xl) {
+      padding-bottom: 128px;
+    }
+  }
 }
 
 /* Images */
 img {
   max-width: 100%;
+}
+
+/* Flex */
+.flex {
+  flex: 1 0 0px;
 }

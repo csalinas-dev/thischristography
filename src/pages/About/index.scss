@@ -1,0 +1,22 @@
+@import '../../shared/styles/variables';
+
+$bg-color: #211919;
+
+.about {
+  background: linear-gradient($dark-bg-top, $bg-color);
+  color: $white;
+
+  .circle {
+    .image {
+      border-radius: 50%;
+    }
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+  }
+}

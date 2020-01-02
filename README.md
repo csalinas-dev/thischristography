@@ -1,16 +1,29 @@
 # This Christography
 
-This app was built using the `create-react-app` tool. The app is written using TypeScript instead of JavaScript.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This app is written using TypeScript.
 
-## Development
-To develop in this project:
-1. Clone the repository
-2. Ensure you are on the `source` branch
-3. Install dependencies using `yarn`
-4. Run the development instance by `yarn start`
-5. Open a second terminal and run `yarn watch-css`
+## Available Scripts
 
-## Production
-To create a production build, run `yarn build`. To deploy the newly created production build, run `yarn deploy`.
+In the project directory, you can run:
 
-Running a deployment will publish the `build` directory to the `master` branch. The `master` branch on the `casjr13` repository is where the site is hosted.
+### `yarn`
+
+Installs all of the project dependencies.
+
+### `yarn start`
+
+Runs the app in the development mode.
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+The page will reload if you make edits.
+You will also see any lint errors in the console.
+
+### `yarn build`
+
+Builds the app for production to the `build` folder.
+It correctly bundles React in production mode and optimizes the build for the best performance.
+
+The build is minified and the filenames include the hashes. Your app is ready to be deployed!
+
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.

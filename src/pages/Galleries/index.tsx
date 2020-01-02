@@ -1,33 +1,28 @@
-import * as React from 'react';
-import { Link } from 'react-router-dom';
-import Header from '../../components/Header';
+import CoverImage from './CoverImage';
+import Layout from 'components/Layout';
+import React, { useContext, useEffect } from 'react';
+import { GalleryCovers } from './Covers';
+import { ImageViewerContext } from 'containers/ImageViewer/context';
+import { resetImageViewer } from 'containers/ImageViewer/actions';
+import './index.scss';
 
-const Galleries = () => (
-  <div className="galleries">
-    <Header />
-    <main>
-      <section className="container">
-        <h1>Galleries</h1>
-        <div className="row mt-5">
-          <div className="col-md-4">
-            <img src="/assets/galleries/20190518/ThisChristography-20190518-008.jpg" alt="USAF Thunderbirds" />
-          </div>
-          <div className="col-md-8 d-flex flex-column justify-content-center">
-            <h1>USAF Thunderbirds</h1>
-            <h5>May 18<sup>th</sup>, 2019</h5>
-            <p>
-              <Link
-                className="btn btn-primary"
-                style={{color: '#fff'}}
-                to="/galleries/20190518"
-              >
-                View Photos
-              </Link></p>
-          </div>
-        </div>
-      </section>
-    </main>
-  </div>
-);
+const Landscapes = () => {
+  const { dispatch } = useContext(ImageViewerContext);
 
-export default Galleries;
+  useEffect(() => {
+    // Reset images in image viewer on unmount
+    return () => {
+      const action = resetImageViewer();
+      dispatch(action);
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  return (
+    <Layout className="landscapes">
+      {GalleryCovers.map(CoverImage)}
+    </Layout>
+  );
+};
+
+export default Landscapes;

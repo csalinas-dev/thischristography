@@ -1,12 +1,13 @@
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
+import * as serviceWorker from './serviceWorker';
+import React from 'react';
+import ReactDOM from 'react-dom';
 import Routes from './components/Routes';
+import './index.scss';
+import '@fortawesome/fontawesome-free/js/all';
 
-import './index.css';
-import registerServiceWorker from './registerServiceWorker';
+ReactDOM.render(<Routes />, document.getElementById('root'));
 
-ReactDOM.render(
-  <Routes />,
-  document.getElementById('root') as HTMLElement
-);
-registerServiceWorker();
+// If you want your app to work offline and load faster, you can change
+// unregister() to register() below. Note this comes with some pitfalls.
+// Learn more about service workers: https://bit.ly/CRA-PWA
+serviceWorker.unregister();

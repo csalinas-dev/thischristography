@@ -1,0 +1,26 @@
+@import '../../shared/styles/variables';
+@import './index';
+
+// Images
+.viewer-image-container {
+  bottom: $pad + ($btn-size / 2);
+  display: none;
+  left: $pad + ($btn-size / 2);
+  position: absolute;
+  right: $pad + ($btn-size / 2);
+  top: $pad + ($btn-size / 2);
+  user-select: none;
+  z-index: 7001;
+
+  &.active {
+    display: inline-block
+  }
+
+  .viewer-image {
+    border-radius: $border-radius;
+    height: 100%;
+    object-fit: contain;
+    width: 100%;
+    z-index: 7002;
+  }
+}

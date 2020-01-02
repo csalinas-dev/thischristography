@@ -8,6 +8,7 @@
     "ricard.PostCSS",
     "msjsdiag.debugger-for-chrome",
     "PKief.material-icon-theme",
-    "sibiraj-s.vscode-scss-formatter"
+    "sibiraj-s.vscode-scss-formatter",
+    "miclo.sort-typescript-imports"
   ]
 }

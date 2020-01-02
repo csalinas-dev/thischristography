@@ -1,0 +1,7 @@
+@import '../../shared/styles/variables';
+
+$bg-color: #dceeff;
+
+.landscapes {
+  background: linear-gradient($light-bg-top, $bg-color);
+}
