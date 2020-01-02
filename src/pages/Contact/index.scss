@@ -19,8 +19,24 @@
     width: 100%;
     z-index: 1;
 
+    ul {
+      margin-left: 32px;
+
+      li {
+        font-size: 1rem;
+      }
+    }
+
     @media (min-width: $breakpoint-sm) {
       width: auto;
+
+      ul {
+        margin-left: 50px;
+
+        li {
+          font-size: 1.25rem;
+        }
+      }
     }
   }
 }

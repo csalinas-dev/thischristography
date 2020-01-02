@@ -7,7 +7,7 @@ import images from 'shared/data/images/home.json';
 import './index.scss';
 import { Container } from 'react-bootstrap';
 
-const image = find(images, ['id', '9G3ETcEp2smC'])
+const image = find(images, ['id', 'neK2n78xWr3x'])
 
 const Contact = () => {
   return (
@@ -20,7 +20,7 @@ const Contact = () => {
           <ul className="fa-ul">
             <li className="py-1">
               <span className="fa-li"><i className="fas fa-map-marker" /></span>
-              <span className="pl-2">Albuquerque, New Mexico</span>
+              <span className="pl-2">Albuquerque, NM</span>
             </li>
             {map(links, ContactItem)}
           </ul>
