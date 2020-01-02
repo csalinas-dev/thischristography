@@ -2,7 +2,7 @@
 
 .layout {
   main {
-    min-height: calc(100vh - 80px);
+    min-height: calc(100vh - #{$header-height});
     overflow-x: hidden;
     padding: 32px 0;
   }
