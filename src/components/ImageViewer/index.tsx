@@ -34,19 +34,25 @@ const ImageViewer: FC = () => {
         placement="left"
         overlay={<Tooltip id="tooltip-close" className="d-none d-lg-inline-block">Escape</Tooltip>}
       >
-        <button className="btn-close fas fa-times" onClick={exit} />
+        <button className="btn-close" onClick={exit}>
+          <i className="fas fa-times"/>
+        </button>
       </OverlayTrigger>
       <OverlayTrigger
         placement="right"
         overlay={<Tooltip id="tooltip-prev" className="d-none d-lg-inline-block">Left Arrow</Tooltip>}
       >
-        <button className="btn-prev fas fa-chevron-left" onClick={() => move(prevIndex)} />
+        <button className="btn-prev" onClick={() => move(prevIndex)}>
+          <i className="fas fa-chevron-left"/>
+        </button>
       </OverlayTrigger>
       <OverlayTrigger
         placement="left"
         overlay={<Tooltip id="tooltip-next" className="d-none d-lg-inline-block">Right Arrow</Tooltip>}
       >
-        <button className="btn-next fas fa-chevron-right" onClick={() => move(nextIndex)} />
+        <button className="btn-next" onClick={() => move(nextIndex)}>
+          <i className="fas fa-chevron-right"/>
+        </button>
       </OverlayTrigger>
       {map(images, ViewerImage)}
     </div>

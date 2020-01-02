@@ -18,13 +18,16 @@ $btn-size: 36px;
   .btn-close,
   .btn-prev,
   .btn-next {
+    align-items: center;
     background-color: $primary;
     border-radius: 50%;
     border: none;
     box-shadow: $whiteframe-shadow-6dp;
     color: $black;
+    display: flex;
     font-size: 24px;
     height: $btn-size;
+    justify-content: center;
     outline: none !important;
     position: absolute;
     width: $btn-size;
@@ -32,8 +35,8 @@ $btn-size: 36px;
   }
 
   .btn-close {
-    top: $pad;
     right: $pad;
+    top: $pad;
   }
 
   .btn-prev,
@@ -44,9 +47,17 @@ $btn-size: 36px;
 
   .btn-prev {
     left: $pad;
+    
+    svg {
+      margin-right: 4px;
+    }
   }
 
   .btn-next {
     right: $pad;
+    
+    svg {
+      margin-left: 2px;
+    }
   }
 }
