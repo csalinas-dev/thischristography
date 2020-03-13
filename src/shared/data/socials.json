@@ -12,10 +12,10 @@
     "icon": "fab fa-instagram"
   },
   {
-    "id": "MkKWx9Fvk2SG",
-    "name": "Twitter",
-    "url": "https://twitter.com/TChristography",
-    "icon": "fab fa-twitter"
+    "id": "FPd48TD45CdZ",
+    "name": "TikTok",
+    "url": "https://www.tiktok.com/@thischristography",
+    "icon": "fab fa-tiktok"
   },
   {
     "id": "pNjdZ7CKmJ6y",
@@ -24,9 +24,9 @@
     "icon": "fab fa-facebook-f"
   },
   {
-    "id": "FPd48TD45CdZ",
-    "name": "500px",
-    "url": "https://500px.com/thischristography",
-    "icon": "fab fa-500px"
+    "id": "MkKWx9Fvk2SG",
+    "name": "Twitter",
+    "url": "https://twitter.com/TChristography",
+    "icon": "fab fa-twitter"
   }
 ]

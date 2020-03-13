@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom';
 import Routes from './components/Routes';
 import './index.scss';
 import '@fortawesome/fontawesome-free/js/all';
+import './fa-tiktok.js';
 
 ReactDOM.render(<Routes />, document.getElementById('root'));
 
