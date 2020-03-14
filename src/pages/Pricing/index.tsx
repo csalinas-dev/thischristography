@@ -17,7 +17,7 @@ const Pricing = () => (
           <tr>
             <td>Graduate Portrait Session</td>
             <td>$75 / hour</td>
-            <td />
+            <td>For high school or college graduates.</td>
           </tr>
           <tr>
             <td>Wedding Photography</td>
@@ -27,7 +27,7 @@ const Pricing = () => (
           <tr>
             <td>Automotive Session</td>
             <td>$75 / hour</td>
-            <td />
+            <td>An automotive session will only include photos of the vehicle. If you would like portraits with your vehicle, refer to the standard session for pricing.</td>
           </tr>
         </tbody>
       </Table>
@@ -48,19 +48,19 @@ const Pricing = () => (
     </Container>
     <Container as="section">
       <h1>Session Information</h1>
-      <p>All photoshoot require a $50 booking fee and it will go towards your total balance.</p>
+      <p>All photoshoots require a non-refundable booking fee of $50.00. The amount will go towards your total balance.</p>
       <p>At the end of your session, you may pay the remaining balance:</p>
       <ul className="fa-ul">
         <li>
-          <span className="fa-li"><i className="fas fa-money-bill-wave"/></span>
+          <span className="fa-li"><i className="fas fa-money-bill-wave" /></span>
           <span className="ml-2">In person using cash.</span>
         </li>
         <li>
-          <span className="fa-li"><i className="fas fa-credit-card"/></span>
+          <span className="fa-li"><i className="fas fa-credit-card" /></span>
           <span className="ml-2">In person using debit or credit card.</span>
         </li>
         <li>
-          <span className="fa-li"><i className="fas fa-file-invoice-dollar"/></span>
+          <span className="fa-li"><i className="fas fa-file-invoice-dollar" /></span>
           <span className="ml-2">Online through a Square invoice.</span>
         </li>
       </ul>
