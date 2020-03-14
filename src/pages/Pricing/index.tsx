@@ -61,9 +61,10 @@ const Pricing = () => (
         </li>
         <li>
           <span className="fa-li"><i className="fas fa-file-invoice-dollar" /></span>
-          <span className="ml-2">Online through a Square invoice.</span>
+          <span className="ml-2">Online through a Square invoice (using debit or credit card).</span>
         </li>
       </ul>
+      <p>All debit/credit card processing is handled by <a href="https://squareup.com/us/en">Square Inc.</a></p>
       <p>Final images will not be delivered until payment has been received.</p>
     </Container>
     <Container>
