@@ -48,7 +48,7 @@ const Pricing = () => (
     </Container>
     <Container as="section">
       <h1>Session Information</h1>
-      <p>All photoshoots require a non-refundable booking fee of $50.00. The amount will go towards your total balance.</p>
+      <p>All photoshoots require a non-refundable booking fee of $50.00 or 50% of the travelling fee, whichever is greater. The amount will go towards your total balance.</p>
       <p>At the end of your session, you may pay the remaining balance:</p>
       <ul className="fa-ul">
         <li>
@@ -66,6 +66,7 @@ const Pricing = () => (
       </ul>
       <p>All debit/credit card processing is handled by <a href="https://squareup.com/us/en">Square Inc.</a></p>
       <p>Final images will not be delivered until payment has been received.</p>
+      <p>Checks will not be accepted.</p>
     </Container>
     <Container>
       <label className="mb-5">All pricing effective January 1<sup>st</sup>, 2020</label>
