@@ -4,7 +4,7 @@ import Layout from 'components/Layout';
 import Portrait from './Portrait';
 import React, { FC, useContext, useEffect } from 'react';
 import ScrollAnimation from 'react-animate-on-scroll';
-import { chain, find, map } from 'lodash';
+import { chain, find, map, take } from 'lodash';
 import { Col, Container, Row } from 'react-bootstrap';
 import { ImageViewerContext } from 'containers/ImageViewer/context';
 import { resetImageViewer, updateImageViewer } from 'containers/ImageViewer/actions';
@@ -12,7 +12,6 @@ import './index.scss';
 
 const portraits = chain(images)
   .shuffle()
-  .take(16)
   .value();
 
 // Select images to use in the sections
@@ -47,7 +46,7 @@ const Portraits: FC = () => {
           </Col>
           <Col xs={12} lg={5} className="offset-lg-1 portraits-container">
             <Row>
-              {map(portraits, Portrait)}
+              {map(take(portraits, 16), Portrait)}
             </Row>
           </Col>
         </Row>
