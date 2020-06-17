@@ -5,9 +5,9 @@ const Logo = () => (
     viewBox="0 0 85 60.9" xmlSpace="preserve">
     <style type="text/css">
       {`
-      .st0{clip - path:url(#SVGID_2_);}
-      .st1{clip - path:url(#SVGID_4_);}
-      .st2{clip - path:url(#SVGID_6_);}
+      .st0{clip-path:url(#SVGID_2_);}
+      .st1{clip-path:url(#SVGID_4_);}
+      .st2{clip-path:url(#SVGID_6_);}
       .st3{fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;}
       `}
     </style>
@@ -19,7 +19,7 @@ const Logo = () => (
         <use xlinkHref="#SVGID_1_" style={{ overflow: 'visible' }} />
       </clipPath>
       <g id="Aperture_Icon" className="st0">
-        <g id="Galleries">
+        <a id="Galleries" href="/galleries">
           <defs>
             <path id="XMLID_2_" d="M44,11.6c0.6-0.4,1.1-0.8,1.6-1.2C51.6,6.3,59.1,5,66.1,7c0.3,0,0.6,0.3,0.7,0.6
           c1.1,5,1.9,10.1,2.3,15.2c0,0.1,0,0.2,0,0.4C61.3,18.3,52.9,14.4,44,11.6z"/>
@@ -31,8 +31,8 @@ const Logo = () => (
           <g style={{ clipPath: 'url(#XMLID_9_)' }}>
             <image style={{ overflow: 'visible' }} width="1498" height="1000" xlinkHref="/assets/images/galleries/thunderbirds/ThisChristography-20190518-029.jpg" transform="matrix(2.236315e-02 0 0 2.236315e-02 50.3996 3.6233)" />
           </g>
-        </g>
-        <g id="Portraits">
+        </a>
+        <a id="Portraits" href="/portraits">
           <defs>
             <path id="XMLID_1_" d="M70.7,35.2c0.4-9.2-0.4-18.4-2.5-27.4c0.4,0.1,0.7,0.2,0.9,0.4c7,3,12.2,9.1,14.1,16.5
           c0.1,0.3,0,0.5-0.2,0.8c-3.7,3.5-7.8,6.8-12,9.7H70.7z"/>
@@ -45,8 +45,8 @@ const Logo = () => (
             <image style={{ overflow: 'visible' }} width="1000" height="1250" xlinkHref="/assets/images/portraits/ThisChristography-20200201-4.jpg" transform="matrix(2.830000e-02 0 0 2.830000e-02 59.9585 7.3556)">
             </image>
           </g>
-        </g>
-        <g id="Weddings">
+        </a>
+        <a id="Weddings" href="/weddings">
           <defs>
             <path id="XMLID_3_" d="M61.1,42.6c8.2-4.3,15.8-9.6,22.6-15.9c0.1,1.2,0.3,2.2,0.3,3.2c0.2,6.7-2.4,13.2-7.1,18
           c-0.3,0.5-1,0.6-1.5,0.4c-4.6-1.4-9.2-3.2-13.5-5.3L61.1,42.6z"/>
@@ -59,8 +59,8 @@ const Logo = () => (
             <image style={{ overflow: 'visible' }} width="1498" height="1000" xlinkHref="/assets/images/weddings/ThisChristography-20190724-52.jpg" transform="matrix(2.411111e-02 0 0 2.411111e-02 56.9309 26.1667)">
             </image>
           </g>
-        </g>
-        <g id="Automotive">
+        </a>
+        <a id="Automotive" href="/automotive">
           <defs>
             <path id="XMLID_4_" d="M50,38c7.7,4.9,16.1,8.8,24.8,11.5l0.1,0.2c-1.2,0.8-2.3,1.6-3.4,2.2C67.7,54,63.4,55.1,59,55
           c-2.1,0-4.2-0.4-6.2-1c-0.3-0.1-0.4-0.4-0.5-0.6c-0.7-3.6-1.3-7.2-1.9-10.9c-0.2-1.3-0.3-2.7-0.4-4.1C50,38.3,50,38.2,50,38z"
@@ -74,7 +74,7 @@ const Logo = () => (
             <image style={{ overflow: 'visible' }} width="1000" height="1250" xlinkHref="/assets/images/automotive/ThisChristography-20190903.jpg" transform="matrix(2.816667e-02 0 0 2.816667e-02 46.7333 29.6212)">
             </image>
           </g>
-        </g>
+        </a>
         <path id="Boudoir" d="M50.8,53.5c-2.3-0.8-4.5-2.1-6.4-3.6c-4.2-3.3-7.2-7.9-8.6-13.1c-0.2-0.4,0-0.8,0.3-1.1
       c3.6-3.4,7.5-6.5,11.5-9.3c0.2-0.1,0.4-0.3,0.7-0.4C47.9,35.2,48.8,44.5,50.8,53.5z"/>
       </g>
