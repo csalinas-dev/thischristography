@@ -1,105 +1,67 @@
 @import '../../shared/styles/variables';
 
 .home {
-  align-items: center;
-  display: flex;
+  align-items: stretch;
+  display: grid;
+  grid-template-areas: 
+    "socials"
+    "content"
+    "other";
+  grid-template-columns: auto;
+  grid-template-rows: 48px auto 56px;
   height: 100vh;
-  justify-content: center;
+  justify-items: stretch;
   position: relative;
   width: 100%;
   z-index: 0;
 
   &:before {
-    background-color: rgba($black, 0.75);
+    background-color: #121212;
     background-image: url("/assets/home/texture.png");
     background-repeat: repeat;
     bottom: 0;
     content: "";
     left: 0;
-    opacity: 0.5;
     position: absolute;
     right: 0;
     top: 0;
     z-index: 0;
   }
 
-  .carousel {
-    bottom: 0;
-    left: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
-    z-index: -1;
-
-    .carousel-inner,
-    .carousel-item {
-      width: 100%;
-      height: 100%;
-
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-    }
-  }
-
-  // Content Boxes
-  .content {
-    z-index: 1;
-    display: flex;
+  // Main
+  main {
     align-items: center;
+    display: flex;
+    grid-area: content;
+    height: 100%;
     justify-content: center;
-    flex-direction: column;
-    padding: 32px;
+    width: 100%;
+    z-index: 1;
 
-    .logo {
-      max-width: 100%;
-    }
-  }
-
-  .other {
-    background: linear-gradient(transparent, $black);
-    bottom: 0;
-    left: 0;
-    padding: 32px 32px 16px;
-    position: absolute;
-    right: 0;
-
-    
-    nav {
-      @media (min-width: $breakpoint-md){
-        justify-content: flex-end;
-      }
-
-      .nav-link {
-        font-size: .75rem;
-        margin: 0 .5em;
-      }
+    svg {
+      height: 100%;
     }
   }
 
   // Navs
   nav {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
     align-items: center;
-    width: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 1;
 
     &.socials {
-      flex-flow: row nowrap;
+      grid-area: socials;
 
       a {
         min-width: 32px;
         min-height: 32px;
       }
     }
-  }
 
-  nav + nav {
-    @media (min-width: 1024px) {
-      margin-top: 50px;
+    &.other {
+      grid-area: other;
+      display: flex;
     }
   }
 
