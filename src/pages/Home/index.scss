@@ -11,42 +11,27 @@
   grid-template-rows: 48px auto 56px;
   height: 100vh;
   justify-items: stretch;
+  overflow: hidden;
   position: relative;
   width: 100%;
   z-index: 0;
 
-  &:before {
-    background-color: rgba(#333, 0.9);
-    background-image: url("/assets/home/texture.png");
-    background-repeat: repeat;
+  // Video
+  #background {
     bottom: 0;
-    content: "";
+    height: 100%;
     left: 0;
+    min-height: 56.25vw; /* 100 * 9 / 16 */
+    min-width: 100%;
     position: absolute;
     right: 0;
     top: 0;
-    z-index: 0;
-  }
-
-  // Carousel
-  .carousel {
-    bottom: 0;
-    left: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
+    width: 177.77777778vh; /* 100 * 16 / 9 */
     z-index: -1;
 
-    .carousel-inner,
-    .carousel-item {
+    source {
+      height: 100vh;
       width: 100%;
-      height: 100%;
-
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
     }
   }
 

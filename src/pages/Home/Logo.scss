@@ -1,5 +1,11 @@
-.home {
-  svg {
-    height: 100%;
-  }
+$logo-color: #181818;
+
+svg {
+  height: 100%;
+}
+
+#T,
+#C,
+#Slash {
+  fill: $logo-color;
 }
