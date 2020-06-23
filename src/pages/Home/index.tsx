@@ -27,7 +27,9 @@ const Home = () => {
     resizeHandler();
   });
 
-  const links = concat(primaryLinks, secondaryLinks);
+  const links = isDesktop 
+    ? concat(primaryLinks, secondaryLinks)
+    : secondaryLinks;
 
   return (
     <div className="home">
