@@ -4,8 +4,8 @@ import PageLink from 'components/PageLink';
 import React, { useEffect, useState } from 'react';
 import SocialLink from 'components/SocialLink';
 import socials from 'shared/data/socials.json';
-import { map } from 'lodash';
-import { secondaryLinks } from 'components/Routes/links';
+import { map, concat } from 'lodash';
+import { primaryLinks, secondaryLinks } from 'components/Routes/links';
 import './Home.scss';
 
 const Home = () => {
@@ -27,6 +27,8 @@ const Home = () => {
     resizeHandler();
   });
 
+  const links = concat(primaryLinks, secondaryLinks);
+
   return (
     <div className="home">
       <div className="d-none">
@@ -34,7 +36,7 @@ const Home = () => {
         <p>This Christography is a photographer based in Albuquerque, NM. Specializing in many forms of portraits (individual, couples, graduates, and family), automotive, engagement, weddings, events, and landscapes.</p>
       </div>
       <nav className="socials">{map(socials, SocialLink)}</nav>
-      <nav className="other">{map(secondaryLinks, PageLink)}</nav>
+      <nav className="other">{map(links, PageLink)}</nav>
       <main className={isDesktop ? "desktop" : "mobile"}>
         {isDesktop ? <Desktop /> : <Mobile />}
       </main>

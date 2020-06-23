@@ -8,7 +8,7 @@
     "content"
     "other";
   grid-template-columns: auto;
-  grid-template-rows: 48px auto 56px;
+  grid-template-rows: 48px auto fit-content(56px);
   height: 100vh;
   justify-items: stretch;
   overflow: hidden;

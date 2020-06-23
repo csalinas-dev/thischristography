@@ -93,7 +93,6 @@ const Logo = () => {
       <div className={classnames("label", "font-montserrat", { "show-label": !!activeLabel })}>
         <h1>{activeLabel}</h1>
       </div>
-      <div className="hint">Use images to navigate</div>
     </>
   );
 }
