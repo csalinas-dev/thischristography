@@ -35,7 +35,9 @@ const Home = () => {
       </div>
       <nav className="socials">{map(socials, SocialLink)}</nav>
       <nav className="other">{map(secondaryLinks, PageLink)}</nav>
-      <main>{isDesktop ? <Desktop /> : <Mobile />}</main>
+      <main className={isDesktop ? "desktop" : "mobile"}>
+        {isDesktop ? <Desktop /> : <Mobile />}
+      </main>
     </div>
   );
 };

@@ -3,7 +3,7 @@
 .home {
   align-items: stretch;
   display: grid;
-  grid-template-areas: 
+  grid-template-areas:
     "socials"
     "content"
     "other";
@@ -14,20 +14,37 @@
   overflow: hidden;
   position: relative;
   width: 100%;
-  z-index: 0;
+
+  #background {
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: -2;
+  }
 
   // Main
   main {
+    align-items: center;
+    display: flex;
     grid-area: content;
-    position: relative;
-    z-index: 1;
-    
-    > div {
+    justify-content: center;
+    padding: 32px;
+    z-index: 0;
+
+    &::before {
+      background-color: rgba($black, 0.75);
+      background-image: url("/assets/home/texture.png");
+      background-repeat: repeat;
       bottom: 0;
+      content: "";
       left: 0;
-      position: absolute;
+      opacity: 0.5;
+      position: fixed;
       right: 0;
       top: 0;
+      z-index: -1;
     }
   }
 
@@ -38,7 +55,7 @@
     flex-wrap: wrap;
     justify-content: center;
     width: 100%;
-    z-index: 2;
+    z-index: 1;
 
     &.socials {
       background: linear-gradient(rgba(#000, .5), transparent);
