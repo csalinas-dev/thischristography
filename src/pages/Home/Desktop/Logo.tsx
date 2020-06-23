@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
 import classnames from 'classnames';
-import './Logo.scss';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { OverlayTrigger, Tooltip } from 'react-bootstrap';
+import './Logo.scss';
 
 const Logo = () => {
   const [activeLabel, setActiveLabel] = useState<string | null>(null);
