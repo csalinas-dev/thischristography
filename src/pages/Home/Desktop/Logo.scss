@@ -1,12 +1,60 @@
+@import "../../../shared/styles/variables";
+@import "../../../shared/styles/whiteframes";
 $logo-color: #000;
+
+@mixin page-link-hover($content) {
+  align-items: center;
+  bottom: 0;
+  color: #fff;
+  content: $content;
+  display: flex;
+  font-family: montserrat, sans-serif;
+  justify-content: center;
+  left: 0;
+  position: absolute;
+  right: 0;
+  text-shadow: 0 1px 8px $shadow-key-umbra, 0 3px 4px $shadow-key-penumbra, 0 3px 3px $shadow-ambient-shadow;
+  top: 0;
+}
+
 .home {
   svg {
     height: 100%;
   }
-  
+
   #T,
   #C,
   #Slash {
     fill: $logo-color;
+  }
+
+  .label {
+    background-color: $white;
+    border-radius: 5px;
+    box-shadow: $whiteframe-shadow-5dp;
+    left: 50%;
+    max-width: 100%;
+    opacity: 0;
+    padding: 32px 64px;
+    position: fixed;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: 10;
+
+    h1 {
+      font-size: 7.5rem;
+    }
+
+    &.show-label {
+      opacity: .5;
+    }
+  }
+
+  .hint {
+    position: fixed;
+    right: 64px;
+    bottom: 64px;
+    transform: translateX(-50%) translateY(-50%);
+    color: rgba(#fff, 0.54);
   }
 }
