@@ -1,0 +1,108 @@
+@import "../../shared/styles/variables";
+
+.home {
+  align-items: stretch;
+  display: grid;
+  grid-template-areas:
+    "socials"
+    "content"
+    "other";
+  grid-template-columns: auto;
+  grid-template-rows: 48px auto 56px;
+  height: 100vh;
+  justify-items: stretch;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+
+  #background {
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: -2;
+  }
+
+  // Main
+  main {
+    align-items: center;
+    display: flex;
+    grid-area: content;
+    justify-content: center;
+    padding: 32px;
+    z-index: 0;
+
+    &::before {
+      background-color: rgba($black, 0.75);
+      background-image: url("/assets/home/texture.png");
+      background-repeat: repeat;
+      bottom: 0;
+      content: "";
+      left: 0;
+      opacity: 0.5;
+      position: fixed;
+      right: 0;
+      top: 0;
+      z-index: -1;
+    }
+  }
+
+  // Navs
+  nav {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    z-index: 1;
+
+    &.socials {
+      background: linear-gradient(rgba(#000, .5), transparent);
+      grid-area: socials;
+
+      a {
+        min-width: 32px;
+        min-height: 32px;
+      }
+    }
+
+    &.other {
+      background: linear-gradient(transparent, rgba(#000, .5));
+      display: flex;
+      grid-area: other;
+    }
+  }
+
+  // Links
+  .nav-link {
+    align-items: center;
+    border-radius: $border-radius;
+    color: $white;
+    display: flex;
+    font-family: "Montserrat", open-sans, sans-serif;
+    font-size: .8rem;
+    font-weight: 100;
+    justify-content: center;
+    letter-spacing: 1px;
+    margin: 0.25em;
+    padding: 0.25em 0.5em;
+    text-shadow: 1px 1px 2px rgba(#000, 0.5);
+    text-transform: uppercase;
+    transition: all ease-in-out 0.3s;
+
+    @media (min-width: 420px) {
+      font-size: 1rem;
+    }
+
+    @media (min-width: 1024px) {
+      margin: 0.5em 1em;
+      padding: 0.5em 1em;
+    }
+
+    &:hover {
+      background-color: $white;
+      color: $black;
+    }
+  }
+}
