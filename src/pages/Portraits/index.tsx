@@ -15,9 +15,9 @@ const portraits = chain(images)
   .value();
 
 // Select images to use in the sections
-const portrait = find(portraits, ['id', 'dJt72h6mTgB7']);
+const portrait = find(portraits, ['id', 'e2SMMM6TSjpy']);
 const senior = find(portraits, ['id', 'sYHKhFnVx68D']);
-const family = find(portraits, ['id', 'e2SMMM6TSjpy']);
+const family = find(portraits, ['id', '22T5peWxa8W6']);
 
 const Portraits: FC = () => {
   // Update images in image viewer on mount
