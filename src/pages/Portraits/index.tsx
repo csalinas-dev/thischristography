@@ -72,12 +72,12 @@ const Portraits: FC = () => {
       {senior &&
         <Container as="section">
           <Row>
-            <Col sm={8} md={6} lg={4} className="offset-sm-2 offset-md-0 order-md-2 mb-4 mb-lg-0">
+            <Col lg={6} className="order-md-2 mb-4 mb-lg-0">
               <ScrollAnimation animateIn="fadeInUp" animateOnce={true}>
                 <Image src={senior.url} height={senior.height} width={senior.width} id={senior.id} />
               </ScrollAnimation>
             </Col>
-            <Col md={6} lg={4} className="d-flex flex-column justify-content-center offset-lg-2 order-md-1 text-center text-md-left">
+            <Col lg={4} className="d-flex flex-column justify-content-center offset-lg-1 text-center text-lg-left">
               <ScrollAnimation animateIn="fadeInDown" animateOnce={true}>
                 <h1>Graduation</h1>
                 <p>If you are a graduating school, let's capture some timeless memories of the things that sum up your time in school! Now that you'll be done with school, let's also show the path of your future.</p>
@@ -90,12 +90,12 @@ const Portraits: FC = () => {
       {family &&
         <Container as="section">
           <Row>
-            <Col sm={8} md={6} lg={4} className="offset-sm-2 offset-md-0 offset-lg-2 mb-4 mb-lg-0">
+            <Col lg={6} className="offset-lg-1 mb-4 mb-lg-0">
               <ScrollAnimation animateIn="fadeInLeft">
                 <Image src={family.url} height={family.height} width={family.width} id={family.id} />
               </ScrollAnimation>
             </Col>
-            <Col md={6} lg={4} className="d-flex flex-column justify-content-center offset-lg-1 text-center text-md-left">
+            <Col lg={4} className="d-flex flex-column justify-content-center text-center text-lg-left">
               <ScrollAnimation animateIn="fadeInRight">
                 <h1>Family</h1>
                 <p>Gather up your loved ones and color coordinate your outfits for some excellent photos to share with your friends and the rest of the family!</p>
