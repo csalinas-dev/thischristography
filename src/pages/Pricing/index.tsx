@@ -29,36 +29,26 @@ const Pricing = () => (
     </Container>
     <Container as="section">
       <h1>Photoshoot Pricing</h1>
+      <p>More information coming soon. In the meantime, contact Chris for more information.</p>
       <Table responsive striped>
-        <thead>
-          <tr>
-            <th/>
-            <th>Current</th>
-            <th>Starting July, 2020</th>
-            <th/>
-          </tr>
-        </thead>
         <tbody>
           <tr>
             <td>Portrait Session</td>
-            <td>$100</td>
             <td>$250</td>
-            <td>Portraits, Seniors Portraits, and Family Portraits</td>
+            <td>Individual, Graduates, Couples, and Family</td>
           </tr>
           <tr>
             <td>Boudoir Session</td>
-            <td>$100</td>
-            <td>$750</td>
-            <td>More information coming soon. Contact Chris for an in person or virtual meeting to discuss further information.</td>
+            <td>Starting at $750</td>
+            <td>Contact Chris for more information.</td>
           </tr>
           <tr>
             <td>Wedding Photography</td>
-            <td colSpan={2}>Starting at $1500</td>
-            <td>More information coming soon. Contact Chris for more information.</td>
+            <td>Starting at $1500</td>
+            <td>Contact Chris for more information.</td>
           </tr>
           <tr>
             <td>Automotive Session</td>
-            <td>$75</td>
             <td>$100</td>
             <td>Exterior and interior photos of your vehicle. Rolling shots are an additional $50.</td>
           </tr>
@@ -80,7 +70,7 @@ const Pricing = () => (
       </ul>
     </Container>
     <Container>
-      <label className="mb-5">New pricing effective July 1<sup>st</sup>, 2020</label>
+      <label className="mb-5">Pricing effective July 1<sup>st</sup>, 2020</label>
     </Container>
   </Layout>
 );
