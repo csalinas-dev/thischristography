@@ -34,23 +34,18 @@ const Pricing = () => (
         <tbody>
           <tr>
             <td>Portrait Session</td>
-            <td>$250</td>
+            <td>$200</td>
             <td>Individual, Graduates, Couples, and Family</td>
           </tr>
           <tr>
-            <td>Boudoir Session</td>
-            <td>Starting at $750</td>
-            <td>Contact Chris for more information.</td>
-          </tr>
-          <tr>
             <td>Wedding Photography</td>
-            <td>Starting at $1500</td>
+            <td>Starting at $1000</td>
             <td>Contact Chris for more information.</td>
           </tr>
           <tr>
             <td>Automotive Session</td>
-            <td>$100</td>
-            <td>Exterior and interior photos of your vehicle. Rolling shots are an additional $50.</td>
+            <td>$75</td>
+            <td>Exterior and interior photos of your vehicle. Rolling shots are an additional $25.</td>
           </tr>
         </tbody>
       </Table>
