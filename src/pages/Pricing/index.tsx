@@ -34,7 +34,7 @@ const Pricing = () => (
         <tbody>
           <tr>
             <td>Portrait Session</td>
-            <td>$200</td>
+            <td>$150</td>
             <td>Individual, Graduates, Couples, and Family</td>
           </tr>
           <tr>
