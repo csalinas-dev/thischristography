@@ -20,6 +20,11 @@ export const primaryLinks: Array<LinkInfo> = [
     id: 'kUS7Xd4K4JFG',
     url: '/automotive',
     name: 'Automotive'
+  },
+  {
+    id: 'an65sdv2bsdd',
+    url: 'https://clients.thischristography.com/',
+    name: 'Clients'
   }
 ];
 
