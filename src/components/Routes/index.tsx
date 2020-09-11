@@ -23,16 +23,16 @@ const Routes = () => {
       <ImageViewerContext.Provider value={{ state, dispatch }}>
         <ScrollToTop>
           <Switch>
-            <Route component={Home}            path="/" exact={true} />
-            <Route component={About}           path="/about" />
-            <Route component={Automotive}      path="/automotive" />
-            <Route component={Contact}         path="/contact" />
-            <Route component={Galleries}       path="/galleries" />
-            <Route component={Portraits}       path="/portraits" />
-            <Route component={Pricing}         path="/pricing" />
-            <Route component={Prints}          path="/prints" />
-            <Route component={Weddings}        path="/weddings" />
-            <Route component={NotFound} />
+            <Route component={Home}       path="/" exact={true} />
+            <Route component={About}      path="/about" />
+            <Route component={Automotive} path="/automotive" />
+            <Route component={Contact}    path="/contact" />
+            <Route component={Galleries}  path="/galleries" />
+            <Route component={Portraits}  path="/portraits" />
+            <Route component={Pricing}    path="/pricing" />
+            <Route component={Prints}     path="/prints" />
+            <Route component={Weddings}   path="/weddings" />
+            <Route component={NotFound}   path="*"/>
           </Switch>
         </ScrollToTop>
       </ImageViewerContext.Provider>
