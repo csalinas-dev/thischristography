@@ -33,9 +33,19 @@ const Pricing = () => (
       <Table responsive striped>
         <tbody>
           <tr>
+            <td>UNM Graduates</td>
+            <td>$50</td>
+            <td>Pictures taken at Hodgin Hall and in front of Farris Engineering Center.</td>
+          </tr>
+          <tr>
+            <td>High School Graduates</td>
+            <td>$75</td>
+            <td>Pictures taken at a location of your choosing (see travelling fees below). For example, we can do it at your high school.</td>
+          </tr>
+          <tr>
             <td>Portrait Session</td>
             <td>$150</td>
-            <td>Individual, Graduates, Couples, and Family</td>
+            <td>Individual, Couples, and Family</td>
           </tr>
           <tr>
             <td>Wedding Photography</td>
@@ -44,7 +54,7 @@ const Pricing = () => (
           </tr>
           <tr>
             <td>Automotive Session</td>
-            <td>$75</td>
+            <td>$50</td>
             <td>Exterior and interior photos of your vehicle. Rolling shots are an additional $25.</td>
           </tr>
         </tbody>
@@ -65,7 +75,7 @@ const Pricing = () => (
       </ul>
     </Container>
     <Container>
-      <label className="mb-5">Pricing effective July 1<sup>st</sup>, 2020</label>
+      <label className="mb-5">Pricing effective November 21<sup>st</sup>, 2020</label>
     </Container>
   </Layout>
 );
