@@ -35,12 +35,12 @@ const Pricing = () => (
           <tr>
             <td>UNM Graduates</td>
             <td>$50</td>
-            <td>Pictures taken at Hodgin Hall and in front of Farris Engineering Center.</td>
+            <td>Pictures taken at Hodgin Hall and other spots around main campus.</td>
           </tr>
           <tr>
-            <td>High School Graduates</td>
+            <td>All Other Graduates</td>
             <td>$75</td>
-            <td>Pictures taken at a location of your choosing (see travelling fees below). For example, we can do it at your high school.</td>
+            <td>Pictures taken at a location of your choosing (see travelling fees below).</td>
           </tr>
           <tr>
             <td>Portrait Session</td>
