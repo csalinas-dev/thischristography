@@ -12,11 +12,6 @@ export const primaryLinks: Array<LinkInfo> = [
     name: 'Portraits'
   },
   {
-    id: '5urf5TDTKvrq',
-    url: 'https://clients.thischristography.com/?t=gallery',
-    name: 'Galleries'
-  },
-  {
     id: 'rU59Rx8r5eNd',
     url: 'https://clients.thischristography.com/?t=wedding',
     name: 'Weddings'
@@ -25,6 +20,11 @@ export const primaryLinks: Array<LinkInfo> = [
     id: 'kUS7Xd4K4JFG',
     url: 'https://clients.thischristography.com/automotive/',
     name: 'Automotive'
+  },
+  {
+    id: '5urf5TDTKvrq',
+    url: 'https://clients.thischristography.com/?t=gallery',
+    name: 'Galleries'
   }
 ];
 

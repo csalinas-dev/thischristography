@@ -116,7 +116,7 @@ const Logo = () => {
               </clipPath>
               <g style={{ clipPath: 'url(#cp-galleries)' }}>
                 <image
-                  xlinkHref="/assets/images/galleries/balloon-fiesta/ThisChristography-20191013.jpg"
+                  xlinkHref="/assets/home/desktop/galleries.jpg"
                   transform="matrix(1.238889e-02 0 0 1.238889e-02 41.7222 38.125)"
                   filter={activeLabel === "Galleries" ? "" : "url(#grayscale)"} />
               </g>
