@@ -1,5 +1,5 @@
 import CarouselItem from './CarouselItem';
-import images from 'shared/data/images/home.json';
+import images from 'shared/data/home.json';
 import PageLink from 'components/PageLink';
 import React from 'react';
 import { Carousel } from 'react-bootstrap';
