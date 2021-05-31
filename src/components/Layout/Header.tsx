@@ -16,7 +16,7 @@ interface HeaderProps {
 const Header = (props: HeaderProps) => (
   <header>
     <Container>
-      <Navbar expand="lg" variant={props.dark ? "dark" : "light"}>
+      <Navbar expand="xl" variant={props.dark ? "dark" : "light"}>
         <Navbar.Brand as={Link} to="/">
           <Brand />
         </Navbar.Brand>
