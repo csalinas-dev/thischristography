@@ -4,7 +4,6 @@ import Layout from 'components/Layout';
 import me from './me.jpg';
 import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
 import './index.scss';
 
 const About = () => {
