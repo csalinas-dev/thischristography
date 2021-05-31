@@ -3,7 +3,7 @@ import Layout from 'components/Layout';
 import links from 'shared/data/socials.json';
 import React from 'react';
 import { map, find } from 'lodash';
-import images from 'shared/data/images/home.json';
+import images from 'shared/data/home.json';
 import './index.scss';
 import { Container } from 'react-bootstrap';
 
