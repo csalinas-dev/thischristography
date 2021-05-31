@@ -20,7 +20,7 @@ const About = () => {
               <Col md={8} lg={12} xl={8} className="offset-md-2 offset-lg-0 offset-xl-2 circle">
                 <Image id="8X8SpGXmtHfp" src={me} alt="Christopher Salinas Jr (also known as JR Salinas)"/>
               </Col>
-              <Col className="text-center pt-4">
+              <Col xs={12} className="text-center pt-4">
                 <h1>Christopher Salinas Jr.</h1>
                 <h2>Photographer</h2>
               </Col>
@@ -29,7 +29,7 @@ const About = () => {
           <Col>
             <section className="mt-4 mt-lg-0">
               <h3>About Me</h3>
-              <p>I'm a freelance photographer based in Albuquerque, NM that specializes in <Link to="/portraits">portraits</Link>, <Link to="/weddings">weddings</Link>, <Link to="/automotive">automotive</Link>, and landscapes. I have been practicing photography for about {yearsPracticing} years now, but only started This Christography at the end of March 2019.</p>
+              <p>I'm a freelance photographer based in Albuquerque, NM that specializes in portraits, weddings, automotive, and landscapes. I have been practicing photography for about {yearsPracticing} years now, but only started This Christography at the end of March 2019.</p>
               <p>I am currently a software engineer for a local IT/Software company in Albuquerque, NM. I am also pursuing my Bachelor's of Science in Computer Science (BSCS) at the University of New Mexico.</p>
             </section>
             <section>
