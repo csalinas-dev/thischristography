@@ -2,6 +2,7 @@ import { Link } from "gatsby";
 import React, { FC } from "react";
 import { startsWith } from "lodash";
 import { css, SerializedStyles } from "@emotion/react";
+import * as breakpoints from "core/styles/breakpoints";
 
 export type IconButtonProps = {
   url: string;
@@ -15,12 +16,17 @@ const IconButton: FC<IconButtonProps> = ({ url, icon, styles }) => {
     border-radius: 50%;
     display: flex;
     font-size: 1rem;
-    height: 2.5rem;
+    height: 1.5rem;
     justify-content: center;
-    width: 2.5rem;
+    width: 1.5rem;
 
     &:active {
       background-color: rgba(0, 0, 0, 0.12);
+    }
+
+    @media ${breakpoints.lg} {
+      height: 2.5rem;
+      width: 2.5rem;
     }
 
     ${styles}

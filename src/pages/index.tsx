@@ -21,6 +21,7 @@ const IndexPage = () => (
       objectFit="cover"
       placeholder="blurred"
       src="../assets/images/ThisChristography-20201010.jpg"
+      quality={100}
     />
   </Layout>
 );

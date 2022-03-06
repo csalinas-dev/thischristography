@@ -1,5 +1,6 @@
 import { css, Global } from "@emotion/react";
 import styled from "@emotion/styled";
+import * as breakpoints from "core/styles/breakpoints";
 import React, { FC, PropsWithChildren } from "react";
 import { Helmet } from "react-helmet";
 import Footer from "./footer";
@@ -31,12 +32,28 @@ const LayoutWrapper = styled.div`
     ". header ."
     ". content ."
     "footer footer footer";
-  grid-template-columns: auto 80% auto;
-  grid-template-rows: 10rem minmax(max-content, auto) fit-content(0);
+  grid-template-columns: auto 90% auto;
+  grid-template-rows: fit-content(10rem) minmax(max-content, auto) fit-content(0);
   min-height: 100vh;
   position: relative;
   row-gap: 1rem;
   width: 100%;
+
+  @media ${breakpoints.sm} {
+    grid-template-columns: auto 36rem auto;
+  }
+
+  @media ${breakpoints.md} {
+    grid-template-columns: auto 56rem auto;
+  }
+
+  @media ${breakpoints.lg} {
+    grid-template-columns: auto 76rem auto;
+  }
+
+  @media ${breakpoints.xl} {
+    grid-template-columns: auto 96rem auto;
+  }
 `;
 
 const Content = styled.main`
@@ -45,7 +62,8 @@ const Content = styled.main`
 
 const Layout: FC<PropsWithChildren<Props>> = ({ children, footer = true }) => (
   <LayoutWrapper>
-    <Helmet>
+    <Helmet title="This Christography | Albuquerque Photographer">
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
       <script
         src="https://kit.fontawesome.com/1407f4e18d.js"
         crossOrigin="anonymous"
