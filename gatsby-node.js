@@ -1,4 +1,4 @@
-import path from "path"
+const path = require("path");
 
 exports.onCreateWebpackConfig = ({ stage, actions }) => {
   actions.setWebpackConfig({
