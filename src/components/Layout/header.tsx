@@ -114,7 +114,7 @@ const HeaderWrapper: FC = () => {
             alt="This Christography Logo"
             height={36}
             layout="constrained"
-            src="../assets/images/logos/thischristography-logo.png"
+            src="../../assets/images/logos/thischristography-logo.png"
             quality={100}
           />
         </Link>
