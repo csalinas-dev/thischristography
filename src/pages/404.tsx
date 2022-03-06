@@ -1,15 +1,21 @@
-import * as React from "react";
-import { Link } from "gatsby";
+import styled from "@emotion/styled";
 import { Layout } from "components";
+import { Link } from "gatsby";
+import React from "react";
+
+const Wrapper = styled(Layout)`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
 
 const NotFoundPage = () => (
-  <Layout>
-    <title>Not found</title>
+  <Wrapper>
     <h1>Page not found</h1>
     <p>
-      <Link to="/">Go home</Link>.
+      <Link to="/">Go home</Link>
     </p>
-  </Layout>
+  </Wrapper>
 );
 
 export default NotFoundPage;

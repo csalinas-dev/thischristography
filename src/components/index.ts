@@ -1,2 +1,2 @@
 export { default as Layout } from "./Layout";
-export { default as GlobalWrapper } from "./GlobalWrapper";
+export { default as IconButton } from "./IconButton";

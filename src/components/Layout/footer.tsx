@@ -1,9 +1,14 @@
+import styled from '@emotion/styled';
 import React, { FC } from 'react';
 
-const Footer: FC = () => (
-  <footer>
+const Footer = styled.footer`
+  grid-area: footer;
+`;
+
+const FooterWrapper: FC = () => (
+  <Footer>
     App Footer
-  </footer>
+  </Footer>
 );
 
-export default Footer;
+export default FooterWrapper;
