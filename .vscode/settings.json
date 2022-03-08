@@ -9,7 +9,7 @@
     "**/.git": true,
     ".cache": true,
     "node_modules": true,
-    "public": true,
+    // "public": true,
     "tmp": true
   },
   "editor.detectIndentation": false,
@@ -48,5 +48,6 @@
   "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": false
-  }
+  },
+  "terminal.integrated.defaultProfile.windows": "Git Bash"
 }
