@@ -34,6 +34,9 @@ const CategoryPlate: FC = () => (
       layout='constrained'
       placeholder="blurred"
       src="../../assets/images/ThisChristography-20201010.jpg"
+      transformOptions={{
+        cropFocus: "center"
+      }}
     />
     <h2>White Sands</h2>
   </PlateWrapper>
