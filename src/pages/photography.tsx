@@ -2,9 +2,9 @@ import { css } from "@emotion/react";
 import { Layout } from "components";
 import React, { FC } from "react";
 
-const Gallery: FC = () => (
+const Photography: FC = () => (
   <Layout>
-    Gallery
+    Photography
     <div
       css={css`
         width: 200px;
@@ -15,4 +15,4 @@ const Gallery: FC = () => (
   </Layout>
 );
 
-export default Gallery;
+export default Photography;

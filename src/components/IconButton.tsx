@@ -2,15 +2,16 @@ import { Link } from "gatsby";
 import React, { FC } from "react";
 import { startsWith } from "lodash";
 import { css, SerializedStyles } from "@emotion/react";
-import * as breakpoints from "core/styles/breakpoints";
+import { breakpoints } from "core/styles";
 
 export type IconButtonProps = {
-  url: string;
   icon: string;
+  onClick?: (event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => void;
   styles?: SerializedStyles;
+  url: string;
 };
 
-const IconButton: FC<IconButtonProps> = ({ url, icon, styles }) => {
+const IconButton: FC<IconButtonProps> = ({ url, icon, styles, onClick }) => {
   const linkStyles = css`
     align-items: center;
     border-radius: 50%;
@@ -32,9 +33,15 @@ const IconButton: FC<IconButtonProps> = ({ url, icon, styles }) => {
     ${styles}
   `;
 
-  if (!startsWith(url, "/")) {
+  if (!startsWith(url, "/" || onClick)) {
     return (
-      <a href={url} target="_blank" rel="noopener noreferrer" css={linkStyles}>
+      <a
+        css={linkStyles}
+        href={url}
+        onClick={onClick}
+        rel="noopener noreferrer"
+        target="_blank"
+      >
         <i className={icon} />
       </a>
     );

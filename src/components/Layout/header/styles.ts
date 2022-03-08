@@ -1,6 +1,6 @@
 import { css } from "@emotion/react";
 import styled from "@emotion/styled";
-import * as breakpoints from "core/styles/breakpoints";
+import { breakpoints } from "core/styles";
 
 export const Header = styled.header`
   align-items: center;
@@ -96,15 +96,4 @@ export const linkStyle = css`
   @media ${breakpoints.lg} {
     margin: 0.5rem;
   }
-`;
-
-export const scrollToTop = css`
-  ${linkStyle}
-  bottom: 3rem;
-  font-size: 3rem;
-  height: 4rem;
-  width: 4rem;
-  position: fixed;
-  right: 3rem;
-  z-index: 9999;
 `;
