@@ -1,6 +1,9 @@
-const shadowKeyUmbra =      "rgba(0, 0, 0, .14)";
-const shadowKeyPenumbra =   "rgba(0, 0, 0, .1)";
-const shadowAmbientShadow = "rgba(0, 0, 0, .08)";
+// const shadowKeyUmbra =      "rgba(0, 0, 0, .14)";
+// const shadowKeyPenumbra =   "rgba(0, 0, 0, .1)";
+// const shadowAmbientShadow = "rgba(0, 0, 0, .08)";
+const shadowKeyUmbra =      "rgba(0, 0, 0, .2)";
+const shadowKeyPenumbra =   "rgba(0, 0, 0, .15)";
+const shadowAmbientShadow = "rgba(0, 0, 0, .12)";
 
 // ---------- Whiteframes ----------
 export const shadows = [

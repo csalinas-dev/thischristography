@@ -80,6 +80,14 @@ export const linkStyle = css`
   text-transform: uppercase;
   transition: opacity ease-in-out 225ms;
 
+  &:first-child {
+    margin-left: 0;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+
   &:active,
   &:visited {
     color: inherit !important;

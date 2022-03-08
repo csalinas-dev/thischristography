@@ -28,6 +28,9 @@ const global = css`
   }
 
   body {
+    font-family: utopia-std, serif;
+    font-weight: 400;
+    font-style: normal;
     font-size: 16px;
     margin: 0;
     padding: 0;
