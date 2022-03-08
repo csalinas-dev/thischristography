@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 import { Layout } from "components";
 import { breakpoints, PageTitle } from "core/styles";
 import React, { FC } from "react";
-import CategoryPlate from "./CategoryPlate";
+import { CategoryPlate } from "../../components/pages/photography";
 
 const Categories = styled.div`
   display: flex;
@@ -13,11 +13,11 @@ const Categories = styled.div`
   @media ${breakpoints.sm} {
     justify-content: space-between;
   }
-  
+
   @media ${breakpoints.md} {
     gap: 3rem;
   }
-  
+
   @media ${breakpoints.xl} {
     gap: 5rem;
   }
