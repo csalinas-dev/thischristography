@@ -1,5 +1,5 @@
 backend:
-  name: test-repo
+  name: thischristography
 
 media_folder: static/assets
 public_folder: /assets
