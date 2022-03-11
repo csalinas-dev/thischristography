@@ -1,5 +1,7 @@
 backend:
-  name: thischristography
+  name: github
+  repo: casjr13/thischristography
+  branch: gatsby
 
 media_folder: static/assets
 public_folder: /assets
