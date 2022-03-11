@@ -27,22 +27,22 @@ const Photography: FC = () => (
   <Layout>
     <PageTitle>Photography</PageTitle>
     <Categories>
-      <CategoryPlate />
-      <CategoryPlate />
-      <CategoryPlate />
-      <CategoryPlate />
-      <CategoryPlate />
-      <CategoryPlate />
-      <CategoryPlate />
-      <CategoryPlate />
-      <CategoryPlate />
-      <CategoryPlate />
-      <CategoryPlate />
-      <CategoryPlate />
-      <CategoryPlate />
-      <CategoryPlate />
-      <CategoryPlate />
-      <CategoryPlate />
+      Categories
+      {/* <CategoryPlate alt="White Sands" href="/photography/white-sands" src="../../assets/images/ThisChristography-20201010.jpg" title="White Sands" />
+      <CategoryPlate alt="Thunderbirds" href="/photography/thunderbirds" src="../../assets/images/ThisChristography-20190518.jpg" title="Thunderbirds" />
+      <CategoryPlate alt="Balloon Fiesta" href="/photography/balloon-fiesta" src="../../assets/images/ThisChristography-20211002-4.jpg" title="Balloon Fiesta" />
+      <CategoryPlate alt="White Sands" href="/photography/white-sands" src="../../assets/images/ThisChristography-20201010.jpg" title="White Sands" />
+      <CategoryPlate alt="Thunderbirds" href="/photography/thunderbirds" src="../../assets/images/ThisChristography-20190518.jpg" title="Thunderbirds" />
+      <CategoryPlate alt="Balloon Fiesta" href="/photography/balloon-fiesta" src="../../assets/images/ThisChristography-20211002-4.jpg" title="Balloon Fiesta" />
+      <CategoryPlate alt="White Sands" href="/photography/white-sands" src="../../assets/images/ThisChristography-20201010.jpg" title="White Sands" />
+      <CategoryPlate alt="Thunderbirds" href="/photography/thunderbirds" src="../../assets/images/ThisChristography-20190518.jpg" title="Thunderbirds" />
+      <CategoryPlate alt="Balloon Fiesta" href="/photography/balloon-fiesta" src="../../assets/images/ThisChristography-20211002-4.jpg" title="Balloon Fiesta" />
+      <CategoryPlate alt="White Sands" href="/photography/white-sands" src="../../assets/images/ThisChristography-20201010.jpg" title="White Sands" />
+      <CategoryPlate alt="Thunderbirds" href="/photography/thunderbirds" src="../../assets/images/ThisChristography-20190518.jpg" title="Thunderbirds" />
+      <CategoryPlate alt="Balloon Fiesta" href="/photography/balloon-fiesta" src="../../assets/images/ThisChristography-20211002-4.jpg" title="Balloon Fiesta" />
+      <CategoryPlate alt="White Sands" href="/photography/white-sands" src="../../assets/images/ThisChristography-20201010.jpg" title="White Sands" />
+      <CategoryPlate alt="Thunderbirds" href="/photography/thunderbirds" src="../../assets/images/ThisChristography-20190518.jpg" title="Thunderbirds" />
+      <CategoryPlate alt="Balloon Fiesta" href="/photography/balloon-fiesta" src="../../assets/images/ThisChristography-20211002-4.jpg" title="Balloon Fiesta" /> */}
     </Categories>
   </Layout>
 );

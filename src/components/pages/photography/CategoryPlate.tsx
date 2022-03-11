@@ -1,15 +1,30 @@
-import { css } from '@emotion/react';
-import styled from '@emotion/styled';
-import { breakpoints, whiteframes } from 'core/styles';
-import { StaticImage } from 'gatsby-plugin-image';
-import React, { FC } from 'react';
+import { css } from "@emotion/react";
+import styled from "@emotion/styled";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import { Link } from "gatsby";
+import React, { FC } from "react";
+import { breakpoints, whiteframes } from "core/styles";
 
-const PlateWrapper = styled.div`
+interface Props {
+  alt: string;
+  href: string;
+  src: string;
+  title: string;
+}
+
+const PlateWrapper = styled(Link)`
+  align-items: center;
   display: flex;
   flex-flow: column nowrap;
-  align-items: center;
   gap: 1rem;
   width: 20rem;
+
+  &,
+  &:visited,
+  &:active {
+    text-decoration: none;
+    color: inherit;
+  }
 
   @media ${breakpoints.sm} {
     width: 15rem;
@@ -18,28 +33,37 @@ const PlateWrapper = styled.div`
   @media ${breakpoints.lg} {
     width: 18rem;
   }
+
+  &:hover [data-main-image] {
+    transform: scale(1.1);
+  }
 `;
 
 const imageStyles = css`
   border-radius: 1rem;
-  box-shadow: ${whiteframes.shadows[8]}
+  box-shadow: ${whiteframes.shadows[8]};
+  overflow: hidden;
+
+  [data-main-image] {
+    transform: scale(1);
+    transition: all ease-in-out 250ms;
+  }
 `;
 
-const CategoryPlate: FC = () => (
-  <PlateWrapper>
-    <StaticImage
-      alt="White Sands National Park"
-      aspectRatio={2/3}
-      css={imageStyles}
-      layout='constrained'
-      placeholder="blurred"
-      src="../../assets/images/ThisChristography-20201010.jpg"
-      transformOptions={{
-        cropFocus: "center"
-      }}
-    />
-    <h2>White Sands</h2>
-  </PlateWrapper>
-);
+
+const CategoryPlate: FC<Props> = ({ href, title }) => {
+  return (
+    <PlateWrapper to={href}>
+      {/* <GatsbyImage
+        alt={alt}
+        css={imageStyles}
+        transformOptions={{
+          cropFocus: "center",
+        }}
+      /> */}
+      <h2>{title}</h2>
+    </PlateWrapper>
+  );
+};
 
 export default CategoryPlate;
