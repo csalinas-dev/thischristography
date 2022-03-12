@@ -11,8 +11,8 @@ collections:
     label: Collection
     folder: collection
     create: true
+    slug: "{{slug}}"
     fields:
-      - { name: name, label: Name }
-      - { name: caption, label: Caption }
-      - { name: slug, label: Slug }
-      - { name: image, label: Image, widget: image }
+      - { name: title, label: Title, required: true }
+      - { name: caption, label: Caption, required: true }
+      - { name: image, label: Image, widget: image, required: true }

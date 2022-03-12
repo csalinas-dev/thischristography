@@ -1,37 +1,23 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: `https://thischristography.com`,
+    title: "This Christography",
+    siteUrl: "https://thischristography.com",
+    description: "This Christography is a photographer in Albuquerque, NM. Specializes in family portraits, graduate portraits, automotive, and landscapes.",
   },
   plugins: [
-    "gatsby-plugin-netlify-cms",
     "gatsby-plugin-emotion",
     "gatsby-plugin-image",
+    "gatsby-plugin-netlify-cms",
+    "gatsby-plugin-react-helmet",
+    "gatsby-plugin-sharp",
+    "gatsby-plugin-sitemap",
+    "gatsby-transformer-remark",
+    "gatsby-transformer-sharp",
     {
       resolve: "gatsby-plugin-google-analytics",
       options: {
         trackingId: "UA-136005418-1",
       },
-    },
-    "gatsby-plugin-react-helmet",
-    "gatsby-plugin-sitemap",
-    "gatsby-transformer-remark",
-    "gatsby-plugin-sharp",
-    "gatsby-transformer-sharp",
-    {
-      resolve: "gatsby-source-filesystem",
-      options: {
-        name: "assets",
-        path: "./src/assets/",
-      },
-      __key: "assets",
-    },
-    {
-      resolve: "gatsby-source-filesystem",
-      options: {
-        name: "pages",
-        path: "./src/pages/",
-      },
-      __key: "pages",
     },
     {
       resolve: `gatsby-plugin-typescript`,
@@ -41,6 +27,12 @@ module.exports = {
         allExtensions: true, // defaults to false
       },
     },
-    "gatsby-plugin-react-helmet",
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "collection",
+        path: "./collection/",
+      },
+    },
   ],
 };
