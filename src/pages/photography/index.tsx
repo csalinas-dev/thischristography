@@ -46,7 +46,7 @@ const Photography: FC<Props> = ({ data }: Props) => {
       console.log(imagePath);
       // Get imageData
       const filename = getFilename(imagePath);
-      const imageData = data.images.nodes.find(v => v.name === filename);
+      const imageData = data.images.nodes.find((v) => v.name === filename);
       if (!imageData) return;
 
       // Convert imageData to image
@@ -72,7 +72,10 @@ const Photography: FC<Props> = ({ data }: Props) => {
 
 export const query = graphql`
   query MyQuery {
-    collections: allFile(filter: { sourceInstanceName: { eq: "collection" } }) {
+    collections: allFile(
+      filter: { sourceInstanceName: { eq: "collection" } }
+      sort: { fields: name }
+    ) {
       nodes {
         name
         childMarkdownRemark {
@@ -93,6 +96,7 @@ export const query = graphql`
           gatsbyImageData(
             aspectRatio: 0.67
             transformOptions: { cropFocus: CENTER }
+            placeholder: BLURRED
           )
         }
       }
