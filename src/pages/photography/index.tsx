@@ -40,10 +40,9 @@ const Photography: FC<Props> = ({ data }: Props) => {
     ({
       name: slug,
       childMarkdownRemark: {
-        frontmatter: { title, caption, image: imagePath },
+        frontmatter: { id, title, caption, image: imagePath },
       },
     }) => {
-      console.log(imagePath);
       // Get imageData
       const filename = getFilename(imagePath);
       const imageData = data.images.nodes.find((v) => v.name === filename);
@@ -54,6 +53,7 @@ const Photography: FC<Props> = ({ data }: Props) => {
       if (!image) return;
       return (
         <CategoryPlate
+          key={id}
           alt={caption}
           href={`/photography/${slug}`}
           image={image}

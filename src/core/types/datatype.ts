@@ -22,6 +22,7 @@ export type ChildMarkdownRemark = {
 export type Collections = Collection;
 
 export type Collection = {
+  id: string,
   caption: string,
   image: string,
   title: string,

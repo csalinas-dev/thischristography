@@ -50,13 +50,11 @@ const imageStyles = css`
   }
 `;
 
-const CategoryPlate: FC<Props> = ({ alt, href, title, image }) => {
-  return (
-    <PlateWrapper to={href}>
-      <GatsbyImage alt={alt} css={imageStyles} image={image} />
-      <h2>{title}</h2>
-    </PlateWrapper>
-  );
-};
+const CategoryPlate: FC<Props> = ({ alt, href, title, image }) => (
+  <PlateWrapper to={href}>
+    <GatsbyImage alt={alt} css={imageStyles} image={image} />
+    <h2>{title}</h2>
+  </PlateWrapper>
+);
 
 export default CategoryPlate;
