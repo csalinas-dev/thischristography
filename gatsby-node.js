@@ -5,5 +5,5 @@ exports.onCreateWebpackConfig = ({ stage, actions }) => {
     resolve: {
       modules: [path.resolve("src"), "node_modules"],
     },
-  })
-}
+  });
+};

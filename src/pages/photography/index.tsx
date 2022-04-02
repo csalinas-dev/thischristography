@@ -1,8 +1,19 @@
 import styled from "@emotion/styled";
 import { Layout } from "components";
+import getFilename from "core/lib/getFilename";
 import { breakpoints, PageTitle } from "core/styles";
+import { AllFile } from "core/types/datatype";
+import { graphql } from "gatsby";
+import { getImage } from "gatsby-plugin-image";
 import React, { FC } from "react";
 import { CategoryPlate } from "../../components/pages/photography";
+
+interface Props {
+  data: {
+    collections: AllFile;
+    images: AllFile;
+  };
+}
 
 const Categories = styled.div`
   display: flex;
@@ -23,28 +34,70 @@ const Categories = styled.div`
   }
 `;
 
-const Photography: FC = () => (
-  <Layout>
-    <PageTitle>Photography</PageTitle>
-    <Categories>
-      Categories
-      {/* <CategoryPlate alt="White Sands" href="/photography/white-sands" src="../../assets/images/ThisChristography-20201010.jpg" title="White Sands" />
-      <CategoryPlate alt="Thunderbirds" href="/photography/thunderbirds" src="../../assets/images/ThisChristography-20190518.jpg" title="Thunderbirds" />
-      <CategoryPlate alt="Balloon Fiesta" href="/photography/balloon-fiesta" src="../../assets/images/ThisChristography-20211002-4.jpg" title="Balloon Fiesta" />
-      <CategoryPlate alt="White Sands" href="/photography/white-sands" src="../../assets/images/ThisChristography-20201010.jpg" title="White Sands" />
-      <CategoryPlate alt="Thunderbirds" href="/photography/thunderbirds" src="../../assets/images/ThisChristography-20190518.jpg" title="Thunderbirds" />
-      <CategoryPlate alt="Balloon Fiesta" href="/photography/balloon-fiesta" src="../../assets/images/ThisChristography-20211002-4.jpg" title="Balloon Fiesta" />
-      <CategoryPlate alt="White Sands" href="/photography/white-sands" src="../../assets/images/ThisChristography-20201010.jpg" title="White Sands" />
-      <CategoryPlate alt="Thunderbirds" href="/photography/thunderbirds" src="../../assets/images/ThisChristography-20190518.jpg" title="Thunderbirds" />
-      <CategoryPlate alt="Balloon Fiesta" href="/photography/balloon-fiesta" src="../../assets/images/ThisChristography-20211002-4.jpg" title="Balloon Fiesta" />
-      <CategoryPlate alt="White Sands" href="/photography/white-sands" src="../../assets/images/ThisChristography-20201010.jpg" title="White Sands" />
-      <CategoryPlate alt="Thunderbirds" href="/photography/thunderbirds" src="../../assets/images/ThisChristography-20190518.jpg" title="Thunderbirds" />
-      <CategoryPlate alt="Balloon Fiesta" href="/photography/balloon-fiesta" src="../../assets/images/ThisChristography-20211002-4.jpg" title="Balloon Fiesta" />
-      <CategoryPlate alt="White Sands" href="/photography/white-sands" src="../../assets/images/ThisChristography-20201010.jpg" title="White Sands" />
-      <CategoryPlate alt="Thunderbirds" href="/photography/thunderbirds" src="../../assets/images/ThisChristography-20190518.jpg" title="Thunderbirds" />
-      <CategoryPlate alt="Balloon Fiesta" href="/photography/balloon-fiesta" src="../../assets/images/ThisChristography-20211002-4.jpg" title="Balloon Fiesta" /> */}
-    </Categories>
-  </Layout>
-);
+const Photography: FC<Props> = ({ data }: Props) => {
+  const collections = data.collections.nodes;
+  const children = collections.map(
+    ({
+      name: slug,
+      childMarkdownRemark: {
+        frontmatter: { title, caption, image: imagePath },
+      },
+    }) => {
+      console.log(imagePath);
+      // Get imageData
+      const filename = getFilename(imagePath);
+      const imageData = data.images.nodes.find(v => v.name === filename);
+      if (!imageData) return;
+
+      // Convert imageData to image
+      const image = getImage(imageData.childImageSharp);
+      if (!image) return;
+      return (
+        <CategoryPlate
+          alt={caption}
+          href={`/photography/${slug}`}
+          image={image}
+          title={title}
+        />
+      );
+    }
+  );
+  return (
+    <Layout>
+      <PageTitle>Photography</PageTitle>
+      <Categories>{children}</Categories>
+    </Layout>
+  );
+};
+
+export const query = graphql`
+  query MyQuery {
+    collections: allFile(filter: { sourceInstanceName: { eq: "collection" } }) {
+      nodes {
+        name
+        childMarkdownRemark {
+          frontmatter {
+            title
+            caption
+            image
+          }
+          id
+        }
+        base
+      }
+    }
+    images: allFile(filter: { sourceInstanceName: { eq: "asset" } }) {
+      nodes {
+        name
+        childImageSharp {
+          gatsbyImageData(
+            aspectRatio: 0.67
+            transformOptions: { cropFocus: CENTER }
+          )
+        }
+      }
+    }
+  }
+`;
 
 export default Photography;
