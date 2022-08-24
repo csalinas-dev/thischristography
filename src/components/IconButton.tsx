@@ -11,7 +11,7 @@ export type IconButtonProps = {
   url: string;
 };
 
-const IconButton: FC<IconButtonProps> = ({ url, icon, styles, onClick }) => {
+const IconButton: FC<IconButtonProps> = ({ url, icon, styles, onClick }: IconButtonProps) => {
   const linkStyles = css`
     align-items: center;
     border-radius: 50%;

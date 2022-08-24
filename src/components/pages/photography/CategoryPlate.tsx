@@ -41,7 +41,7 @@ const PlateWrapper = styled(Link)`
 
 const imageStyles = css`
   border-radius: 1rem;
-  box-shadow: ${whiteframes.shadows[8]};
+  box-shadow: ${whiteframes.shadows[12]};
   overflow: hidden;
 
   [data-main-image] {

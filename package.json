@@ -17,7 +17,7 @@
   "dependencies": {
     "@emotion/react": "^11.8.1",
     "@emotion/styled": "^11.8.1",
-    "gatsby": "^4.9.0",
+    "gatsby": "4.7.0",
     "gatsby-plugin-emotion": "^7.9.0",
     "gatsby-plugin-google-analytics": "^4.9.0",
     "gatsby-plugin-image": "^2.9.0",
