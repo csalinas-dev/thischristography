@@ -12,16 +12,21 @@ module.exports = {
     //     path: `${__dirname}/static/assets`,
     //   },
     // },
-    // {
-    //   resolve: "gatsby-source-filesystem",
-    //   options: {
-    //     name: "collection",
-    //     path: `${__dirname}/collection`,
-    //   },
-    // },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "collections",
+        path: `${__dirname}/collections`,
+      },
+    },
     "gatsby-plugin-emotion",
     "gatsby-plugin-image",
-    "gatsby-plugin-netlify-cms",
+    {
+      resolve: "gatsby-plugin-netlify-cms",
+      options: {
+        modulePath: `${__dirname}/src/cms/cms.js`
+      }
+    },
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sharp",
     "gatsby-plugin-sitemap",
