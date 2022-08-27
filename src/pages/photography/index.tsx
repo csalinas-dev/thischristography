@@ -71,7 +71,7 @@ const Photography: FC<Props> = ({ data }: Props) => {
 };
 
 export const query = graphql`
-  query MyQuery {
+  query PhotographyQuery {
     collections: allFile(
       filter: { sourceInstanceName: { eq: "collection" } }
       sort: { fields: name }
