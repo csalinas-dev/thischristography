@@ -28,3 +28,11 @@ collections:
           allow_multiple: false,
           choose_url: false
         }
+      - {
+          name: images,
+          label: Images,
+          widget: image,
+          required: true,
+          allow_multiple: true,
+          choose_url: false
+        }
