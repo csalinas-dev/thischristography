@@ -1,6 +1,6 @@
 import * as React from "react";
 import { css } from "@emotion/react";
-import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 import { Layout } from "components";
 import { graphql } from "gatsby";
@@ -22,41 +22,46 @@ const background = css`
   z-index: -1;
 `;
 
-const IndexPage: FC<Props> = ({ data }: Props) => {
-  const { images } = data;
-  const imageData = images.nodes.find(i => i.name.includes("20201010"));
-  if (!imageData) return;
+const IndexPage = () => (
+  <Layout footer={false}>Homepage</Layout>
+);
 
-  const image = getImage(imageData.childImageSharp);
-  if (!image) return;
+// const IndexPage: FC<Props> = ({ data }: Props) => {
+//   let content = <div>Missing Homepage Image</div>;
+//   const { images } = data;
+//   const imageNode = images.nodes.find((node) => node.name.includes("20201010"));
+//   if (imageNode) {
+//     const image = getImage(imageNode.childImageSharp);
+//     if (image) {
+//       content = (
+//         <GatsbyImage
+//           alt="White Sands National Park by This Christography"
+//           css={background}
+//           objectFit="cover"
+//           image={image}
+//         />
+//       );
+//     }
+//   }
 
-  return (
-    <Layout footer={false}>
-      <GatsbyImage
-        alt="White Sands National Park by This Christography"
-        css={background}
-        objectFit="cover"
-        image={image}
-      />
-    </Layout>
-  );
-};
+//   return <Layout footer={false}>{content}</Layout>;
+// };
 
 export default IndexPage;
 
-export const query = graphql`
-  query HomeQuery {
-    images: allFile(filter: { sourceInstanceName: { eq: "asset" } }) {
-      nodes {
-        name
-        childImageSharp {
-          gatsbyImageData(
-            aspectRatio: 0.67
-            transformOptions: { cropFocus: CENTER }
-            placeholder: BLURRED
-          )
-        }
-      }
-    }
-  }
-`;
+// export const query = graphql`
+//   query HomeQuery {
+//     images: allFile(filter: { sourceInstanceName: { eq: "asset" } }) {
+//       nodes {
+//         name
+//         childImageSharp {
+//           gatsbyImageData(
+//             aspectRatio: 0.67
+//             transformOptions: { cropFocus: CENTER }
+//             placeholder: BLURRED
+//           )
+//         }
+//       }
+//     }
+//   }
+// `;

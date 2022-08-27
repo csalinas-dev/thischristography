@@ -24,6 +24,6 @@ export type Collections = Collection;
 export type Collection = {
   id: string,
   caption: string,
-  image: string,
+  thumbnail: string,
   title: string,
 }

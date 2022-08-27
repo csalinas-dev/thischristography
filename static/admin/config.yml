@@ -9,10 +9,22 @@ public_folder: /assets
 collections:
   - name: collection
     label: Collection
-    folder: collection
+    folder: collections
     create: true
-    slug: "{{slug}}"
+    slug: index
+    media_folder: ''
+    public_folder: ''
+    path: '{{title}}/index'
+    editor:
+      preview: false
     fields:
       - { name: title, label: Title, required: true }
       - { name: caption, label: Caption, required: true }
-      - { name: image, label: Image, widget: image, required: true }
+      - {
+          name: thumbnail,
+          label: Featured Image,
+          widget: image,
+          required: true,
+          allow_multiple: false,
+          choose_url: false
+        }

@@ -5,20 +5,20 @@ module.exports = {
     description: "This Christography is a photographer in Albuquerque, NM. Specializes in family portraits, graduate portraits, automotive, and landscapes.",
   },
   plugins: [
-    {
-      resolve: "gatsby-source-filesystem",
-      options: {
-        name: "asset",
-        path: "./static/assets",
-      },
-    },
-    {
-      resolve: "gatsby-source-filesystem",
-      options: {
-        name: "collection",
-        path: "./collection/",
-      },
-    },
+    // {
+    //   resolve: "gatsby-source-filesystem",
+    //   options: {
+    //     name: "asset",
+    //     path: `${__dirname}/static/assets`,
+    //   },
+    // },
+    // {
+    //   resolve: "gatsby-source-filesystem",
+    //   options: {
+    //     name: "collection",
+    //     path: `${__dirname}/collection`,
+    //   },
+    // },
     "gatsby-plugin-emotion",
     "gatsby-plugin-image",
     "gatsby-plugin-netlify-cms",
