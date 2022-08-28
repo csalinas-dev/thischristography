@@ -1,15 +1,14 @@
 import * as React from "react";
 import { css } from "@emotion/react";
-import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import { GatsbyImage, getImage, ImageDataLike } from "gatsby-plugin-image";
 
 import { Layout } from "components";
 import { graphql } from "gatsby";
-import { AllFile } from "core/types/datatype";
 import { FC } from "react";
 
 interface Props {
   data: {
-    images: AllFile;
+    imageData: ImageDataLike;
   };
 }
 
@@ -22,46 +21,31 @@ const background = css`
   z-index: -1;
 `;
 
-const IndexPage = () => (
-  <Layout footer={false}>Homepage</Layout>
-);
+const IndexPage: FC<Props> = ({ data: { imageData } }: Props) => {
+  let content = <div>Missing Homepage Image</div>;
+  if (imageData) {
+    const image = getImage(imageData);
+    if (image) {
+      content = (
+        <GatsbyImage
+          alt="White Sands National Park by This Christography"
+          css={background}
+          objectFit="cover"
+          image={image}
+        />
+      );
+    }
+  }
 
-// const IndexPage: FC<Props> = ({ data }: Props) => {
-//   let content = <div>Missing Homepage Image</div>;
-//   const { images } = data;
-//   const imageNode = images.nodes.find((node) => node.name.includes("20201010"));
-//   if (imageNode) {
-//     const image = getImage(imageNode.childImageSharp);
-//     if (image) {
-//       content = (
-//         <GatsbyImage
-//           alt="White Sands National Park by This Christography"
-//           css={background}
-//           objectFit="cover"
-//           image={image}
-//         />
-//       );
-//     }
-//   }
-
-//   return <Layout footer={false}>{content}</Layout>;
-// };
-
+  return <Layout footer={false}>{content}</Layout>;
+};
 export default IndexPage;
 
-// export const query = graphql`
-//   query HomeQuery {
-//     images: allFile(filter: { sourceInstanceName: { eq: "asset" } }) {
-//       nodes {
-//         name
-//         childImageSharp {
-//           gatsbyImageData(
-//             aspectRatio: 0.67
-//             transformOptions: { cropFocus: CENTER }
-//             placeholder: BLURRED
-//           )
-//         }
-//       }
-//     }
-//   }
-// `;
+export const query = graphql`
+  query HomepageImage {
+    imageData: imageSharp(id: { eq: "57780b17-323f-5309-9a4a-105ecbc022b6" }) {
+      id
+      gatsbyImageData
+    }
+  }
+`;
