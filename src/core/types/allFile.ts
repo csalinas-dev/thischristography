@@ -1,7 +1,11 @@
+import { ImageDataLike } from "gatsby-plugin-image";
+
 export type AllFile = {
-  nodes: Array<File>,
-}
+  nodes: Array<File>;
+};
 
 export type File = {
-  name: string,
-}
+  id: string;
+  name: string;
+  childImageSharp: ImageDataLike;
+};

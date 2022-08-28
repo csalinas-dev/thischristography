@@ -6,6 +6,7 @@ import { Layout } from "components";
 import { CategoryPlate } from "components/pages/photography";
 import { breakpoints, PageTitle } from "core/styles";
 import { Collection } from "core/types/collections";
+import { getImage } from "gatsby-plugin-image";
 
 type PhotographyQueryType = {
   allMarkdownRemark: {
@@ -39,15 +40,24 @@ const Categories = styled.div`
 const Photography: FC<Props> = ({ data }: Props) => {
   const collections = data.allMarkdownRemark.nodes;
   const children = collections.map(
-    ({ id, frontmatter: { slug, title, caption, thumbnail } }) => (
-      <CategoryPlate
-        key={id}
-        alt={caption}
-        href={`/photography/${slug}`}
-        thumbnail={thumbnail}
-        title={title}
-      />
-    )
+    ({ 
+      id,
+      frontmatter: { slug, title, caption },
+      thumbnailImg: {
+        childImageSharp: imageData
+      }
+    }) => {
+      const image = getImage(imageData);
+      return (
+        <CategoryPlate
+          key={id}
+          alt={caption}
+          href={`/photography/${slug}`}
+          image={image}
+          title={title}
+        />
+      );
+    }
   );
   return (
     <Layout>
@@ -68,6 +78,15 @@ export const query = graphql`
           slug
           thumbnail
           title
+        }
+        thumbnailImg {
+          childImageSharp {
+            gatsbyImageData(
+              aspectRatio: 0.67
+              transformOptions: {fit: COVER, cropFocus: CENTER}
+              quality: 25
+            )
+          }
         }
       }
     }

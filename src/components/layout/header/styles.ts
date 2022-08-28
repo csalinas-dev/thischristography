@@ -80,7 +80,7 @@ export const linkStyle = css`
   text-transform: uppercase;
   transition: opacity ease-in-out 225ms;
 
-  &:first-child {
+  &:first-of-type {
     margin-left: 0;
   }
 

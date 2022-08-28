@@ -3,11 +3,12 @@ import styled from "@emotion/styled";
 import { Link } from "gatsby";
 import React, { FC } from "react";
 import { breakpoints, whiteframes } from "core/styles";
+import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image";
 
 interface Props {
   alt: string;
   href: string;
-  thumbnail: string;
+  image?: IGatsbyImageData;
   title: string;
 }
 
@@ -16,6 +17,7 @@ const PlateWrapper = styled(Link)`
   display: flex;
   flex-flow: column nowrap;
   gap: 1rem;
+  width: 20rem;
 
   &,
   &:visited,
@@ -24,42 +26,37 @@ const PlateWrapper = styled(Link)`
     color: inherit;
   }
 
-  &:hover img {
-    transform: scale(1.1);
-  }
-`;
-
-const ImageWrapper = styled.div`
-  border-radius: 1rem;
-  box-shadow: ${whiteframes.shadows[12]};
-  height: 30rem;
-  overflow: hidden;
-  width: 20rem;
-
   @media ${breakpoints.sm} {
-    height: 22.5rem;
     width: 15rem;
   }
 
   @media ${breakpoints.lg} {
-    height: 27rem;
     width: 18rem;
+  }
+
+  &:hover [data-main-image] {
+    transform: scale(1.1);
   }
 `;
 
 const imageStyles = css`
-  height: 100%;
-  object-fit: cover;
-  transform: scale(1);
-  transition: all ease-in-out 250ms;
-  width: 100%;
+  border-radius: 1rem;
+  box-shadow: ${whiteframes.shadows[12]};
+  overflow: hidden;
+
+  [data-main-image] {
+    transform: scale(1);
+    transition: all ease-in-out 250ms;
+  }
 `;
 
-const CategoryPlate: FC<Props> = ({ alt, href, title, thumbnail }) => (
+const CategoryPlate: FC<Props> = ({ alt, href, title, image }) => (
   <PlateWrapper to={href}>
-    <ImageWrapper>
-      <img alt={alt} css={imageStyles} src={thumbnail} />
-    </ImageWrapper>
+    {!!image ? (
+      <GatsbyImage alt={alt} css={imageStyles} image={image} />
+    ) : (
+      <span>Missing Image</span>
+    )}
     <h2>{title}</h2>
   </PlateWrapper>
 );
