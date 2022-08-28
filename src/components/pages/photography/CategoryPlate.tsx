@@ -1,6 +1,5 @@
 import { css } from "@emotion/react";
 import styled from "@emotion/styled";
-import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image";
 import { Link } from "gatsby";
 import React, { FC } from "react";
 import { breakpoints, whiteframes } from "core/styles";
@@ -8,7 +7,7 @@ import { breakpoints, whiteframes } from "core/styles";
 interface Props {
   alt: string;
   href: string;
-  image: IGatsbyImageData;
+  thumbnail: string;
   title: string;
 }
 
@@ -50,9 +49,9 @@ const imageStyles = css`
   }
 `;
 
-const CategoryPlate: FC<Props> = ({ alt, href, title, image }) => (
+const CategoryPlate: FC<Props> = ({ alt, href, title, thumbnail }) => (
   <PlateWrapper to={href}>
-    <GatsbyImage alt={alt} css={imageStyles} image={image} />
+    <img alt={alt} css={imageStyles} src={thumbnail} />
     <h2>{title}</h2>
   </PlateWrapper>
 );

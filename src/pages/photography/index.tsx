@@ -1,18 +1,20 @@
-import styled from "@emotion/styled";
-import { Layout } from "components";
-import getFilename from "core/lib/getFilename";
-import { breakpoints, PageTitle } from "core/styles";
-import { AllFile } from "core/types/datatype";
-import { graphql } from "gatsby";
-import { getImage } from "gatsby-plugin-image";
 import React, { FC } from "react";
-import { CategoryPlate } from "../../components/pages/photography";
+import { graphql } from "gatsby";
+import styled from "@emotion/styled";
+
+import { Layout } from "components";
+import { CategoryPlate } from "components/pages/photography";
+import { breakpoints, PageTitle } from "core/styles";
+import { Collection } from "core/types/collections";
+
+type PhotographyQueryType = {
+  allMarkdownRemark: {
+    nodes: Collection[];
+  };
+};
 
 interface Props {
-  data: {
-    collections: AllFile;
-    images: AllFile;
-  };
+  data: PhotographyQueryType;
 }
 
 const Categories = styled.div`
@@ -34,80 +36,40 @@ const Categories = styled.div`
   }
 `;
 
-const Photography = () => (
-  <Layout>
-    <PageTitle>Photography</PageTitle>
-  </Layout>
-)
-
-// const Photography: FC<Props> = ({ data }: Props) => {
-//   const collections = data.collections.nodes;
-//   const children = collections.map(
-//     ({
-//       name: slug,
-//       childMarkdownRemark: {
-//         frontmatter: { id, title, caption, thumbnail: imagePath },
-//       },
-//     }) => {
-//       // Get imageData
-//       const filename = getFilename(imagePath);
-//       const imageData = data.images.nodes.find((v) => v.name === filename);
-//       if (!imageData) return;
-
-//       // Convert imageData to image
-//       const image = getImage(imageData.childImageSharp);
-//       if (!image) return;
-//       return (
-//         <CategoryPlate
-//           key={id}
-//           alt={caption}
-//           href={`/photography/${slug}`}
-//           image={image}
-//           title={title}
-//         />
-//       );
-//     }
-//   );
-//   return (
-//     <Layout>
-//       <PageTitle>Photography</PageTitle>
-//       <Categories>{children}</Categories>
-//     </Layout>
-//   );
-// };
-
-// export const query = graphql`
-//   query PhotographyQuery {
-//     collections: allFile(
-//       filter: { sourceInstanceName: { eq: "collection" } }
-//       sort: { fields: name }
-//     ) {
-//       nodes {
-//         name
-//         childMarkdownRemark {
-//           frontmatter {
-//             title
-//             caption
-//             thumbnail
-//           }
-//           id
-//         }
-//         base
-//       }
-//     }
-//     images: allFile(filter: { sourceInstanceName: { eq: "asset" } }) {
-//       nodes {
-//         name
-//         childImageSharp {
-//           gatsbyImageData(
-//             aspectRatio: 0.67
-//             transformOptions: { cropFocus: CENTER }
-//             placeholder: BLURRED
-//           )
-//         }
-//       }
-//     }
-//   }
-// `;
-
+const Photography: FC<Props> = ({ data }: Props) => {
+  const collections = data.allMarkdownRemark.nodes;
+  const children = collections.map(
+    ({ id, frontmatter: { slug, title, caption, thumbnail } }) => (
+      <CategoryPlate
+        key={id}
+        alt={caption}
+        href={`/photography/${slug}`}
+        thumbnail={thumbnail}
+        title={title}
+      />
+    )
+  );
+  return (
+    <Layout>
+      <PageTitle>Photography</PageTitle>
+      <Categories>{children}</Categories>
+    </Layout>
+  );
+};
 export default Photography;
+
+export const query = graphql`
+  query PhotographyQuery {
+    allMarkdownRemark {
+      nodes {
+        id
+        frontmatter {
+          caption
+          slug
+          thumbnail
+          title
+        }
+      }
+    }
+  }
+`;
