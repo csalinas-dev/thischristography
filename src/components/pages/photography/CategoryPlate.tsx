@@ -42,6 +42,9 @@ const imageStyles = css`
   border-radius: 1rem;
   box-shadow: ${whiteframes.shadows[12]};
   overflow: hidden;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 
   [data-main-image] {
     transform: scale(1);
