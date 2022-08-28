@@ -49,6 +49,7 @@ exports.onCreateNode = async ({
 
     if (fileNode) {
       createNodeField({ node, name: "localFile", value: fileNode.id });
+      console.log(node.frontmatter.title);
     }
   }
 };
