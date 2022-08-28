@@ -1,5 +1,6 @@
 ---
 title: Albuquerque
+slug: albuquerque
 caption: Albuquerque City Lights by This Christography
 thumbnail: https://ucarecdn.com/ecdd8eaf-f024-48e9-a2bb-b53889b8dedc/
 images:
