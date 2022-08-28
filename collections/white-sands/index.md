@@ -1,7 +1,7 @@
 ---
 title: White Sands
 caption: White Sands by This Christography
-thumbnail: thischristography-20201010.jpg
+thumbnail: https://ucarecdn.com/3c91ba56-5046-4abe-b2b1-fab1682241de/
 images:
   - https://ucarecdn.com/63a831ae-5b26-4663-be41-14090ef87610/
   - https://ucarecdn.com/9e34e3c6-050d-4592-8ef7-41dbd85248b0/
