@@ -70,7 +70,7 @@ export default Photography;
 
 export const query = graphql`
   query PhotographyQuery {
-    allMarkdownRemark {
+    allMarkdownRemark(sort: {fields: frontmatter___title}) {
       nodes {
         id
         frontmatter {
