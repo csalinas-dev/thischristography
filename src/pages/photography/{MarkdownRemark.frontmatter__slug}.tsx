@@ -3,42 +3,53 @@ import { graphql, Link } from "gatsby";
 import styled from "@emotion/styled";
 
 import { Layout } from "components";
-import { PageTitle, whiteframes } from "core/styles";
+import { PageTitle } from "core/styles";
 import { CollectionLayout } from "components/pages/photography";
+import { Collection } from "core/types/collections";
 
-// interface Props {
-//   data: {
-//     collections: AllFile;
-//     images: AllFile;
-//   };
-// }
+interface Props {
+  data: {
+    markdownRemark: Collection;
+  };
+}
 
 const BackButton = styled(Link)``;
 
 const CollectionPage = ({
   data: {
     markdownRemark: {
-      frontmatter: { title, caption, images },
+      frontmatter: { title },
+      collectionImages: images,
     },
   },
-}: any) => (
+}: Props) => (
   <Layout>
     <BackButton to="/photography">Back To Photography</BackButton>
     <PageTitle>{title}</PageTitle>
-    <CollectionLayout caption={caption} images={images} />
+    <CollectionLayout title={title} images={images} />
   </Layout>
 );
 export default CollectionPage;
 
 export const query = graphql`
-  query collectionQuery($id: String!) {
+  query CollectionQuery($id: String!) {
     markdownRemark(id: { eq: $id }) {
-      id
       frontmatter {
-        slug
         title
         caption
-        images
+      }
+      collectionImages {
+        id
+        childImageSharp {
+          gatsbyImageData(
+            transformOptions: { fit: COVER, cropFocus: CENTER }
+            quality: 50
+          )
+          original {
+            height
+            width
+          }
+        }
       }
     }
   }

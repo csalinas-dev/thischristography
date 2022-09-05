@@ -7,6 +7,15 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: "gatsby-plugin-remote-images",
+      options: {
+        nodeType: "MarkdownRemark",
+        imagePath: "frontmatter.images",
+        type: "array",
+        name: "collectionImages",
+      }
+    },
+    {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "asset",
