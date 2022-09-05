@@ -3,6 +3,7 @@ import { css } from "@emotion/react";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { whiteframes } from "core/styles";
 import { File } from "core/types/allFile";
+import { getImageGroups } from "core/lib/getImageGroups";
 
 interface Props {
   title: string;
@@ -16,22 +17,8 @@ const imageStyles = css`
   width: 100%;
 `;
 
-/*
-===============================================================================
-  LAYOUT ALGORITHM
-===============================================================================
-1. Compute the portrait groups.
-  If length == 3, return 3 in a single group.
-  If length >= 2, take 2. Repeat process with the rest.
-  Otherwise, stop processing. There are 0 or 1 images.
-2. Compare number of landscapes (NOL) with the number of portrait groups (NOPG).
-  Remove excess until NOPG and NOL are within 1.
-    Take the first n+1, where n is the smaller of the two groups.
-      For example, if NOPG is 2 and NOL is 5, only take the first 3 of NOL.
-  Start with the bigger value, and alternate.
-    Using above example: L, PG, L, PG, L
-*/
 export const CollectionLayout = ({ title, images }: Props) => {
+  const rows = getImageGroups(images);
   const count = images.length;
   const collectionImages = images.map(
     ({ id, childImageSharp: imageData }: File, i: number) => {

@@ -7,5 +7,12 @@ export type AllFile = {
 export type File = {
   id: string;
   name: string;
-  childImageSharp: ImageDataLike;
+  childImageSharp: ImageSharp;
 };
+
+export type ImageSharp = {
+  original: {
+    height: number,
+    width: number,
+  }
+} & ImageDataLike;
