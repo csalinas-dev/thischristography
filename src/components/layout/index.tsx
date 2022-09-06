@@ -3,16 +3,12 @@ import styled from "@emotion/styled";
 import React, {
   FC,
   PropsWithChildren,
-  SyntheticEvent,
-  useEffect,
-  useState,
 } from "react";
 import { Helmet } from "react-helmet";
 import { breakpoints } from "core/styles";
 import Footer from "./footer";
 import Header from "./header";
-import IconButton from "components/IconButton";
-import { linkStyle } from "./header/styles";
+import { ScrollToTop } from "components/ScrollToTop";
 
 interface Props {
   footer?: boolean;
@@ -73,61 +69,22 @@ const Content = styled.main`
   grid-area: content;
 `;
 
-const scrollToTopButton = css`
-  ${linkStyle}
-  bottom: 3rem;
-  font-size: 3rem;
-  height: 4rem;
-  width: 4rem;
-  position: fixed;
-  right: 3rem;
-  z-index: 9999;
-`;
 
-const Layout: FC<PropsWithChildren<Props>> = ({ children, footer = true }) => {
-  const [scrolled, setScrolled] = useState<boolean>(false);
-
-  const scrollToTop = (e: SyntheticEvent) => {
-    e.preventDefault();
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  };
-
-  const onScroll = () => {
-    setScrolled(window.scrollY !== 0);
-  };
-
-  useEffect(() => {
-    window.addEventListener("scroll", onScroll);
-
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
-
-  return (
-    <LayoutWrapper>
-      <Helmet title="This Christography | Albuquerque Photographer">
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <script
-          src="https://kit.fontawesome.com/1407f4e18d.js"
-          crossOrigin="anonymous"
-        />
-      </Helmet>
-      <Global styles={global}></Global>
-      <Header />
-      <Content>{children}</Content>
-      {footer && <Footer />}
-      {scrolled && (
-        <IconButton
-          styles={scrollToTopButton}
-          icon="fa-solid fa-chevron-up"
-          url="#"
-          onClick={scrollToTop}
-        />
-      )}
-    </LayoutWrapper>
-  );
-};
+const Layout: FC<PropsWithChildren<Props>> = ({ children, footer = true }) => (
+  <LayoutWrapper>
+    <Helmet title="This Christography | Albuquerque Photographer">
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <script
+        src="https://kit.fontawesome.com/1407f4e18d.js"
+        crossOrigin="anonymous"
+      />
+    </Helmet>
+    <Global styles={global}></Global>
+    <Header />
+    <Content>{children}</Content>
+    {footer && <Footer />}
+    <ScrollToTop />
+  </LayoutWrapper>
+);
 
 export default Layout;
