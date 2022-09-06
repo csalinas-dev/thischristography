@@ -23,7 +23,7 @@ const Row = styled.div`
 `;
 
 const imageStyles = css`
-  border-radius: 0.5rem;
+  border-radius: 1rem;
   box-shadow: ${whiteframes.shadows[8]};
   margin-top: 2rem;
   margin-bottom: 2rem;
