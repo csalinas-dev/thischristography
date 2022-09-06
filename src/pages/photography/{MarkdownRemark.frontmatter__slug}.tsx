@@ -7,7 +7,6 @@ import { Layout } from "components";
 import { PageTitle } from "core/styles";
 import { CollectionLayout } from "components/pages/photography";
 import { Collection } from "core/types/collections";
-import { linkStyle } from "components/layout/header/styles";
 
 interface Props {
   data: {
