@@ -13,4 +13,6 @@ images:
   - https://ucarecdn.com/aa8c7f24-5e5b-4e74-9d16-2513827e165d/
   - https://ucarecdn.com/fd9affc2-2dae-4aeb-9b16-4b7359a0b8c7/
   - https://ucarecdn.com/5ba5b3ca-61ba-4f3b-ab3f-5e9678561152/
+  - https://ucarecdn.com/7fff67a5-8cab-48bd-9fcc-4b343772ede0/
+  - https://ucarecdn.com/44015284-ea85-4442-ae62-43f5b54deee7/
 ---
