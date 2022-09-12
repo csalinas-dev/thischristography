@@ -2,7 +2,7 @@
 title: Graduates
 slug: graduates
 caption: Graduate Photo by This Christography
-thumbnail: https://ucarecdn.com/015b57e1-dbc4-4937-be5b-57267e69f51e/-/crop/5520x3716/0,0/-/preview/
+thumbnail: https://ucarecdn.com/0756f52c-1cb2-4de9-bf8b-598c9a3c3a03/
 images:
   - https://ucarecdn.com/b7af63bd-f822-4e9a-974f-a40619724123/
   - https://ucarecdn.com/deaf614b-dd94-4144-ac15-43f455e11f81/
