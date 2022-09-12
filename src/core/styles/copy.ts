@@ -10,3 +10,9 @@ export const PageTitle = styled.h1`
     text-align: left;
   }
 `;
+
+export const Paragraph = styled.p`
+  font-size: 1.5rem;
+  margin: 1.5rem 0;
+  line-height: 1.25em;
+`;
