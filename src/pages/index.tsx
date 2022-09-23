@@ -112,44 +112,46 @@ const IndexPage: FC<Props> = ({ data: { bgImage, fgImage } }: Props) => {
             More information coming soon. In the meantime, contact Chris for
             more information.
           </Paragraph>
-          <Table>
-            <tbody>
-              <tr>
-                <td>Portrait Session</td>
-                <td>$250</td>
-                <td>Individual, Couples, Family, Maternity, etc...</td>
-              </tr>
-              <tr>
-                <td>UNM Graduates</td>
-                <td>$75</td>
-                <td>
-                  Pictures taken at Hodgin Hall and other spots around main
-                  campus.
-                </td>
-              </tr>
-              <tr>
-                <td>All Other Graduates</td>
-                <td>$150</td>
-                <td>
-                  Pictures taken at a location of your choosing (see travelling
-                  fees below).
-                </td>
-              </tr>
-              <tr>
-                <td>Automotive Session</td>
-                <td>$100</td>
-                <td>
-                  Exterior and interior photos of your vehicle. Rolling shots
-                  are an additional $50.
-                </td>
-              </tr>
-              <tr>
-                <td>Wedding Photography</td>
-                <td>Starting at $1250</td>
-                <td>Contact Chris for more information.</td>
-              </tr>
-            </tbody>
-          </Table>
+          <TableResponsive>
+            <Table>
+              <tbody>
+                <tr>
+                  <td>Portrait Session</td>
+                  <td>$250</td>
+                  <td>Individual, Couples, Family, Maternity, etc...</td>
+                </tr>
+                <tr>
+                  <td>UNM Graduates</td>
+                  <td>$75</td>
+                  <td>
+                    Pictures taken at Hodgin Hall and other spots around main
+                    campus.
+                  </td>
+                </tr>
+                <tr>
+                  <td>All Other Graduates</td>
+                  <td>$150</td>
+                  <td>
+                    Pictures taken at a location of your choosing (see travelling
+                    fees below).
+                  </td>
+                </tr>
+                <tr>
+                  <td>Automotive Session</td>
+                  <td>$100</td>
+                  <td>
+                    Exterior and interior photos of your vehicle. Rolling shots
+                    are an additional $50.
+                  </td>
+                </tr>
+                <tr>
+                  <td>Wedding Photography</td>
+                  <td>Starting at $1250</td>
+                  <td>Contact Chris for more information.</td>
+                </tr>
+              </tbody>
+            </Table>
+          </TableResponsive>
           <SubTitle>Travelling Fees</SubTitle>
           <Paragraph>
             Using the one-way distance from Albuquerque to the location of the
