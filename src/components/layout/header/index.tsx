@@ -28,14 +28,14 @@ const HeaderWrapper: FC = () => (
       >
         Clients
       </a>
-      <a
+      {/* <a
         css={linkStyle}
         href="https://clients.thischristography.com/shop"
         rel="noopener noreferrer"
         target="_blank"
       >
         Shop
-      </a>
+      </a> */}
     </Links>
     <Brand>
       <Link to="/" css={linkStyle}>
