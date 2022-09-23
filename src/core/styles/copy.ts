@@ -3,6 +3,7 @@ import { breakpoints } from ".";
 
 export const PageTitle = styled.h1`
   font-size: 3rem;
+  line-height: 1.1em;
   text-align: center;
   margin: 2rem 0;
   
@@ -13,6 +14,7 @@ export const PageTitle = styled.h1`
 
 export const SubTitle = styled.h1`
   font-size: 2.25rem;
+  line-height: 1.1em;
   text-align: center;
   margin: 2rem 0;
   
