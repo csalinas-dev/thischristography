@@ -32,12 +32,18 @@ const Main = styled.div`
   margin-top: 100vh;
 `;
 
+const TableResponsive = styled.div`
+  overflow-x: auto;
+  width: 100%;
+`;
+
 const Table = styled.table`
   border-collapse: collapse;
 
   td {
     border: 1px solid rgba(0, 0, 0, 0.24);
     padding: 0.5rem 0.75rem;
+    white-space: nowrap;
   }
 
   tr:nth-child(2n + 1) td {
