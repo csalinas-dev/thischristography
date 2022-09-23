@@ -21,7 +21,7 @@ const FooterWrapper: FC = () => {
   useEffect(() => {
     const get = async () => {
       const response = await fetch(
-        "https://api.github.com/repos/casjr13/thischristography/branches/master"
+        "https://api.github.com/repos/casjr13/thischristography/branches/main"
       );
       const data = await response.json();
 
