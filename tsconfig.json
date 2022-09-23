@@ -1,28 +1,37 @@
 {
   "compilerOptions": {
-    "allowJs": true,
-    "allowSyntheticDefaultImports": true,
-    "baseUrl": "./src",
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
-    "isolatedModules": true,
-    "jsx": "react-jsx",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
-    "module": "esnext",
-    "moduleResolution": "node",
-    "noImplicitAny": true,
-    "noEmit": true,
-    "resolveJsonModule": true,
-    "skipLibCheck": true,
-    "strict": true,
-    "target": "ES2015",
-    "noFallthroughCasesInSwitch": true
+    /* Visit https://aka.ms/tsconfig.json to read more about this file */
+
+    /* Language and Environment */
+    "jsx": "react",                                      /* Specify what JSX code is generated. */
+    "lib": ["dom", "esnext"],                            /* Specify a set of bundled library declaration files that describe the target runtime environment. */
+    "target": "esnext",                                  /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */
+    "types": ["@emotion/core"],
+
+    /* Modules */
+    "baseUrl": "./src",                                  /* Specify the base directory to resolve non-relative module names. */
+    "module": "commonjs",                                /* Specify what module code is generated. */
+    "moduleResolution": "node",                          /* Specify how TypeScript looks up a file from a given module specifier. */
+
+    /* Emit */
+    "newLine": "lf",                                     /* Set the newline character for emitting files. */
+    "outDir": "public",                                  /* Specify an output folder for all emitted files. */
+    "removeComments": true,                              /* Disable emitting comments. */
+    "sourceMap": true,                                   /* Create source map files for emitted JavaScript files. */
+    "rootDir": "src",
+
+    /* Interop Constraints */
+    "esModuleInterop": true,                             /* Emit additional JavaScript to ease support for importing CommonJS modules. This enables `allowSyntheticDefaultImports` for type compatibility. */
+    "forceConsistentCasingInFileNames": true,            /* Ensure that casing is correct in imports. */
+
+    /* Type Checking */
+    "strict": true,                                      /* Enable all strict type-checking options. */
+    "noImplicitAny": true,                               /* Enable error reporting for expressions and declarations with an implied `any` type.. */
+    "noUnusedLocals": true,                              /* Enable error reporting when a local variables aren't read. */
+    "noUnusedParameters": true,                          /* Raise an error when a function parameter isn't read */
+
+    /* Completeness */
+    "skipLibCheck": true                                 /* Skip type checking all .d.ts files. */
   },
-  "include": [
-    "src"
-  ]
+  "include": ["./src/**/*"]
 }

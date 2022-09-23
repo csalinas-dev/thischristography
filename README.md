@@ -1,32 +1,11 @@
-# This Christography
+<p align="center">
+  <a href="https://thischristography.com">
+    <img alt="Gatsby" src="src/assets/images/logos/thischristography-logo.svg" height="60" />
+  </a>
+</p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-This app is written using TypeScript.
 
-## Available Scripts
+[![Netlify Status](https://api.netlify.com/api/v1/badges/c26ba70d-bed9-4639-b33b-0649ada7557b/deploy-status)](https://app.netlify.com/sites/thischristography/deploys)
 
-In the project directory, you can run:
 
-### `yarn`
-
-Installs all of the project dependencies.
-
-### `yarn start`
-
-Runs the app in the development mode.
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.
-You will also see any lint errors in the console.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes. Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-## Deployment
-The website is published automatically when a commit to the `source` branch is updated.
+This is the repository for the This Christography website. Built with GatsbyJS and connected to Netlify for deployments and hosting. Using the Netlify CMS for content management.

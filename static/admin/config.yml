@@ -1,0 +1,50 @@
+backend:
+  name: github
+  repo: casjr13/thischristography
+  branch: gatsby
+
+media_library:
+  name: uploadcare
+  config:
+    publicKey: 9f52c2c1078a46792da0
+media_folder: static/assets
+public_folder: /assets
+
+collections:
+  - name: collection
+    label: Collection
+    folder: collections
+    create: true
+    slug: index
+    media_folder: ''
+    public_folder: ''
+    path: '{{title}}/index'
+    editor:
+      preview: false
+    fields:
+      - name: title
+        label: Title
+        required: true
+      - name: slug
+        label: Slug
+        widget: hidden
+        slug: '{{slug}}'
+      - name: caption
+        label: Caption
+        required: true
+      - name: thumbnail
+        label: Featured Image
+        widget: image
+        required: true
+        allow_multiple: false
+        choose_url: false
+      - name: images
+        label: Images
+        widget: image
+        required: true
+        choose_url: false
+        media_library:
+          config:
+            multiple: true
+            previewStep: false
+
