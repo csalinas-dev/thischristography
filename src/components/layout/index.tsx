@@ -73,6 +73,8 @@ const Content = styled.main`
 const Layout: FC<PropsWithChildren<Props>> = ({ children, footer = true }) => (
   <LayoutWrapper>
     <Helmet title="This Christography | Albuquerque Photographer">
+      <meta name="description" content="Photographer in Albuquerque, NM specializing in portraits, senior portraits, automotive, engagement, weddings, and landscapes." />
+      <meta name="keywords" content="photographers near me, photographer, albuquerque, portraits, landscape, senior pictures, car photography, engagement photos, wedding photography, this christography, this chris, christopher salinas" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <script
         src="https://kit.fontawesome.com/1407f4e18d.js"
