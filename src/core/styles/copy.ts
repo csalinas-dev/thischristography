@@ -11,6 +11,16 @@ export const PageTitle = styled.h1`
   }
 `;
 
+export const SubTitle = styled.h1`
+  font-size: 2.25rem;
+  text-align: center;
+  margin: 2rem 0;
+  
+  @media ${breakpoints.md} {
+    text-align: left;
+  }
+`;
+
 export const Paragraph = styled.p`
   font-size: 1.5rem;
   margin: 1.5rem 0;
