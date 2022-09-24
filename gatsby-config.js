@@ -76,5 +76,6 @@ module.exports = {
         generateMatchPathRewrites: true, // boolean to turn off automatic creation of redirect rules for client only paths
       },
     },
+    "gatsby-plugin-sitemap"
   ],
 };
