@@ -4,6 +4,7 @@ slug: albuquerque
 caption: Albuquerque City Lights by This Christography
 thumbnail: https://ucarecdn.com/ecdd8eaf-f024-48e9-a2bb-b53889b8dedc/
 images:
+  - https://ucarecdn.com/4fa42e38-707b-4a0a-a52f-de96de254537/
   - https://ucarecdn.com/63307ba3-37bf-4234-b577-baff49697ea3/
   - https://ucarecdn.com/9c0e382e-2929-4eb8-8c44-a18fc697cbc1/
   - https://ucarecdn.com/798371f4-f5bc-41c4-b70c-e0b4ba91d27b/
