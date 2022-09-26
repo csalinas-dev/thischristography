@@ -1,7 +1,7 @@
 backend:
   name: github
   repo: casjr13/thischristography
-  branch: gatsby
+  branch: main
 
 media_library:
   name: uploadcare
