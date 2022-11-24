@@ -144,11 +144,6 @@ const IndexPage: FC<Props> = ({ data: { bgImage, fgImage } }: Props) => {
                     are an additional $50.
                   </td>
                 </tr>
-                <tr>
-                  <td>Wedding Photography</td>
-                  <td>Starting at $1250</td>
-                  <td>Contact Chris for more information.</td>
-                </tr>
               </tbody>
             </Table>
           </TableResponsive>
