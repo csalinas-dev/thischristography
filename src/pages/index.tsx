@@ -94,24 +94,48 @@ const IndexPage: FC<Props> = ({ data: { bgImage, fgImage } }: Props) => {
       <Main>
         <PageTitle>Albuquerque Photography</PageTitle>
         <Paragraph>
-          Christopher Salinas Jr., a.k.a. This Christography, is a photographer based in Albuquerque, New Mexico.
-          Specializing in portraits, automotive, aviation, and landscape
-          photography.
+          This Christography is a photography business based in Albuquerque, New
+          Mexico, that offers a unique blend of family portraits, personal
+          portraits, graduation portraits, automotive, aviation, and landscape
+          photography. The photographer behind This Christography, Chris
+          Salinas, has a passion for capturing moments and creating memories
+          that last a lifetime. Inspired by talented photographers such as Peter
+          McKinnon, Pat Kay, Alan Palander, Becki Peckham, and Brandon Woelfel,
+          Chris strives to create images that are both beautiful and inspiring.
+        </Paragraph>
+        <Paragraph>
+          With a focus on capturing natural, candid moments, Chris provides a
+          personalized experience for each of his clients. Whether you're
+          looking for family portraits to hang on your wall, graduation
+          portraits to commemorate a milestone, or aviation and automotive
+          photography to showcase your passion, Chris will work with you to
+          create images that truly reflect your individuality and style.
+        </Paragraph>
+        <Paragraph>
+          In addition to his portrait and commercial photography services, Chris
+          is also an accomplished landscape photographer, showcasing his
+          stunning images from all over the country through his online store.
+          With a keen eye for detail and a love of travel, Chris is constantly
+          on the move, capturing breathtaking images from across the country.
+        </Paragraph>
+        <Paragraph>
+          At This Christography, Chris is dedicated to providing his clients
+          with high-quality, professional photography services that truly
+          capture the essence of life. Whether you're looking for portraits that
+          capture the love and laughter of your family, or landscape images that
+          showcase the beauty of the world around us, Chris has the skills and
+          expertise to bring your vision to life.
         </Paragraph>
         {fgContent}
         <Paragraph>
-          He loves to travel to new places, capturing Earth in
-          all its beauty. All of the landscape images that you see will be
-          available to purchase from the online store, shipped directly to you.
-          There are plenty of printing options! Including lustre prints, metal
-          prints, canvas prints, and pre-framed prints. Just choose the photo and the desired size, submit, and receive your very own This Christography photo!
+          All of the landscape images that you see are available to purchase
+          from the online store, shipped directly to you. There are plenty of
+          printing options! Including lustre prints, metal prints, canvas
+          prints, and pre-framed prints. Just choose the photo and the desired
+          size, submit, and receive your very own This Christography photo!
         </Paragraph>
         <Section>
-          <PageTitle>Photoshoot Pricing</PageTitle>
-          <Paragraph>
-            More information coming soon. In the meantime, contact Chris for
-            more information.
-          </Paragraph>
+          <PageTitle>Pricing</PageTitle>
           <TableResponsive>
             <Table>
               <tbody>
@@ -121,7 +145,7 @@ const IndexPage: FC<Props> = ({ data: { bgImage, fgImage } }: Props) => {
                   <td>Individual, Couples, Family, Maternity, etc...</td>
                 </tr>
                 <tr>
-                  <td>UNM Graduates</td>
+                  <td>UNM Grad Photos</td>
                   <td>$75</td>
                   <td>
                     Pictures taken at Hodgin Hall and other spots around main
@@ -129,11 +153,11 @@ const IndexPage: FC<Props> = ({ data: { bgImage, fgImage } }: Props) => {
                   </td>
                 </tr>
                 <tr>
-                  <td>All Other Graduates</td>
+                  <td>Non-UNM Grad Photos</td>
                   <td>$150</td>
                   <td>
-                    Pictures taken at a location of your choosing (see travelling
-                    fees below).
+                    Pictures taken at a location of your choosing (see
+                    travelling fees below).
                   </td>
                 </tr>
                 <tr>
@@ -188,9 +212,16 @@ const IndexPage: FC<Props> = ({ data: { bgImage, fgImage } }: Props) => {
         <Section>
           <PageTitle>Session Information</PageTitle>
           <Paragraph>
-            All photoshoots require a non-refundable booking fee of $50.00 or
-            50% of the travelling fee, whichever is greater. The amount will go
-            towards your total balance.
+            A photoshoot consists of a 1 to 2 hour session at a location of your
+            choosing (ask Chris for recommendation, if you need help choosing).
+            You may bring multiple outfits, but please let Chris know ahead of
+            time.
+          </Paragraph>
+          <Paragraph>
+            All photoshoots require a{" "}
+            <strong>non-refundable booking fee</strong> of{" "}
+            <em>$50.00 or 50% of the travelling fee, whichever is greater</em>.
+            The amount will go towards your total balance.
           </Paragraph>
           <Paragraph>
             At the end of your session, you may pay the remaining balance:
@@ -258,7 +289,9 @@ export const query = graphql`
       gatsbyImageData
     }
     fgImage: imageSharp(
-      fluid: { originalName: { eq: "fa43f008-1974-425a-849b-9a084e14b752.jpg" } }
+      fluid: {
+        originalName: { eq: "fa43f008-1974-425a-849b-9a084e14b752.jpg" }
+      }
     ) {
       id
       gatsbyImageData
