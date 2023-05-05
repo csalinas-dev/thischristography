@@ -1,11 +1,11 @@
-import React, { FC } from "react";
+import React, { FC, SyntheticEvent } from "react";
 import { graphql } from "gatsby";
 import { css } from "@emotion/react";
 import { GatsbyImage, getImage, ImageDataLike } from "gatsby-plugin-image";
 
 import { Layout } from "components";
 import styled from "@emotion/styled";
-import { PageTitle, Paragraph, Section, SubTitle } from "core/styles";
+import { breakpoints, PageTitle, Paragraph, Section, SubTitle } from "core/styles";
 
 interface Props {
   data: {
@@ -30,6 +30,7 @@ const foregroundImage = css`
 
 const Main = styled.div`
   margin-top: 100vh;
+  position: relative;
 `;
 
 const TableResponsive = styled.div`
@@ -53,6 +54,47 @@ const Table = styled.table`
 
 const ItemLabel = styled.div`
   margin-bottom: 0.5rem;
+`;
+
+const PricingButton = styled.a`
+  align-items: center;
+  color: rgb(0,0,0);
+  display: flex;
+  flex-flow: column;
+  font-family: montserrat, sans-serif;
+  font-size: 2rem;
+  gap: .5rem;
+  justify-content: center;
+  left: 50%;
+  opacity: .54;
+  position: absolute;
+  text-shadow: 0px 1px 5px rgba(0,0,0,.14);
+  top: -15rem;
+  transform: translateY(-100%) translateX(-50%);
+  transition: opacity ease-in-out 300ms;
+  z-index: 9999;
+  width: 100%;
+
+  i {
+    color: rgba(0,0,0,0.54);
+    font-size: 3rem
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &,
+  &:active,
+  &:visited,
+  &:hover {
+    text-decoration: none;
+    outline: none;
+  }
+
+  @media (${breakpoints.lg}) {
+    width: auto;
+  }
 `;
 
 const IndexPage: FC<Props> = ({ data: { bgImage, fgImage } }: Props) => {
@@ -88,10 +130,29 @@ const IndexPage: FC<Props> = ({ data: { bgImage, fgImage } }: Props) => {
     }
   }
 
+  const scrollToPricing = (e: SyntheticEvent) => {
+    e.preventDefault();
+
+    const pricing = document.querySelector('#pricing') as HTMLElement | null;
+    const bounds = pricing?.getBoundingClientRect();
+    const pricingTop = bounds?.top;
+    if (!pricingTop) return;
+
+    window.scrollTo({
+      top: pricingTop + window.scrollY,
+      behavior: "smooth",
+    });
+  }
+
   return (
     <Layout>
       {bgContent}
+      
       <Main>
+        <PricingButton href="#" onClick={scrollToPricing}>
+          <span>VIEW PRICING</span>
+          <i className="fa-solid fa-chevron-down" />
+        </PricingButton>
         <PageTitle>Albuquerque Photography</PageTitle>
         <Paragraph>
           This Christography is a photography business based in Albuquerque, New
@@ -134,7 +195,7 @@ const IndexPage: FC<Props> = ({ data: { bgImage, fgImage } }: Props) => {
           prints, and pre-framed prints. Just choose the photo and the desired
           size, submit, and receive your very own This Christography photo!
         </Paragraph>
-        <Section>
+        <Section id="pricing">
           <PageTitle>Pricing</PageTitle>
           <TableResponsive>
             <Table>

@@ -7,8 +7,8 @@ const scrollToTopButton = css`
   ${linkStyle}
   bottom: 3rem;
   font-size: 3rem;
-  height: 4rem;
-  width: 4rem;
+  height: 5rem !important;
+  width: 5rem !important;
   position: fixed;
   right: 3rem;
   z-index: 9999;
