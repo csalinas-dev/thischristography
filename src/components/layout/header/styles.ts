@@ -90,7 +90,7 @@ export const linkStyle = css`
 
   &:active,
   &:visited {
-    color: inherit !important;
+    color: #fff !important;
   }
 
   &:hover {
