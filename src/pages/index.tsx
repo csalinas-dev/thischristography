@@ -283,7 +283,7 @@ export default IndexPage;
 export const query = graphql`
   query HomepageImage {
     bgImage: imageSharp(
-      fluid: { originalName: { eq: "thischristography-20201010.jpg" } }
+      fluid: { originalName: { eq: "thischristography-20200912.jpg" } }
     ) {
       id
       gatsbyImageData

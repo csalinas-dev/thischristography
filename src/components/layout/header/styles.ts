@@ -73,7 +73,7 @@ export const Socials = styled.div`
 `;
 
 export const linkStyle = css`
-  color: inherit;
+  color: #fff;
   margin: 0.5rem;
   opacity: 0.54;
   text-decoration: none !important;

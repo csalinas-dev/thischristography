@@ -9,7 +9,7 @@ import {
   Socials,
 } from "./styles";
 
-import logo from "assets/images/logos/thischristography-logo.png";
+import logo from "assets/images/logos/thischristography-logo-white.png";
 
 const HeaderWrapper: FC = () => (
   <Header>
