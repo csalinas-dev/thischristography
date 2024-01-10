@@ -1,7 +1,41 @@
 import React, { SyntheticEvent, useEffect, useState } from "react";
 import { IconButton } from "components";
 import { css } from "@emotion/react";
-import { linkStyle } from "./layout/header/styles";
+import { breakpoints } from "core/styles";
+
+const linkStyle = css`
+    color: #000 !important;
+    margin: 0.5rem;
+    opacity: 0.54;
+    text-decoration: none !important;
+    text-transform: uppercase;
+    transition: opacity ease-in-out 225ms;
+
+    &:first-of-type {
+      margin-left: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:active,
+    &:visited {
+      color: #000 !important;
+    }
+
+    &:hover {
+      opacity: 1;
+    }
+
+    @media ${breakpoints.md} {
+      margin: 0.2rem;
+    }
+
+    @media ${breakpoints.lg} {
+      margin: 0.5rem;
+    }
+  `;
 
 const scrollToTopButton = css`
   ${linkStyle}

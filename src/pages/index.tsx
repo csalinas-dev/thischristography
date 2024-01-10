@@ -89,7 +89,7 @@ const IndexPage: FC<Props> = ({ data: { bgImage, fgImage } }: Props) => {
   }
 
   return (
-    <Layout>
+    <Layout home={true}>
       {bgContent}
       <Main>
         <PageTitle>Albuquerque Photography</PageTitle>
