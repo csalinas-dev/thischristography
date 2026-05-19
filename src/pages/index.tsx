@@ -5,7 +5,7 @@ import { GatsbyImage, getImage, ImageDataLike } from "gatsby-plugin-image";
 
 import { Layout } from "components";
 import styled from "@emotion/styled";
-import { PageTitle, Paragraph, Section, SubTitle } from "core/styles";
+import { PageTitle, Paragraph, Section } from "core/styles";
 
 interface Props {
   data: {
@@ -32,27 +32,45 @@ const Main = styled.div`
   margin-top: 100vh;
 `;
 
-const TableResponsive = styled.div`
-  overflow-x: auto;
-  width: 100%;
-`;
+const AnnouncementBanner = styled.div`
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 0.5rem;
+  margin: 3rem 0;
+  padding: 2.5rem;
+  position: relative;
+  text-align: center;
 
-const Table = styled.table`
-  border-collapse: collapse;
-
-  td {
-    border: 1px solid rgba(0, 0, 0, 0.24);
-    padding: 0.5rem 0.75rem;
+  &::before {
+    background: #fff;
+    content: "Announcement";
+    font-family: montserrat, sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    padding: 0 0.75rem;
+    position: absolute;
+    text-transform: uppercase;
+    top: -0.625rem;
+    left: 50%;
+    transform: translateX(-50%);
     white-space: nowrap;
   }
-
-  tr:nth-child(2n + 1) td {
-    background-color: rgba(0, 0, 0, 0.08);
-  }
 `;
 
-const ItemLabel = styled.div`
-  margin-bottom: 0.5rem;
+const AnnouncementTitle = styled.h2`
+  font-family: utopia-std, serif;
+  font-size: 2rem;
+  font-weight: 400;
+  font-style: italic;
+  line-height: 1.2em;
+  margin: 0 0 1.5rem;
+`;
+
+const AnnouncementBody = styled.p`
+  font-size: 1.25rem;
+  line-height: 1.5em;
+  margin: 0.75rem 0;
+  opacity: 0.8;
 `;
 
 const IndexPage: FC<Props> = ({ data: { bgImage, fgImage } }: Props) => {
@@ -93,186 +111,50 @@ const IndexPage: FC<Props> = ({ data: { bgImage, fgImage } }: Props) => {
       {bgContent}
       <Main>
         <PageTitle>Albuquerque Photography</PageTitle>
+        <AnnouncementBanner>
+          <AnnouncementTitle>
+            This Christography is Closing
+          </AnnouncementTitle>
+          <AnnouncementBody>
+            After several wonderful years of capturing your most meaningful
+            moments, This Christography is no longer accepting new photoshoot
+            bookings.
+          </AnnouncementBody>
+          <AnnouncementBody>
+            It has been an incredible honor to photograph so many families,
+            graduates, events, and landscapes across New Mexico and beyond.
+            Thank you sincerely to every client who trusted me with your
+            memories.
+          </AnnouncementBody>
+          <AnnouncementBody>
+            The photography collection and prints store will remain available.
+          </AnnouncementBody>
+        </AnnouncementBanner>
         <Paragraph>
           This Christography is a photography business based in Albuquerque, New
-          Mexico, that offers a unique blend of family portraits, personal
-          portraits, graduation portraits, automotive, aviation, and landscape
-          photography. The photographer behind This Christography, Chris
-          Salinas, has a passion for capturing moments and creating memories
-          that last a lifetime. Inspired by talented photographers such as Peter
-          McKinnon, Pat Kay, Alan Palander, Becki Peckham, and Brandon Woelfel,
-          Chris strives to create images that are both beautiful and inspiring.
+          Mexico, specializing in family portraits, personal portraits, graduation
+          portraits, automotive, aviation, and landscape photography. Chris
+          Salinas has spent years capturing moments and creating memories that
+          last a lifetime, inspired by talented photographers such as Peter
+          McKinnon, Pat Kay, Alan Palander, Becki Peckham, and Brandon Woelfel.
         </Paragraph>
         <Paragraph>
-          With a focus on capturing natural, candid moments, Chris provides a
-          personalized experience for each of his clients. Whether you're
-          looking for family portraits to hang on your wall, graduation
-          portraits to commemorate a milestone, or aviation and automotive
-          photography to showcase your passion, Chris will work with you to
-          create images that truly reflect your individuality and style.
-        </Paragraph>
-        <Paragraph>
-          In addition to his portrait and commercial photography services, Chris
-          is also an accomplished landscape photographer, showcasing his
-          stunning images from all over the country through his online store.
-          With a keen eye for detail and a love of travel, Chris is constantly
-          on the move, capturing breathtaking images from across the country.
-        </Paragraph>
-        <Paragraph>
-          At This Christography, Chris is dedicated to providing his clients
-          with high-quality, professional photography services that truly
-          capture the essence of life. Whether you're looking for portraits that
-          capture the love and laughter of your family, or landscape images that
-          showcase the beauty of the world around us, Chris has the skills and
-          expertise to bring your vision to life.
+          In addition to portrait and commercial photography, Chris is an
+          accomplished landscape photographer, showcasing stunning images from
+          all over the country through his online store. With a keen eye for
+          detail and a love of travel, Chris has captured breathtaking images
+          from across the country.
         </Paragraph>
         {fgContent}
-        <Paragraph>
-          All of the landscape images that you see are available to purchase
-          from the online store, shipped directly to you. There are plenty of
-          printing options! Including lustre prints, metal prints, canvas
-          prints, and pre-framed prints. Just choose the photo and the desired
-          size, submit, and receive your very own This Christography photo!
-        </Paragraph>
         <Section>
-          <PageTitle>Pricing</PageTitle>
-          <TableResponsive>
-            <Table>
-              <tbody>
-                <tr>
-                  <td>Portrait Session</td>
-                  <td>$250</td>
-                  <td>Individual, Couples, Family, Maternity, etc...</td>
-                </tr>
-                <tr>
-                  <td>UNM Grad Photos</td>
-                  <td>$75</td>
-                  <td>
-                    Pictures taken at Hodgin Hall and other spots around main
-                    campus.
-                  </td>
-                </tr>
-                <tr>
-                  <td>Non-UNM Grad Photos</td>
-                  <td>$150</td>
-                  <td>
-                    Pictures taken at a location of your choosing (see
-                    travelling fees below).
-                  </td>
-                </tr>
-                <tr>
-                  <td>Automotive Session</td>
-                  <td>$100</td>
-                  <td>
-                    Exterior and interior photos of your vehicle. Rolling shots
-                    are an additional $50.
-                  </td>
-                </tr>
-              </tbody>
-            </Table>
-          </TableResponsive>
-          <SubTitle>Travelling Fees</SubTitle>
+          <PageTitle>Prints</PageTitle>
           <Paragraph>
-            Using the one-way distance from Albuquerque to the location of the
-            shoot, the round trip fee is $75 for every 50 miles. For example
+            All of the landscape images you see are available to purchase from
+            the online store, shipped directly to you. There are plenty of
+            printing options — including lustre prints, metal prints, canvas
+            prints, and pre-framed prints. Just choose the photo and the desired
+            size, and receive your very own This Christography photo!
           </Paragraph>
-          <ul className="fa-ul">
-            <li>
-              <span className="fa-li">
-                <i className="fas fa-route" />
-              </span>
-              <ItemLabel>0 - 50 miles: included in price.</ItemLabel>
-            </li>
-            <li>
-              <span className="fa-li">
-                <i className="fas fa-route" />
-              </span>
-              <ItemLabel>50 - 100 miles: $75</ItemLabel>
-            </li>
-            <li>
-              <span className="fa-li">
-                <i className="fas fa-route" />
-              </span>
-              <ItemLabel>100 - 150 miles: $150</ItemLabel>
-            </li>
-            <li>
-              <span className="fa-li">
-                <i className="fas fa-route" />
-              </span>
-              <ItemLabel>150 - 200 miles: $225</ItemLabel>
-            </li>
-            <li>
-              <span className="fa-li">
-                <i className="fas fa-route" />
-              </span>
-              <ItemLabel>and so on...</ItemLabel>
-            </li>
-          </ul>
-        </Section>
-        <Section>
-          <PageTitle>Session Information</PageTitle>
-          <Paragraph>
-            A photoshoot consists of a 1 to 2 hour session at a location of your
-            choosing (ask Chris for recommendation, if you need help choosing).
-            You may bring multiple outfits, but please let Chris know ahead of
-            time.
-          </Paragraph>
-          <Paragraph>
-            All photoshoots require a{" "}
-            <strong>non-refundable booking fee</strong> of{" "}
-            <em>$50.00 or 50% of the travelling fee, whichever is greater</em>.
-            The amount will go towards your total balance.
-          </Paragraph>
-          <Paragraph>
-            At the end of your session, you may pay the remaining balance:
-          </Paragraph>
-          <ul className="fa-ul">
-            <li>
-              <span className="fa-li">
-                <i className="fas fa-money-bill-wave" />
-              </span>
-              <ItemLabel
-                css={css`
-                  display: inline-block;
-                  margin-bottom: 0.5rem;
-                `}
-              >
-                In person using cash.
-              </ItemLabel>
-            </li>
-            <li>
-              <span className="fa-li">
-                <i className="fas fa-credit-card" />
-              </span>
-              <ItemLabel
-                css={css`
-                  margin-bottom: 0.5rem;
-                `}
-              >
-                In person using debit or credit card.
-              </ItemLabel>
-            </li>
-            <li>
-              <span className="fa-li">
-                <i className="fas fa-file-invoice-dollar" />
-              </span>
-              <ItemLabel
-                css={css`
-                  margin-bottom: 0.5rem;
-                `}
-              >
-                Online through a Square invoice (using debit or credit card).
-              </ItemLabel>
-            </li>
-          </ul>
-          <Paragraph>
-            Debit/credit card processing is handled by{" "}
-            <a href="https://squareup.com/us/en">Square Inc.</a>
-          </Paragraph>
-          <Paragraph>
-            Final images will not be delivered until payment has been received.
-          </Paragraph>
-          <Paragraph>Checks will not be accepted.</Paragraph>
         </Section>
       </Main>
     </Layout>
