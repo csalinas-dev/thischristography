@@ -157,16 +157,6 @@ const HeaderWrapper: FC<Props> = ({ home }) => {
       <Socials>
         <IconButton
           styles={linkStyle}
-          icon="fa-solid fa-phone"
-          url="tel:+15057204759"
-        />
-        <IconButton
-          styles={linkStyle}
-          icon="fa-solid fa-envelope"
-          url="mailto:chris@thischristography.com"
-        />
-        <IconButton
-          styles={linkStyle}
           icon="fa-brands fa-instagram"
           url="https://instagram.com/thischristography"
         />
