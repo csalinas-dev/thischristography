@@ -32,45 +32,45 @@ const Main = styled.div`
   margin-top: 100vh;
 `;
 
-const AnnouncementBanner = styled.div`
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  border-radius: 0.5rem;
-  margin: 3rem 0;
-  padding: 2.5rem;
-  position: relative;
+const SplashOverlay = styled.div`
+  color: #fff;
+  left: 0;
+  padding: 2rem;
+  position: absolute;
+  right: 0;
   text-align: center;
+  top: 28vh;
+  z-index: 1;
+`;
 
-  &::before {
-    background: #fff;
-    content: "Announcement";
-    font-family: montserrat, sans-serif;
-    font-size: 0.75rem;
-    font-weight: 600;
-    letter-spacing: 0.1em;
-    padding: 0 0.75rem;
-    position: absolute;
-    text-transform: uppercase;
-    top: -0.625rem;
-    left: 50%;
-    transform: translateX(-50%);
-    white-space: nowrap;
-  }
+const AnnouncementLabel = styled.div`
+  font-family: montserrat, sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  margin-bottom: 1.25rem;
+  opacity: 0.7;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+  text-transform: uppercase;
 `;
 
 const AnnouncementTitle = styled.h2`
   font-family: utopia-std, serif;
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: 400;
   font-style: italic;
   line-height: 1.2em;
-  margin: 0 0 1.5rem;
+  margin: 0 0 1.25rem;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
 `;
 
 const AnnouncementBody = styled.p`
-  font-size: 1.25rem;
-  line-height: 1.5em;
-  margin: 0.75rem 0;
-  opacity: 0.8;
+  font-size: 1.1rem;
+  line-height: 1.6em;
+  margin: 0.5rem auto;
+  max-width: 36rem;
+  opacity: 0.9;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.5);
 `;
 
 const IndexPage: FC<Props> = ({ data: { bgImage, fgImage } }: Props) => {
@@ -109,27 +109,21 @@ const IndexPage: FC<Props> = ({ data: { bgImage, fgImage } }: Props) => {
   return (
     <Layout home={true}>
       {bgContent}
+      <SplashOverlay>
+        <AnnouncementLabel>Announcement</AnnouncementLabel>
+        <AnnouncementTitle>This Christography is Closing</AnnouncementTitle>
+        <AnnouncementBody>
+          After several wonderful years of capturing your most meaningful
+          moments, This Christography is no longer accepting new photoshoot
+          bookings.
+        </AnnouncementBody>
+        <AnnouncementBody>
+          Thank you sincerely to every client who trusted me with your memories.
+          The photography collection and prints store will remain available.
+        </AnnouncementBody>
+      </SplashOverlay>
       <Main>
         <PageTitle>Albuquerque Photography</PageTitle>
-        <AnnouncementBanner>
-          <AnnouncementTitle>
-            This Christography is Closing
-          </AnnouncementTitle>
-          <AnnouncementBody>
-            After several wonderful years of capturing your most meaningful
-            moments, This Christography is no longer accepting new photoshoot
-            bookings.
-          </AnnouncementBody>
-          <AnnouncementBody>
-            It has been an incredible honor to photograph so many families,
-            graduates, events, and landscapes across New Mexico and beyond.
-            Thank you sincerely to every client who trusted me with your
-            memories.
-          </AnnouncementBody>
-          <AnnouncementBody>
-            The photography collection and prints store will remain available.
-          </AnnouncementBody>
-        </AnnouncementBanner>
         <Paragraph>
           This Christography is a photography business based in Albuquerque, New
           Mexico, specializing in family portraits, personal portraits, graduation
