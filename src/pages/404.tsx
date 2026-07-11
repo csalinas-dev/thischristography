@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { Layout } from "components";
+import { Layout, SiteHead } from "components";
 import { Link } from "gatsby";
 import React from "react";
 
@@ -19,3 +19,5 @@ const NotFoundPage = () => (
 );
 
 export default NotFoundPage;
+
+export const Head = SiteHead;

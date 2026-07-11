@@ -3,7 +3,7 @@ import { graphql, Link } from "gatsby";
 import { css } from "@emotion/react";
 import styled from "@emotion/styled";
 
-import { Layout } from "components";
+import { Layout, SiteHead } from "components";
 import { PageTitle } from "core/styles";
 import { CollectionLayout } from "components/pages/photography";
 import { Collection } from "core/types/collections";
@@ -57,6 +57,8 @@ const CollectionPage = ({
   </Layout>
 );
 export default CollectionPage;
+
+export const Head = SiteHead;
 
 export const query = graphql`
   query CollectionQuery($id: String!) {
