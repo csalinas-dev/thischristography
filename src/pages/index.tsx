@@ -3,7 +3,7 @@ import { graphql } from "gatsby";
 import { css } from "@emotion/react";
 import { GatsbyImage, getImage, ImageDataLike } from "gatsby-plugin-image";
 
-import { Layout } from "components";
+import { Layout, SiteHead } from "components";
 import styled from "@emotion/styled";
 import { PageTitle, Paragraph, Section } from "core/styles";
 
@@ -155,6 +155,8 @@ const IndexPage: FC<Props> = ({ data: { bgImage, fgImage } }: Props) => {
   );
 };
 export default IndexPage;
+
+export const Head = SiteHead;
 
 export const query = graphql`
   query HomepageImage {

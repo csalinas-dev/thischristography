@@ -1,5 +1,5 @@
-import CMS from 'netlify-cms-app';
-import uploadcare from 'netlify-cms-media-library-uploadcare';
+import CMS from 'decap-cms-app';
+import uploadcare from 'decap-cms-media-library-uploadcare';
 
 // Add UploadCare
 CMS.registerMediaLibrary(uploadcare);

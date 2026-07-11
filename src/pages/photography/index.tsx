@@ -2,7 +2,7 @@ import React, { FC } from "react";
 import { graphql } from "gatsby";
 import styled from "@emotion/styled";
 
-import { Layout } from "components";
+import { Layout, SiteHead } from "components";
 import { CategoryPlate } from "components/pages/photography";
 import { breakpoints, PageTitle } from "core/styles";
 import { Collection } from "core/types/collections";
@@ -68,9 +68,11 @@ const Photography: FC<Props> = ({ data }: Props) => {
 };
 export default Photography;
 
+export const Head = SiteHead;
+
 export const query = graphql`
   query PhotographyQuery {
-    allMarkdownRemark(sort: {fields: frontmatter___title}) {
+    allMarkdownRemark(sort: {frontmatter: {title: ASC}}) {
       nodes {
         id
         frontmatter {

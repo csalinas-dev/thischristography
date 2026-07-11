@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import styled from "@emotion/styled";
-import { Layout } from "components";
+import { Layout, SiteHead } from "components";
 import { breakpoints, PageTitle, Paragraph } from "core/styles";
 
 import me from "assets/images/me.jpg";
@@ -72,3 +72,5 @@ const About: FC = () => (
 );
 
 export default About;
+
+export const Head = SiteHead;
