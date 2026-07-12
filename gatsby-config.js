@@ -5,6 +5,21 @@ module.exports = {
     description:
       "This Christography is a photographer in Albuquerque, NM. Specializes in family portraits, graduate portraits, automotive, and landscapes.",
   },
+  // Security headers previously supplied by gatsby-plugin-netlify's
+  // mergeSecurityHeaders. That plugin is incompatible with
+  // gatsby-adapter-netlify, so the headers are declared here; the adapter
+  // emits them into Netlify's _headers.
+  headers: [
+    {
+      source: "/*",
+      headers: [
+        { key: "x-frame-options", value: "DENY" },
+        { key: "x-content-type-options", value: "nosniff" },
+        { key: "x-xss-protection", value: "1; mode=block" },
+        { key: "referrer-policy", value: "same-origin" },
+      ],
+    },
+  ],
   plugins: [
     {
       resolve: "gatsby-source-filesystem",
@@ -48,7 +63,5 @@ module.exports = {
         allExtensions: true, // defaults to false
       },
     },
-    "gatsby-plugin-netlify",
-    "gatsby-plugin-sitemap"
   ],
 };
